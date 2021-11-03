@@ -107,15 +107,15 @@ img:hover {
 /* Misc */
 .hline {
     display: block;
-    width: 90%; /* Set to desired length. */
+    width: 100%; /* Set to desired length. */
     margin: 10px auto;
-    border-bottom: 1px solid dimgrey;
+    border-bottom: 2px solid lightgrey;
 }
 .vline {
     display: block;
     height: 18px; /* Set to desired length. */
     margin: auto 10px;
-    border-left: 1px solid dimgrey;
+    border-left: 1px solid lightgrey;
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * Responsiveness * * * * * * * * * * * * * * * * * * * * * * * * * */
