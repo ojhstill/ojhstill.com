@@ -1,27 +1,44 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+const scrollElements = document.querySelectorAll('.js-scroll');
+const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-function FadeInSection(props) {
-    const [isVisible, setVisible] = React.useState(false);
-    const domRef = React.useRef();
-    React.useEffect(() => {
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setVisible(entry.isIntersecting);
-                }
-            });
-        });
-        observer.observe(domRef.current);
-        return () => observer.unobserve(domRef.current);
-    }, []);
+let throttleTimer = false;
+
+const elementInView = (element, dividend = 1) => {
+    const elementTop = element.getBoundingClientRect().top;
+
     return (
-        <div
-    className=className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
-    ref={domRef}
-        >
-        {props.children}
-        </div>
-);
+        elementTop <=
+        (window.innerHeight || document.documentElement.clientHeight) / dividend
+    );
+};
+
+const displayScrollElement = (element) => {
+    element.classList.add('scrolled');
+};
+
+const handleScrollAnimation = () => {
+    scrollElements.forEach((element) => {
+        if (elementInView(element, 1.25)) {
+            displayScrollElement(element);
+        }
+    })
 }
+
+const throttle = (callback, time) => {
+    if (throttleTimer) return;
+
+    throttleTimer = true;
+    setTimeout(() => {
+        if (typeof callback === 'function') {
+            console.log(scrollElements)
+            callback();
+        }
+        throttleTimer = false;
+    }, time);
+}
+
+window.addEventListener('scroll', () => {
+    if (mediaQuery && !mediaQuery.matches) {
+        throttle(handleScrollAnimation(), 400);
+    }
+});

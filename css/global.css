@@ -159,19 +159,51 @@ img:hover {
     }
 }
 
-.fade-in-section {
-    opacity: 0;
-    transform: translateY(20vh);
-    visibility: hidden;
-    transition: opacity 0.6s ease-out, transform 1.2s ease-out;
-    will-change: opacity, visibility;
-}
-.fade-in-section.is-visible {
-    opacity: 1;
-    transform: none;
-    visibility: visible;
+@keyframes fade-in-bottom {
+    0% {
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
+/*.fade-in-section {*/
+/*    opacity: 0;*/
+/*    transform: translateY(20vh);*/
+/*    visibility: hidden;*/
+/*    transition: opacity 0.6s ease-out, transform 1.2s ease-out;*/
+/*    will-change: opacity, visibility;*/
+/*}*/
+/*.fade-in-section.is-visible {*/
+/*    opacity: 1;*/
+/*    transform: none;*/
+/*    visibility: visible;*/
+/*}*/
+
+.js-scroll {
+    opacity: 0;
+    transition: opacity 500ms;
+}
+.js-scroll.scrolled {
+    opacity: 1;
+}
+.scrolled.fade-in-bottom {
+    animation: fade-in-bottom 1s ease-in-out both;
+}
+
+@media (prefers-reduced-motion) {
+    .js-scroll {
+        opacity: 1;
+    }
+    .scrolled {
+        animation: none !important;
+    }
+}
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * Colour * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 .red {
