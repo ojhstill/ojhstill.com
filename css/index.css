@@ -1,0 +1,56 @@
+.headline {
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 1px;
+    margin: 2rem 0;
+}
+.headline .space {
+    display: none;
+}
+
+.profile-section {
+    margin: 1.2rem 0;
+}
+.profile-section .section-heading {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: left;
+    align-items: center;
+}
+.profile-section img{
+    object-fit: contain;
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 1rem;
+}
+.profile-section h5, .profile-section h6{
+    margin: 5px 0 0 0;
+}
+.profile-section p {
+    margin-top: 1rem;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * Responsiveness * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* Mobile */
+@media screen and (max-width: 841px) {
+    .headline br {
+        display: none;
+    }
+    .headline .space {
+        display: inline;
+    }
+}
+@media screen and (max-width: 410px) {
+
+}
+@media (max-width: 1200px) {
+    body {
+        padding: 0 5%;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 768px) {
+
+}

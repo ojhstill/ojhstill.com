@@ -40,30 +40,22 @@ body {
     opacity: 0;
     animation: fadeIn 0.5s ease-in-out forwards;
 }
-
-h1, h2, h3, h4, h5, h6 {
-    margin-top: 60px;
-    text-align: left;
-}
-.headline {
-    font-size: 2rem;
-    text-align: center;
-    letter-spacing: 1px;
-    margin: 3rem 0;
-}
-.headline .space {
-    display: none;
-}
-
 main {
     flex: 1 0 auto;
     text-align: center;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    /*margin-top: 40px;*/
+    text-align: left;
+}
+
+
 p, li {
     text-align: left;
     text-justify: none;
 }
+
 a:hover {
     text-decoration: none;
 }
@@ -94,13 +86,13 @@ nav a, footer a {
 }
 
 img {
-    border-radius: 2px 2px 0 0;
+    /*border-radius: 10px;*/
     object-fit: contain;
     /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
-    transition: 0.3s;
+    /*transition: 0.3s;*/
 }
 img:hover {
-    transform: scale(1.02);
+    /*transform: scale(1.02);*/
     /*box-shadow: 0 4px 16px 7px rgba(0,0,0,0.2);*/
 }
 
@@ -108,7 +100,7 @@ img:hover {
 .hline {
     display: block;
     width: 100%; /* Set to desired length. */
-    margin: 10px auto;
+    margin: 20px auto;
     border-bottom: 2px solid lightgrey;
 }
 .vline {
@@ -186,7 +178,7 @@ img:hover {
 /*}*/
 
 .js-scroll {
-    opacity: 0;
+    opacity: 1;
     transition: opacity 500ms;
 }
 .js-scroll.scrolled {
