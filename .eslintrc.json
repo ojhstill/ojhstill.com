@@ -1,0 +1,50 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  },
+  // "plugins": ["svelte3"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:svelte/recommended",
+    "plugin:svelte/prettier"
+  ],
+  "rules": {
+    "indent": ["error", 2],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+
+    "svelte/first-attribute-linebreak": [
+      "error",
+      {
+        "multiline": "beside",
+        "singleline": "beside"
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.svelte"],
+      "parser": "svelte-eslint-parser",
+      // "processor": "svelte3/svelte3"
+      "rules": {
+        "indent": "off",
+        "svelte/indent": [
+          "error",
+          {
+            "indent": 2,
+            "ignoredNodes": [],
+            "switchCase": 1,
+            "alignAttributesVertically": true
+          }
+        ]
+      }
+    }
+  ]
+}
