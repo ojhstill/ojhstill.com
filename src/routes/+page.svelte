@@ -1,7 +1,7 @@
 
 
   <div class="hero lg:max-w-screen-lg mx-auto lg:rounded-3xl animation-gradient drop-shadow py-16 px-8 text-left md:text-center transition-all">
-  <h1 class="text-slate-100 leading-tight tracking-tighter font-extrabold">
+  <h1 class="text-zinc-100 leading-tight tracking-tight font-extrabold">
     <!-- <span class="">Electronic Engineering</span> Graduate,
     <br class="hidden lg:block"><span class="">Full-stack Engineer</span>,
     and <span class="">Music Artist</span>. -->
@@ -15,33 +15,33 @@
 
 <div class="max-w-screen-lg mx-auto mt-8">
   <div class="sm:container mx-auto px-4 transition-all">
-    <p class="text-xl text-slate-300">
-      Hi, I'm Oli. 👋 I studied a masters in Electronic Engineering at the University of York,
-      and now I'm a Graduate Engineer and Scrum Master for
-      <a class="hover:opacity-80 transition-opacity underline decoration-dotted"
+    <p class="text-xl text-zinc-100">
+      Hi, I'm Oli. 👋 I studied MEng Electronic Engineering at the University of York,
+      and now I'm a Software Engineer and Scrum Master for
+      <a class="hover:opacity-70 transition-opacity underline decoration-dotted"
          href="https://www.roke.co.uk/"
          target="_blank"
          rel="noreferrer">Roke</a>.
       Here is my complete online portfolio, including all experiences, achievements, and personal projects.
     </p>
 
-    <!-- <div class="text-slate-300 mt-8">
+    <!-- <div class="text-zinc-100 mt-8">
       <h2 class="text-3xl mb-2">Experience</h2>
     </div> -->
   </div>
 
-  <div class="text-center text-slate-300 mt-8">
+  <div class="text-center text-zinc-100 mt-8">
     <h2 class="text-3xl mb-2">Under Construction</h2>
-    <p class="mb-2">
+    <p class="">
       I'm currently updating this website. For now, please view my
-      <a class="hover:opacity-80 transition-opacity underline decoration-dotted"
+      <a class="hover:opacity-70 transition-opacity underline decoration-dotted"
          href="https://linkedin.com/in/ojhstill"
          target="_blank"
          rel="noopener noreferrer">LinkedIn</a>.
     </p>
     <p>
       <span class="mr-2">📥</span>or
-      <a class="hover:opacity-80 transition-opacity underline decoration-dotted"
+      <a class="hover:opacity-70 transition-opacity underline decoration-dotted"
          href="mailto:oliverjhstill@gmail.com"
          target="_blank">email me!</a>
     </p>
@@ -88,9 +88,9 @@
   }
   .animation-gradient {
     /* color: #e91878; */
-    background: #e91878;
+    /* background: #e91878; */
     /* background: linear-gradient(45deg, #e91878, #fc8829); */
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #fc8829, #e91878, #931de7, #118bf5);
     background-size: 100%;
     background-repeat: repeat;
     background-size: 400% 400%;
