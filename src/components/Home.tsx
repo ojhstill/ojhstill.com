@@ -14,21 +14,24 @@ const Skeleton = () => (
 const items = [
   {
     title: 'Full‑Stack Solutions Architect',
-    description: 'Explore the birth of groundbreaking ideas and inventions.',
+    description:
+      'Transforming complex project requirements into scalable, end‑to‑end digital solutions – from designing cost‑efficient architectures for e‑commerce platforms to integrating modern frameworks with robust back‑end systems.',
     header: <Skeleton />,
     className: 'md:col-span-2',
     icon: <CodeSandboxLogoIcon aria-hidden="true" className="size-6" />,
   },
   {
     title: 'Client-Focused Technical Consultant',
-    description: 'Dive into the transformative power of technology.',
+    description:
+      'Empowering businesses with tailored technical insights and hands‑on support – spearheading client engagement strategies to drive innovation.',
     header: <Skeleton />,
     className: 'md:col-span-1',
     icon: <MixIcon aria-hidden="true" className="size-6" />,
   },
   {
     title: 'Certified Agile Team Leader',
-    description: 'Discover the beauty of thoughtful and functional design.',
+    description:
+      'Leading high‑performing teams with agile methodologies – demonstrated by boosting Scrum velocity by 77% on multi‑million‑pound projects, mentoring junior talent, and driving transformative technical change.',
     header: <Skeleton />,
     className: 'md:col-span-1',
     icon: <RocketIcon aria-hidden="true" className="size-6" />,
@@ -36,7 +39,7 @@ const items = [
   {
     title: 'Dynamic Product Designer',
     description:
-      'Understand the impact of effective communication in our lives.',
+      'Merging full‑stack expertise with creative design principles – from revamping digital portals to championing accessibility standards, crafting intuitive products that resonate with users.',
     header: <Skeleton />,
     className: 'md:col-span-2',
     icon: <TransformIcon aria-hidden="true" className="size-6" />,
@@ -51,7 +54,12 @@ export default function Home() {
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm/6 text-foreground ring-1 ring-foreground/50 hover:ring-foreground/20">
               I've recently joined Wattle.{' '}
-              <a href="#" className="font-semibold text-primary">
+              <a
+                href="https://www.wearewattle.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-primary"
+              >
                 <span aria-hidden="true" className="absolute inset-0" />
                 Read more <span aria-hidden="true">&rarr;</span>
               </a>

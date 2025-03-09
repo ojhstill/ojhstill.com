@@ -1,11 +1,17 @@
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { Cross1Icon } from '@radix-ui/react-icons';
 
+interface MobileMenuProps {
+  mobileMenuOpen: boolean;
+  setMobileMenuOpen: (open: boolean) => void;
+  navigation: { name: string; href: string; icon: React.ReactNode }[];
+}
+
 export default function MobileMenu({
   mobileMenuOpen,
   setMobileMenuOpen,
   navigation,
-}) {
+}: MobileMenuProps) {
   return (
     <Dialog
       open={mobileMenuOpen}
