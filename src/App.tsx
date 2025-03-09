@@ -5,6 +5,7 @@ import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import Header from '@/components/Header';
 import MobileMenu from '@/components/MobileMenu';
 import { CodeSandboxLogoIcon, LinkedInLogoIcon, GitHubLogoIcon, MixIcon, RocketIcon, TransformIcon, ArrowRightIcon } from "@radix-ui/react-icons";
+import Footer from '@/components/Footer';
 
 const navigation = [
   { name: 'Timeline', href: '/timeline' },
@@ -123,6 +124,7 @@ export default function App() {
           />
         ))}
       </BentoGrid>
+      <Footer />
       </div>
       </div>
   )
