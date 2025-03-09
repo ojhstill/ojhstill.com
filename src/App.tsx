@@ -53,11 +53,7 @@ export default function App() {
   return (
     <div className="relative h-full w-full pb-20">
       <div className="
-        absolute inset-0
-
-        /* Background color */
-        bg-[theme('colors.zinc.50')]
-        dark:bg-[theme('colors.zinc.900')]
+        absolute inset-0 bg-background
 
         /* Spacing between pattern repeats */
         [--s:20px]
