@@ -1,7 +1,7 @@
-'use client'
+'use client';
 
 import { useState } from 'react';
-import { LinkedInLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
+import { LinkedInLogoIcon, GitHubLogoIcon } from '@radix-ui/react-icons';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import MobileMenu from '@/components/MobileMenu';
@@ -12,17 +12,26 @@ import Home from '@/components/Home';
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Timeline', href: '/timeline' },
-  { name: 'GitHub', icon: <GitHubLogoIcon aria-hidden="true" />, href: 'https://github.com/ojhstill' },
-  { name: 'LinkedIn', icon: <LinkedInLogoIcon aria-hidden="true" />, href: 'https://www.linkedin.com/in/ojhstill' },
-]
+  {
+    name: 'GitHub',
+    icon: <GitHubLogoIcon aria-hidden="true" />,
+    href: 'https://github.com/ojhstill',
+  },
+  {
+    name: 'LinkedIn',
+    icon: <LinkedInLogoIcon aria-hidden="true" />,
+    href: 'https://www.linkedin.com/in/ojhstill',
+  },
+];
 
 export default function App() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <Router>
       <div className="relative h-full w-full pb-20">
-        <div className="
+        <div
+          className="
           absolute inset-0 bg-background
           [--s:20px]
           [--dot-size:1px]
@@ -33,10 +42,15 @@ export default function App() {
           [background-position:0_0,var(--s)_calc(var(--s)/2)]
           [background-size:calc(2*var(--s))_var(--s)]
           [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]
-        " />
+        "
+        />
 
         <Header navigation={navigation} setMobileMenuOpen={setMobileMenuOpen} />
-        <MobileMenu navigation={navigation} mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
+        <MobileMenu
+          navigation={navigation}
+          mobileMenuOpen={mobileMenuOpen}
+          setMobileMenuOpen={setMobileMenuOpen}
+        />
 
         <Routes>
           <Route path="/" element={<Home />} />
@@ -46,5 +60,5 @@ export default function App() {
         <Footer />
       </div>
     </Router>
-  )
+  );
 }
