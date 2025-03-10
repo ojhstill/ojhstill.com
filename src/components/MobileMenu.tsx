@@ -1,6 +1,6 @@
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { Cross1Icon } from '@radix-ui/react-icons';
-import { NavigationItem } from '@/components/Header';
+import { NavigationLinks, NavigationItem } from '@/components/NavigationLinks';
 
 interface MobileMenuProps {
   mobileMenuOpen: boolean;
@@ -39,18 +39,10 @@ export default function MobileMenu({
         </div>
         <div className="mt-6 flow-root">
           <div className="-my-6 divide-y divide-gray-500/10">
-            <div className="space-y-2 py-6">
-              {navigation.map(item => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="-mx-3 rounded-lg px-3 py-2 text-base/7 font-semibold hover:bg-sidebar-accent flex items-center gap-2"
-                >
-                  {item.icon}
-                  {item.name}
-                </a>
-              ))}
-            </div>
+            <NavigationLinks
+              navigation={navigation}
+              className="space-y-2 py-6"
+            />
             <div className="space-y-2 py-6">
               <a
                 href="mailto:oliver@ojhstill.com"

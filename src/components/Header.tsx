@@ -2,13 +2,7 @@ import { useState } from 'react';
 import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 import MobileMenu from '@/components/MobileMenu';
 import DarkModeToggle from '@/components/DarkModeToggle';
-
-export interface NavigationItem {
-  name?: string;
-  href?: string;
-  icon?: React.ReactNode;
-  onClick?: () => void;
-}
+import { NavigationLinks, NavigationItem } from '@/components/NavigationLinks';
 
 interface HeaderProps {
   navigation: NavigationItem[];
@@ -45,22 +39,14 @@ export default function Header({ navigation }: HeaderProps) {
               <HamburgerMenuIcon aria-hidden="true" className="size-6" />
             </button>
           </div>
-          <div className="hidden lg:flex lg:gap-x-12">
-            {navigation.map(item => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-sm/6 font-semibold flex items-center gap-2"
-              >
-                {item.icon}
-                {item.name}
-              </a>
-            ))}
-          </div>
+          <NavigationLinks
+            navigation={navigation}
+            className="hidden lg:flex lg:gap-x-12"
+          />
           <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6 items-center">
             <a
               href="mailto:oliver@ojhstill.com"
-              className="text-sm/6 font-semibold"
+              className="-mx-3 flex rounded-lg px-3 py-2 text-base/7 font-semibold hover:bg-sidebar-accent"
             >
               Get in Touch
             </a>

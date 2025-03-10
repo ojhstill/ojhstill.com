@@ -15,7 +15,7 @@ const items = [
     header: (
       <div className="flex flex-1 min-h-[6rem] h-20 md:h-44 lg:h-60 w-full">
         <img
-          src="https://media.licdn.com/dms/image/v2/D4E16AQFW7N4dFENiIQ/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1703259010042?e=1747267200&v=beta&t=LI30JYly02u-00Umi0Xq6LdvIGb9fEl1JDRCN-XUbUU"
+          src="https://images.unsplash.com/photo-1669023414162-8b0573b9c6b2?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Header Image"
           width={500}
           height={500}
@@ -33,7 +33,7 @@ const items = [
     header: (
       <div className="flex flex-1 min-h-[6rem] h-20 md:h-44 lg:h-60 w-full">
         <img
-          src="https://media.licdn.com/dms/image/v2/D4E16AQFW7N4dFENiIQ/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1703259010042?e=1747267200&v=beta&t=LI30JYly02u-00Umi0Xq6LdvIGb9fEl1JDRCN-XUbUU"
+          src="https://images.unsplash.com/photo-1675023071154-407c202d06c7?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Header Image"
           width={500}
           height={500}
@@ -51,7 +51,7 @@ const items = [
     header: (
       <div className="flex flex-1 min-h-[6rem] h-20 md:h-44 lg:h-60 w-full">
         <img
-          src="https://media.licdn.com/dms/image/v2/D4E16AQFW7N4dFENiIQ/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1703259010042?e=1747267200&v=beta&t=LI30JYly02u-00Umi0Xq6LdvIGb9fEl1JDRCN-XUbUU"
+          src="https://images.unsplash.com/photo-1674027326476-3ea3cbf7b9be?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Header Image"
           width={500}
           height={500}
@@ -69,7 +69,7 @@ const items = [
     header: (
       <div className="flex flex-1 min-h-[6rem] h-20 md:h-44 lg:h-60 w-full">
         <img
-          src="https://media.licdn.com/dms/image/v2/D4E16AQFW7N4dFENiIQ/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1703259010042?e=1747267200&v=beta&t=LI30JYly02u-00Umi0Xq6LdvIGb9fEl1JDRCN-XUbUU"
+          src="https://images.unsplash.com/photo-1674027001834-719c347d1eca?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Header Image"
           width={500}
           height={500}

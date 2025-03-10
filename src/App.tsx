@@ -27,7 +27,7 @@ export default function App() {
 
   return (
     <Router>
-      <div className="relative h-full w-full pb-20">
+      <div className="relative h-full w-full pb-12">
         <div
           className="
           absolute inset-0 bg-background

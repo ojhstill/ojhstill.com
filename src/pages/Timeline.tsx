@@ -50,7 +50,7 @@ const data = [
   },
   {
     date: '2024',
-    title: 'Going Freelance',
+    title: 'Going Freelance in Bristol',
     content: (
       <div>
         <div className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal space-y-4 mb-8">
@@ -103,7 +103,7 @@ const data = [
   },
   {
     date: '2021',
-    title: 'Starting at Roke',
+    title: 'Begining at Roke',
     content: (
       <div>
         <div className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal space-y-4 mb-8">
@@ -179,11 +179,11 @@ export default function Timeline() {
     <div className="relative isolate px-6 pt-14 lg:px-8">
       <div className="mx-auto max-w-4xl py-32 sm:py-32 lg:py-32">
         <h1 className="text-5xl font-semibold tracking-tight sm:text-7xl">
-          My Career Timeline
+          My Career Journey
         </h1>
         <p className="mt-8 text-lg font-medium text-pretty text-muted-foreground sm:text-xl/8">
-          Here is a detailed timeline of my career, including all my work
-          history and freelance projects.
+          Here's a quick overview of my career journey so far, showcasing some
+          highlights from my work history and freelance projects.
         </p>
         <UITimeline data={data} />
       </div>
