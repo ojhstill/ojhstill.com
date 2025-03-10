@@ -1,14 +1,27 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
 
 export default function DarkModeToggle() {
   const [darkMode, setDarkMode] = useState(false);
 
+  useEffect(() => {
+    const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+    if (savedDarkMode) {
+      document.documentElement.classList.add('dark');
+      setDarkMode(true);
+    } else {
+      document.documentElement.classList.remove('dark');
+      setDarkMode(false);
+    }
+  }, []);
+
   const toggleDarkMode = () => {
     document.documentElement.classList.toggle('dark');
-    setDarkMode(prev => !prev);
+    const newDarkMode = !darkMode;
+    setDarkMode(newDarkMode);
+    localStorage.setItem('darkMode', newDarkMode.toString());
   };
 
   return (
