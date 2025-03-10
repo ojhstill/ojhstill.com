@@ -4,8 +4,8 @@ export default function Footer() {
   return (
     <footer className="text-center py-6">
       <p className="text-xs text-muted-foreground">
-        © {currentYear} Oliver Still. All rights reserved. Made using React &
-        Tailwind.
+        © {currentYear} Oliver Still. All rights reserved. Made using Vite,
+        React & Tailwind.
       </p>
     </footer>
   );

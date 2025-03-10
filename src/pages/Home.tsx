@@ -14,7 +14,7 @@ const Skeleton = () => (
       alt="Wattle Logo"
       width={500}
       height={500}
-      className="rounded-xl object-cover"
+      className="rounded-xl object-cover w-full"
     />
   </div>
 );

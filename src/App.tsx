@@ -1,31 +1,28 @@
 'use client';
 
-import { useState } from 'react';
 import { LinkedInLogoIcon, GitHubLogoIcon } from '@radix-ui/react-icons';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import MobileMenu from '@/components/MobileMenu';
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Timeline from '@/pages/Timeline';
 import Home from '@/pages/Home';
 
-const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'Timeline', href: '/timeline' },
-  {
-    name: 'GitHub',
-    icon: <GitHubLogoIcon aria-hidden="true" />,
-    href: 'https://github.com/ojhstill',
-  },
-  {
-    name: 'LinkedIn',
-    icon: <LinkedInLogoIcon aria-hidden="true" />,
-    href: 'https://www.linkedin.com/in/ojhstill',
-  },
-];
-
 export default function App() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'Timeline', href: '/timeline' },
+    {
+      name: 'GitHub',
+      icon: <GitHubLogoIcon aria-hidden="true" />,
+      href: 'https://github.com/ojhstill',
+    },
+    {
+      name: 'LinkedIn',
+      icon: <LinkedInLogoIcon aria-hidden="true" />,
+      href: 'https://www.linkedin.com/in/ojhstill',
+    },
+  ];
 
   return (
     <Router>
@@ -45,12 +42,7 @@ export default function App() {
         "
         />
 
-        <Header navigation={navigation} setMobileMenuOpen={setMobileMenuOpen} />
-        <MobileMenu
-          navigation={navigation}
-          mobileMenuOpen={mobileMenuOpen}
-          setMobileMenuOpen={setMobileMenuOpen}
-        />
+        <Header navigation={navigation} />
 
         <Routes>
           <Route path="/" element={<Home />} />

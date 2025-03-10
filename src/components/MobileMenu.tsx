@@ -1,10 +1,12 @@
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { Cross1Icon } from '@radix-ui/react-icons';
+import { NavigationItem } from '@/components/Header';
+import DarkModeToggle from '@/components/DarkModeToggle';
 
 interface MobileMenuProps {
   mobileMenuOpen: boolean;
   setMobileMenuOpen: (open: boolean) => void;
-  navigation: { name: string; href: string; icon?: React.ReactNode }[];
+  navigation: NavigationItem[];
 }
 
 export default function MobileMenu({
@@ -50,13 +52,14 @@ export default function MobileMenu({
                 </a>
               ))}
             </div>
-            <div className="py-6">
+            <div className="space-y-2 py-6">
               <a
                 href="/contact"
                 className="-mx-3 flex rounded-lg px-3 py-2 text-base/7 font-semibold hover:bg-sidebar-accent"
               >
                 Get in Touch
               </a>
+              <DarkModeToggle />
             </div>
           </div>
         </div>
