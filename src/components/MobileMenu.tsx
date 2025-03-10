@@ -53,7 +53,7 @@ export default function MobileMenu({
             </div>
             <div className="space-y-2 py-6">
               <a
-                href="/contact"
+                href="mailto:oliver@ojhstill.com"
                 className="-mx-3 flex rounded-lg px-3 py-2 text-base/7 font-semibold hover:bg-sidebar-accent"
               >
                 Get in Touch

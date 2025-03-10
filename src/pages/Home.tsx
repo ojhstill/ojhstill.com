@@ -97,7 +97,7 @@ export default function Home() {
                 className="font-semibold text-primary"
               >
                 <span aria-hidden="true" className="absolute inset-0" />
-                Read more <span aria-hidden="true">&rarr;</span>
+                Learn more <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
           </div>
@@ -120,7 +120,7 @@ export default function Home() {
                 See My Career Timeline
               </a>
               <a
-                href="/contact"
+                href="mailto:oliver@ojhstill.com"
                 className="text-sm/6 font-semibold flex items-center gap-2 hover:text-primary/80"
               >
                 Let’s Collaborate
