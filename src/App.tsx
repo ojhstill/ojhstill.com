@@ -17,11 +17,13 @@ export default function App() {
       name: 'GitHub',
       icon: <GitHubLogoIcon aria-hidden="true" />,
       href: 'https://github.com/ojhstill',
+      target: '_blank',
     },
     {
       name: 'LinkedIn',
       icon: <LinkedInLogoIcon aria-hidden="true" />,
       href: 'https://www.linkedin.com/in/ojhstill',
+      target: '_blank',
     },
   ];
 
