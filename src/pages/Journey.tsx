@@ -70,33 +70,19 @@ const data = [
         </div>
         <div className="grid grid-cols-2 gap-4">
           <img
-            src="https://abcounties.com/wp-content/uploads/2023/02/bristol-997x375.jpg"
-            alt="hero template"
+            src="https://www.collegiate-ac.com/propeller/uploads/sites/2/2019/09/city-hero-bristol-1450x742.jpg"
+            alt="Bristol City"
             width={500}
             height={500}
             className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
           />
           <img
             src="https://media.licdn.com/dms/image/v2/D4E22AQHORXPFp-4M_Q/feedshare-shrink_1280/feedshare-shrink_1280/0/1725978809588?e=1744243200&v=beta&t=cLhQ6FPKh3HiQehWlDDt_UXSVF_HmHZ85EQAb68G30Q"
-            alt="feature template"
+            alt="Me Post 2024 Great North Run"
             width={500}
             height={500}
             className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
           />
-          {/* <img
-            src="https://assets.aceternity.com/pro/bento-grids.png"
-            alt="bento template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
-          <img
-            src="https://assets.aceternity.com/cards.png"
-            alt="cards template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          /> */}
         </div>
       </div>
     ),
@@ -139,9 +125,9 @@ const data = [
             ✅ Salman Bhai Fan Club registrations open
           </div>
         </div> */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4">
           <img
-            src="https://media.licdn.com/dms/image/v2/D4E0BAQEe5TwWpKAqxA/company-logo_200_200/company-logo_200_200/0/1738857449783/roke_manor_research_logo?e=2147483647&v=beta&t=UrP4elG616Zuz7oxm-cJ_FcKk-vnilf8MLca3opYMl4"
+            src="https://media.licdn.com/dms/image/v2/D4E0BAQHvzFBtc-lAhg/company-logo_200_200/company-logo_200_200/0/1688204294818/roke_manor_research_logo?e=2147483647&v=beta&t=huS0ryLQ_51zpAZFUgKEheLZOS0oMZeGQFkQ9ydop4w"
             alt="Roke Logo"
             width={500}
             height={500}
@@ -154,20 +140,6 @@ const data = [
             height={500}
             className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
           />
-          {/* <img
-            src="https://assets.aceternity.com/features-section.png"
-            alt="feature template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
-          <img
-            src="https://assets.aceternity.com/cards.png"
-            alt="cards template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          /> */}
         </div>
       </div>
     ),
