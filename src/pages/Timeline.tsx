@@ -177,7 +177,7 @@ const data = [
 export default function Timeline() {
   return (
     <div className="relative isolate px-6 pt-14 lg:px-8">
-      <div className="mx-auto max-w-2xl py-32 sm:py-32 lg:py-32">
+      <div className="mx-auto max-w-4xl py-32 sm:py-32 lg:py-32">
         <h1 className="text-5xl font-semibold tracking-tight sm:text-7xl">
           My Career Timeline
         </h1>
