@@ -1,6 +1,17 @@
 import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 
-export default function Header({ navigation, setMobileMenuOpen }) {
+interface NavigationItem {
+  name: string;
+  href: string;
+  icon?: React.ReactNode;
+}
+
+interface HeaderProps {
+  navigation: NavigationItem[];
+  setMobileMenuOpen: (open: boolean) => void;
+}
+
+export default function Header({ navigation, setMobileMenuOpen }: HeaderProps) {
   return (
     <header className="absolute inset-x-0 top-0 z-50">
       <nav

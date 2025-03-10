@@ -6,8 +6,8 @@ import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import MobileMenu from '@/components/MobileMenu';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Timeline from '@/components/Timeline';
-import Home from '@/components/Home';
+import Timeline from '@/pages/Timeline';
+import Home from '@/pages/Home';
 
 const navigation = [
   { name: 'Home', href: '/' },

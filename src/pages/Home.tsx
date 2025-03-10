@@ -8,12 +8,20 @@ import {
 } from '@radix-ui/react-icons';
 
 const Skeleton = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gray-100 dark:bg-gray-800"></div>
+  <div className="flex flex-1 min-h-[6rem] h-20 md:h-44 lg:h-60 w-full">
+    <img
+      src="https://media.licdn.com/dms/image/v2/D4E16AQFW7N4dFENiIQ/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1703259010042?e=1747267200&v=beta&t=LI30JYly02u-00Umi0Xq6LdvIGb9fEl1JDRCN-XUbUU"
+      alt="Wattle Logo"
+      width={500}
+      height={500}
+      className="rounded-xl object-cover"
+    />
+  </div>
 );
 
 const items = [
   {
-    title: 'Full‑Stack Solutions Architect',
+    title: 'Full‑Stack Software Architect',
     description:
       'Transforming complex project requirements into scalable, end‑to‑end digital solutions – from designing cost‑efficient architectures for e‑commerce platforms to integrating modern frameworks with robust back‑end systems.',
     header: <Skeleton />,
@@ -31,7 +39,7 @@ const items = [
   {
     title: 'Certified Agile Team Leader',
     description:
-      'Leading high‑performing teams with agile methodologies – demonstrated by boosting Scrum velocity by 77% on multi‑million‑pound projects, mentoring junior talent, and driving transformative technical change.',
+      'Leading high‑performing teams with agile methodologies – demonstrated by boosting Scrum velocity, mentoring junior talent, and driving technical change.',
     header: <Skeleton />,
     className: 'md:col-span-1',
     icon: <RocketIcon aria-hidden="true" className="size-6" />,
@@ -73,8 +81,8 @@ export default function Home() {
             </div>
             <p className="mt-8 text-lg font-medium text-pretty text-muted-foreground sm:text-xl/8">
               Hi, I'm Oli. 👋 I'm currently a Software Engineer based in Bristol
-              working at Wattle. Here is my complete online portfolio, including
-              all work history and freelance projects.
+              building new things at Wattle. Here is my complete online
+              portfolio, including all work history and personal projects.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
