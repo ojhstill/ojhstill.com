@@ -1,7 +1,6 @@
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { Cross1Icon } from '@radix-ui/react-icons';
 import { NavigationItem } from '@/components/Header';
-import DarkModeToggle from '@/components/DarkModeToggle';
 
 interface MobileMenuProps {
   mobileMenuOpen: boolean;
@@ -59,7 +58,6 @@ export default function MobileMenu({
               >
                 Get in Touch
               </a>
-              <DarkModeToggle />
             </div>
           </div>
         </div>

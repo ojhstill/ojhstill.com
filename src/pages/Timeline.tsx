@@ -2,7 +2,8 @@ import { Timeline as UITimeline } from '@/components/ui/timeline';
 
 const data = [
   {
-    title: 'Early 2025 - Joining Wattle',
+    date: '2025',
+    title: 'Joining Wattle',
     content: (
       <div>
         <div className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal space-y-4 mb-8">
@@ -48,7 +49,8 @@ const data = [
     ),
   },
   {
-    title: 'Early 2024 - Going Freelance',
+    date: '2024',
+    title: 'Going Freelance',
     content: (
       <div>
         <div className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal space-y-4 mb-8">
@@ -100,7 +102,8 @@ const data = [
     ),
   },
   {
-    title: '2021 - Starting at Roke',
+    date: '2021',
+    title: 'Starting at Roke',
     content: (
       <div>
         <div className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal space-y-4 mb-8">

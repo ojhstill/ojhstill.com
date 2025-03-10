@@ -1,12 +1,13 @@
 'use client';
 
 import { LinkedInLogoIcon, GitHubLogoIcon } from '@radix-ui/react-icons';
-import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Timeline from '@/pages/Timeline';
 import Home from '@/pages/Home';
+import Contact from '@/pages/Contact';
 
 export default function App() {
   const navigation = [
@@ -30,6 +31,7 @@ export default function App() {
         <div
           className="
           absolute inset-0 bg-background
+          z-0
           [--s:20px]
           [--dot-size:1px]
           [--dot-colour:theme('colors.zinc.300')]
@@ -47,6 +49,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/timeline" element={<Timeline />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
 
         <Footer />

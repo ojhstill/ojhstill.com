@@ -34,7 +34,8 @@ export default function Header({ navigation }: HeaderProps) {
               <span>ojhstill</span>
             </a>
           </div>
-          <div className="flex lg:hidden">
+          <div className="flex lg:hidden gap-x-6 items-center">
+            <DarkModeToggle />
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
@@ -56,7 +57,7 @@ export default function Header({ navigation }: HeaderProps) {
               </a>
             ))}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-12 items-center">
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6 items-center">
             <a href="/contact" className="text-sm/6 font-semibold">
               Get in Touch
             </a>

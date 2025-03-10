@@ -7,24 +7,22 @@ import {
   ArrowRightIcon,
 } from '@radix-ui/react-icons';
 
-const Skeleton = () => (
-  <div className="flex flex-1 min-h-[6rem] h-20 md:h-44 lg:h-60 w-full">
-    <img
-      src="https://media.licdn.com/dms/image/v2/D4E16AQFW7N4dFENiIQ/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1703259010042?e=1747267200&v=beta&t=LI30JYly02u-00Umi0Xq6LdvIGb9fEl1JDRCN-XUbUU"
-      alt="Wattle Logo"
-      width={500}
-      height={500}
-      className="rounded-xl object-cover w-full"
-    />
-  </div>
-);
-
 const items = [
   {
     title: 'Full‑Stack Software Architect',
     description:
       'Transforming complex project requirements into scalable, end‑to‑end digital solutions – from designing cost‑efficient architectures for e‑commerce platforms to integrating modern frameworks with robust back‑end systems.',
-    header: <Skeleton />,
+    header: (
+      <div className="flex flex-1 min-h-[6rem] h-20 md:h-44 lg:h-60 w-full">
+        <img
+          src="https://media.licdn.com/dms/image/v2/D4E16AQFW7N4dFENiIQ/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1703259010042?e=1747267200&v=beta&t=LI30JYly02u-00Umi0Xq6LdvIGb9fEl1JDRCN-XUbUU"
+          alt="Header Image"
+          width={500}
+          height={500}
+          className="rounded-xl object-cover w-full"
+        />
+      </div>
+    ),
     className: 'md:col-span-2',
     icon: <CodeSandboxLogoIcon aria-hidden="true" className="size-6" />,
   },
@@ -32,7 +30,17 @@ const items = [
     title: 'Client-Focused Technical Consultant',
     description:
       'Empowering businesses with tailored technical insights and hands‑on support – spearheading client engagement strategies to drive innovation.',
-    header: <Skeleton />,
+    header: (
+      <div className="flex flex-1 min-h-[6rem] h-20 md:h-44 lg:h-60 w-full">
+        <img
+          src="https://media.licdn.com/dms/image/v2/D4E16AQFW7N4dFENiIQ/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1703259010042?e=1747267200&v=beta&t=LI30JYly02u-00Umi0Xq6LdvIGb9fEl1JDRCN-XUbUU"
+          alt="Header Image"
+          width={500}
+          height={500}
+          className="rounded-xl object-cover w-full"
+        />
+      </div>
+    ),
     className: 'md:col-span-1',
     icon: <MixIcon aria-hidden="true" className="size-6" />,
   },
@@ -40,7 +48,17 @@ const items = [
     title: 'Certified Agile Team Leader',
     description:
       'Leading high‑performing teams with agile methodologies – demonstrated by boosting Scrum velocity, mentoring junior talent, and driving technical change.',
-    header: <Skeleton />,
+    header: (
+      <div className="flex flex-1 min-h-[6rem] h-20 md:h-44 lg:h-60 w-full">
+        <img
+          src="https://media.licdn.com/dms/image/v2/D4E16AQFW7N4dFENiIQ/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1703259010042?e=1747267200&v=beta&t=LI30JYly02u-00Umi0Xq6LdvIGb9fEl1JDRCN-XUbUU"
+          alt="Header Image"
+          width={500}
+          height={500}
+          className="rounded-xl object-cover w-full"
+        />
+      </div>
+    ),
     className: 'md:col-span-1',
     icon: <RocketIcon aria-hidden="true" className="size-6" />,
   },
@@ -48,7 +66,17 @@ const items = [
     title: 'Dynamic Product Designer',
     description:
       'Merging full‑stack expertise with creative design principles – from revamping digital portals to championing accessibility standards, crafting intuitive products that resonate with users.',
-    header: <Skeleton />,
+    header: (
+      <div className="flex flex-1 min-h-[6rem] h-20 md:h-44 lg:h-60 w-full">
+        <img
+          src="https://media.licdn.com/dms/image/v2/D4E16AQFW7N4dFENiIQ/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1703259010042?e=1747267200&v=beta&t=LI30JYly02u-00Umi0Xq6LdvIGb9fEl1JDRCN-XUbUU"
+          alt="Header Image"
+          width={500}
+          height={500}
+          className="rounded-xl object-cover w-full"
+        />
+      </div>
+    ),
     className: 'md:col-span-2',
     icon: <TransformIcon aria-hidden="true" className="size-6" />,
   },
@@ -87,13 +115,13 @@ export default function Home() {
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="/timeline"
-                className="rounded-md bg-primary hover:bg-zinc-300 text-primary-foreground px-3.5 py-2.5 text-sm font-semibold shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="rounded-md bg-primary hover:bg-primary/80 text-primary-foreground px-3.5 py-2.5 text-sm font-semibold shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 See My Career Timeline
               </a>
               <a
                 href="/contact"
-                className="text-sm/6 font-semibold flex items-center gap-2 hover:text-zinc-300"
+                className="text-sm/6 font-semibold flex items-center gap-2 hover:text-primary/80"
               >
                 Let’s Collaborate
                 <ArrowRightIcon aria-hidden="true" />
