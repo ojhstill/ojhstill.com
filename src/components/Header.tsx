@@ -21,7 +21,7 @@ export default function Header({ navigation }: HeaderProps) {
       <header className="absolute inset-x-0 top-0 z-50">
         <nav
           aria-label="Global"
-          className="flex items-center justify-between p-6 lg:px-8"
+          className="flex items-center justify-between p-6"
         >
           <div className="flex lg:flex-1">
             <a href="/" className="-m-1.5 p-1.5">
@@ -44,13 +44,13 @@ export default function Header({ navigation }: HeaderProps) {
             className="hidden lg:flex lg:gap-x-12"
           />
           <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6 items-center">
+            <DarkModeToggle />
             <a
               href="mailto:oliver@ojhstill.com"
-              className="-mx-3 flex rounded-lg px-3 py-2 text-base/7 font-semibold hover:bg-sidebar-accent"
+              className="-mx-3 flex rounded-lg px-3 text-base/7 font-semibold hover:bg-sidebar-accent"
             >
               Get in Touch
             </a>
-            <DarkModeToggle />
           </div>
         </nav>
       </header>

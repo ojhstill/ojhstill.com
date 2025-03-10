@@ -20,7 +20,7 @@ export function NavigationLinks({
         <a
           key={item.name}
           href={item.href}
-          className="-mx-3 rounded-lg px-3 py-2 text-base/7 font-semibold hover:bg-sidebar-accent flex items-center gap-2"
+          className="-mx-3 rounded-lg px-3 text-base/7 font-semibold hover:bg-sidebar-accent flex items-center gap-2"
         >
           {item.icon}
           {item.name}

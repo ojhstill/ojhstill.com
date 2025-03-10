@@ -13,7 +13,7 @@ export default function DarkModeToggle() {
 
   return (
     <button
-      className="border-1 border-foreground/50 hover:border-foreground/20 rounded-lg p-2 cursor-pointer"
+      className="border-1 border-foreground/60 hover:border-foreground/30 rounded-lg p-2 cursor-pointer"
       onClick={toggleDarkMode}
       aria-label="Toggle Dark Mode"
     >

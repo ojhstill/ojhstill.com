@@ -1,4 +1,4 @@
-import { Timeline as UITimeline } from '@/components/ui/timeline';
+import { Timeline } from '@/components/ui/timeline';
 
 const data = [
   {
@@ -174,7 +174,7 @@ const data = [
   },
 ];
 
-export default function Timeline() {
+export default function Journey() {
   return (
     <div className="relative isolate px-6 pt-14 lg:px-8">
       <div className="mx-auto max-w-4xl py-32 sm:py-32 lg:py-32">
@@ -185,7 +185,7 @@ export default function Timeline() {
           Here's a quick overview of my career journey so far, showcasing some
           highlights from my work history and freelance projects.
         </p>
-        <UITimeline data={data} />
+        <Timeline data={data} />
       </div>
     </div>
   );

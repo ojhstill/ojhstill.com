@@ -5,14 +5,14 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Timeline from '@/pages/Timeline';
+import Journey from '@/pages/Journey';
 import Home from '@/pages/Home';
 import Contact from '@/pages/Contact';
 
 export default function App() {
   const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'Timeline', href: '/timeline' },
+    { name: 'Career Journey', href: '/journey' },
     {
       name: 'GitHub',
       icon: <GitHubLogoIcon aria-hidden="true" />,
@@ -48,7 +48,7 @@ export default function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/timeline" element={<Timeline />} />
+          <Route path="/journey" element={<Journey />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
 

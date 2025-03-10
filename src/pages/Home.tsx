@@ -15,7 +15,7 @@ const items = [
     header: (
       <div className="flex flex-1 min-h-[6rem] h-20 md:h-44 lg:h-60 w-full">
         <img
-          src="https://images.unsplash.com/photo-1669023414162-8b0573b9c6b2?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="https://images.unsplash.com/photo-1669023414171-56f0740e34cd?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Header Image"
           width={500}
           height={500}
@@ -51,7 +51,7 @@ const items = [
     header: (
       <div className="flex flex-1 min-h-[6rem] h-20 md:h-44 lg:h-60 w-full">
         <img
-          src="https://images.unsplash.com/photo-1674027326476-3ea3cbf7b9be?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="https://images.unsplash.com/photo-1666336473880-aebebece24b4?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Header Image"
           width={500}
           height={500}
@@ -69,7 +69,7 @@ const items = [
     header: (
       <div className="flex flex-1 min-h-[6rem] h-20 md:h-44 lg:h-60 w-full">
         <img
-          src="https://images.unsplash.com/photo-1674027001834-719c347d1eca?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="https://images.unsplash.com/photo-1675023112820-84a7ee71a119?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Header Image"
           width={500}
           height={500}
@@ -88,7 +88,7 @@ export default function Home() {
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-32 lg:py-32">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm/6 text-foreground ring-1 ring-foreground/50 hover:ring-foreground/20">
+            <div className="relative rounded-full px-3 py-1 text-sm/6 text-foreground ring-1 ring-foreground/60 hover:ring-foreground/30">
               I've recently joined Wattle.{' '}
               <a
                 href="https://www.wearewattle.com"
@@ -114,14 +114,14 @@ export default function Home() {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="/timeline"
-                className="rounded-md bg-primary hover:bg-primary/80 text-primary-foreground px-3.5 py-2.5 text-sm font-semibold shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                href="/journey"
+                className="rounded-md bg-primary hover:bg-primary/70 text-primary-foreground px-3.5 py-2.5 text-sm font-semibold shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                See My Career Timeline
+                See My Career Journey
               </a>
               <a
                 href="mailto:oliver@ojhstill.com"
-                className="text-sm/6 font-semibold flex items-center gap-2 hover:text-primary/80"
+                className="text-sm/6 font-semibold flex items-center gap-2 hover:text-primary/70"
               >
                 Let’s Collaborate
                 <ArrowRightIcon aria-hidden="true" />
