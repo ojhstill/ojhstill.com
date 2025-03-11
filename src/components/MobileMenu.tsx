@@ -1,5 +1,5 @@
 import { Dialog, DialogPanel } from '@headlessui/react';
-import { Cross1Icon } from '@radix-ui/react-icons';
+import { Cross1Icon, GlobeIcon } from '@radix-ui/react-icons';
 import { NavigationLinks, NavigationItem } from '@/components/NavigationLinks';
 
 interface MobileMenuProps {
@@ -25,7 +25,8 @@ export default function MobileMenu({
         className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-sidebar px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 duration-300 ease-out data-[closed]:opacity-0 md:data-[closed]:translate-x-1"
       >
         <div className="flex items-center justify-between">
-          <a href="/" className="-m-1.5 p-1.5">
+          <a href="/" className="-m-1.5 p-1.5 flex gap-x-2">
+            <GlobeIcon aria-hidden="true" className="size-6" />
             <span>ojhstill</span>
           </a>
           <button

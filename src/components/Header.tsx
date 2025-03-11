@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { HamburgerMenuIcon } from '@radix-ui/react-icons';
+import { HamburgerMenuIcon, GlobeIcon } from '@radix-ui/react-icons';
 import MobileMenu from '@/components/MobileMenu';
 import DarkModeToggle from '@/components/DarkModeToggle';
 import { NavigationLinks, NavigationItem } from '@/components/NavigationLinks';
@@ -24,7 +24,8 @@ export default function Header({ navigation }: HeaderProps) {
           className="flex items-center justify-between p-6"
         >
           <div className="flex lg:flex-1">
-            <a href="/" className="-m-1.5 p-1.5">
+            <a href="/" className="-m-1.5 p-1.5 flex gap-x-2">
+              <GlobeIcon aria-hidden="true" className="size-6" />
               <span>ojhstill</span>
             </a>
           </div>
