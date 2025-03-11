@@ -1,4 +1,5 @@
 import { BentoGrid, BentoGridItem } from '@/components/ui/bento-grid';
+import { Spotlight } from '@/components/ui/spotlight-new';
 import {
   CodeSandboxLogoIcon,
   MixIcon,
@@ -101,6 +102,7 @@ export default function Home() {
               </a>
             </div>
           </div>
+          <Spotlight duration={20} translateY={-250} />
           <div className="text-center">
             <div className="relative inline-block p-6">
               <h1 className="relative z-10 text-5xl font-semibold tracking-tight sm:text-7xl">
