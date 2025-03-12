@@ -17,14 +17,14 @@ const data = [
             digital tools.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-4">
-          {/* <img
-            src="https://media.licdn.com/dms/image/v2/C4E0BAQHKZKFz-Zus0w/company-logo_200_200/company-logo_200_200/0/1663664358840/wattle_solutions_ltd_logo?e=1749686400&v=beta&t=jyrmjYzytbUhT3NFAwGuTAWZEoEZ1CyFU-MTKXqWc-E"
-            alt="Wattle Logo"
+        <div className="grid grid-cols-2 gap-4">
+          <img
+            src="https://media.licdn.com/dms/image/v2/D4D22AQHnfI0aaRtaFg/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1684398209908?e=1744848000&v=beta&t=qvkFXEakV2AqV0dEfjbwg1bIbjGFoE9Ooe4tctAIuJU"
+            alt="Wattle Conference Stand"
             width={500}
             height={500}
             className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          /> */}
+          />
           <img
             src="https://media.licdn.com/dms/image/v2/D4E22AQESSeUoejLngQ/feedshare-shrink_1280/B4EZT054EyHcAk-/0/1739275601156?e=1744243200&v=beta&t=6O8rkQgC14ebt65jMiszbgpQgwGN-qsNPEvOQUIIFA8"
             alt="Wattle Office Space"
@@ -32,20 +32,6 @@ const data = [
             height={500}
             className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
           />
-          {/* <img
-            src="https://assets.aceternity.com/templates/startup-3.webp"
-            alt="startup template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
-          <img
-            src="https://assets.aceternity.com/templates/startup-4.webp"
-            alt="startup template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          /> */}
         </div>
       </div>
     ),
@@ -127,14 +113,14 @@ const data = [
             ✅ Salman Bhai Fan Club registrations open
           </div>
         </div> */}
-        <div className="grid grid-cols-1 gap-4">
-          {/* <img
-            src="https://media.licdn.com/dms/image/v2/D4E0BAQHvzFBtc-lAhg/company-logo_200_200/company-logo_200_200/0/1688204294818/roke_manor_research_logo?e=2147483647&v=beta&t=huS0ryLQ_51zpAZFUgKEheLZOS0oMZeGQFkQ9ydop4w"
+        <div className="grid grid-cols-2 gap-4">
+          <img
+            src="https://www.roke.co.uk/media/v2gmrdt3/roke-48.jpg?center=0.49624060150375937,0.54260651629072687&mode=crop&width=1440&height=584&format=jpg&quality=80&rnd=133077229832030000"
             alt="Roke Logo"
             width={500}
             height={500}
             className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          /> */}
+          />
           <img
             src="https://www.roke.co.uk/media/arenugbt/2015-roke-2.png"
             alt="Roke Romsey Site"
