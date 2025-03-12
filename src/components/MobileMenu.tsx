@@ -25,14 +25,19 @@ export default function MobileMenu({
         className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-sidebar px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 duration-300 ease-out data-[closed]:opacity-0 md:data-[closed]:translate-x-1"
       >
         <div className="flex items-center justify-between">
-          <a href="/" className="-m-1.5 p-1.5 flex gap-x-2">
-            <GlobeIcon aria-hidden="true" className="size-6" />
-            <span>ojhstill</span>
-          </a>
+          <div className="sm:opacity-0">
+            <a
+              href="/"
+              className="-mx-3 px-3 py-2 text-base/7 font-semibold flex items-center gap-2"
+            >
+              <GlobeIcon aria-hidden="true" className="size-6" />
+              ojhstill
+            </a>
+          </div>
           <button
             type="button"
             onClick={() => setMobileMenuOpen(false)}
-            className="-m-2.5 p-2.5 cursor-pointer"
+            className="-m-2.5 p-2 cursor-pointer"
           >
             <span className="sr-only">Close menu</span>
             <Cross1Icon aria-hidden="true" className="size-6" />

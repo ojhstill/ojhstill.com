@@ -1,5 +1,5 @@
 import { BentoGrid, BentoGridItem } from '@/components/ui/bento-grid';
-import { Spotlight } from '@/components/ui/spotlight-new';
+// import { Spotlight } from '@/components/ui/spotlight-new';
 import {
   CodeSandboxLogoIcon,
   MixIcon,
@@ -28,9 +28,9 @@ const items = [
     icon: <CodeSandboxLogoIcon aria-hidden="true" className="size-6" />,
   },
   {
-    title: 'Client-Focused Technical Consultant',
+    title: 'Commerical-Focused Technical Consultant',
     description:
-      'Empowering businesses with tailored technical insights and hands‑on support – spearheading client engagement strategies to drive innovation.',
+      'Empowering clients with tailored technical insights and hands‑on support – spearheading client engagement strategies to drive innovation.',
     header: (
       <div className="flex flex-1 min-h-[6rem] h-20 md:h-44 lg:h-60 w-full">
         <img
@@ -86,64 +86,62 @@ const items = [
 export default function Home() {
   return (
     <>
-      <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div className="mx-auto max-w-2xl py-32 sm:py-32 lg:py-32">
-          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm/6 text-foreground ring-1 ring-foreground/60 hover:ring-foreground/30">
-              I've recently joined Wattle.{' '}
-              <a
-                href="https://www.wearewattle.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-primary"
-              >
-                <span aria-hidden="true" className="absolute inset-0" />
-                Learn more <span aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
-          </div>
-          <Spotlight duration={20} translateY={-250} />
-          <div className="text-center">
-            <div className="relative inline-block p-6">
-              <h1 className="relative z-10 text-5xl font-semibold tracking-tight sm:text-7xl">
-                Software Engineer, Product Designer, and Agile Leader.
-              </h1>
-            </div>
-            <p className="mt-8 text-lg font-medium text-pretty text-muted-foreground sm:text-xl/8">
-              Hi, I'm Oli. 👋 I'm currently a Software Engineer based in Bristol
-              building new things at Wattle. Here is my complete online
-              portfolio, including all work history and personal projects.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="/journey"
-                className="rounded-md bg-primary hover:bg-primary/70 text-primary-foreground px-3.5 py-2.5 text-sm font-semibold shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                See My Career Journey
-              </a>
-              <a
-                href="mailto:oliver@ojhstill.com"
-                className="text-sm/6 font-semibold flex items-center gap-2 hover:text-primary/70"
-              >
-                Let’s Collaborate
-                <ArrowRightIcon aria-hidden="true" />
-              </a>
-            </div>
+      <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-32">
+        <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+          <div className="relative rounded-full px-3 py-1 text-sm/6 text-foreground ring-1 ring-foreground/60 hover:ring-foreground/30">
+            I've recently joined Wattle.{' '}
+            <a
+              href="https://www.wearewattle.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-primary"
+            >
+              <span aria-hidden="true" className="absolute inset-0" />
+              Learn more <span aria-hidden="true">&rarr;</span>
+            </a>
           </div>
         </div>
-        <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
-          {items.map((item, i) => (
-            <BentoGridItem
-              key={i}
-              title={item.title}
-              description={item.description}
-              header={item.header}
-              className={item.className}
-              icon={item.icon}
-            />
-          ))}
-        </BentoGrid>
+        {/* <Spotlight duration={20} translateY={-250} /> */}
+        <div className="text-center">
+          <div className="relative inline-block">
+            <h1 className="relative z-10 text-4xl sm:text-7xl font-semibold tracking-tight">
+              Software Engineer, Product Designer, and Agile Leader.
+            </h1>
+          </div>
+          <p className="mt-8 text-lg font-medium text-pretty text-muted-foreground sm:text-xl/8">
+            Hi, I'm Oli. 👋 I'm currently a Software Engineer based in Bristol
+            building new things at Wattle. Here is my complete online portfolio,
+            including all work history and personal projects.
+          </p>
+          <div className="mt-10 flex items-center justify-center gap-x-6 text-xs/6 lg:text-sm">
+            <a
+              href="/journey"
+              className="rounded-md bg-primary hover:bg-primary/70 text-primary-foreground px-3.5 py-2.5 font-semibold shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              See My Career Journey
+            </a>
+            <a
+              href="mailto:oliver@ojhstill.com"
+              className="font-semibold flex items-center gap-2 hover:text-primary/70"
+            >
+              Let’s Collaborate
+              <ArrowRightIcon aria-hidden="true" />
+            </a>
+          </div>
+        </div>
       </div>
+      <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
+        {items.map((item, i) => (
+          <BentoGridItem
+            key={i}
+            title={item.title}
+            description={item.description}
+            header={item.header}
+            className={item.className}
+            icon={item.icon}
+          />
+        ))}
+      </BentoGrid>
     </>
   );
 }

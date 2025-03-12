@@ -29,7 +29,7 @@ export default function App() {
 
   return (
     <Router>
-      <div className="relative h-full w-full pb-12">
+      <div className="relative h-full w-full">
         <div
           className="
           absolute inset-0 bg-background
@@ -48,11 +48,13 @@ export default function App() {
 
         <Header navigation={navigation} />
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/journey" element={<Journey />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <main className="relative isolate px-6 py-18">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/journey" element={<Journey />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
 
         <Footer />
       </div>

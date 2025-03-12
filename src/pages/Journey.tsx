@@ -1,4 +1,6 @@
 import { Timeline } from '@/components/ui/timeline';
+import { ArrowDownIcon } from '@radix-ui/react-icons';
+import { useEffect } from 'react';
 
 const data = [
   {
@@ -15,14 +17,14 @@ const data = [
             digital tools.
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-4">
-          <img
+        <div className="grid grid-cols-1 gap-4">
+          {/* <img
             src="https://media.licdn.com/dms/image/v2/C4E0BAQHKZKFz-Zus0w/company-logo_200_200/company-logo_200_200/0/1663664358840/wattle_solutions_ltd_logo?e=1749686400&v=beta&t=jyrmjYzytbUhT3NFAwGuTAWZEoEZ1CyFU-MTKXqWc-E"
             alt="Wattle Logo"
             width={500}
             height={500}
             className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
+          /> */}
           <img
             src="https://media.licdn.com/dms/image/v2/D4E22AQESSeUoejLngQ/feedshare-shrink_1280/B4EZT054EyHcAk-/0/1739275601156?e=1744243200&v=beta&t=6O8rkQgC14ebt65jMiszbgpQgwGN-qsNPEvOQUIIFA8"
             alt="Wattle Office Space"
@@ -81,7 +83,7 @@ const data = [
             alt="Me Post 2024 Great North Run"
             width={500}
             height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            className="rounded-lg object-cover object-top h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
           />
         </div>
       </div>
@@ -126,13 +128,13 @@ const data = [
           </div>
         </div> */}
         <div className="grid grid-cols-1 gap-4">
-          <img
+          {/* <img
             src="https://media.licdn.com/dms/image/v2/D4E0BAQHvzFBtc-lAhg/company-logo_200_200/company-logo_200_200/0/1688204294818/roke_manor_research_logo?e=2147483647&v=beta&t=huS0ryLQ_51zpAZFUgKEheLZOS0oMZeGQFkQ9ydop4w"
             alt="Roke Logo"
             width={500}
             height={500}
             className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
+          /> */}
           <img
             src="https://www.roke.co.uk/media/arenugbt/2015-roke-2.png"
             alt="Roke Romsey Site"
@@ -144,21 +146,67 @@ const data = [
       </div>
     ),
   },
+  // {
+  //   date: '2017',
+  //   title: "A Master's of Engineering",
+  //   content: (
+  //     <div>
+  //       <div className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal space-y-4 mb-8">
+  //         <p>
+  //           I graduated from the University of York with a Master's of
+  //           Engineering in Electronic Engineering. My final year project focused
+  //           on the development of a smart irrigation system, using machine
+  //           learning to predict soil moisture levels and control water flow to
+  //           plants.
+  //         </p>
+  //       </div>
+  //       <div className="grid grid-cols-1 gap-4">
+  //         <img
+  //           src="https://www.roke.co.uk/media/arenugbt/2015-roke-2.png"
+  //           alt="Roke Romsey Site"
+  //           width={500}
+  //           height={500}
+  //           className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+  //         />
+  //       </div>
+  //     </div>
+  //   ),
+  // },
 ];
 
 export default function Journey() {
+  useEffect(() => {
+    const handleScroll = () => {
+      const downArrow = document.querySelector('.down-arrow') as HTMLElement;
+      if (downArrow) {
+        const windowHeight = window.innerHeight / 4;
+        const opacity = Math.max(0, 1 - window.scrollY / windowHeight);
+        downArrow.style.opacity = opacity.toString();
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="relative isolate px-6 pt-14 lg:px-8">
-      <div className="mx-auto max-w-4xl py-32 sm:py-32 lg:py-32">
-        <h1 className="text-5xl font-semibold tracking-tight sm:text-7xl">
+    <>
+      <div className="text-center mx-auto max-w-2xl py-16 sm:py-32 lg:py-32">
+        <h1 className="relative z-10 text-4xl sm:text-6xl font-semibold tracking-tight">
           My Career Journey
         </h1>
         <p className="mt-8 text-lg font-medium text-pretty text-muted-foreground sm:text-xl/8">
           Here's a quick overview of my career journey so far, showcasing some
-          highlights from my work history and freelance projects.
+          highlights from my work history and freelance projects. 🚀
         </p>
-        <Timeline data={data} />
       </div>
-    </div>
+      <div className="flex justify-center">
+        <ArrowDownIcon aria-hidden="true" className="size-8 down-arrow" />
+      </div>
+
+      <Timeline data={data} />
+    </>
   );
 }

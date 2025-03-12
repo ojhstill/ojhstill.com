@@ -24,9 +24,12 @@ export default function Header({ navigation }: HeaderProps) {
           className="flex items-center justify-between p-6"
         >
           <div className="flex lg:flex-1">
-            <a href="/" className="-m-1.5 p-1.5 flex gap-x-2">
+            <a
+              href="/"
+              className="-mx-3 px-3 py-2 text-base/7 font-semibold flex items-center gap-2"
+            >
               <GlobeIcon aria-hidden="true" className="size-6" />
-              <span>ojhstill</span>
+              ojhstill
             </a>
           </div>
           <div className="flex lg:hidden gap-x-6 items-center">
@@ -34,7 +37,7 @@ export default function Header({ navigation }: HeaderProps) {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
-              className="-m-2.5 p-2.5 cursor-pointer"
+              className="-m-2.5 p-2 cursor-pointer"
             >
               <span className="sr-only">Open main menu</span>
               <HamburgerMenuIcon aria-hidden="true" className="size-6" />
@@ -48,7 +51,7 @@ export default function Header({ navigation }: HeaderProps) {
             <DarkModeToggle />
             <a
               href="mailto:oliver@ojhstill.com"
-              className="-mx-3 flex rounded-lg px-3 text-base/7 font-semibold hover:bg-sidebar-accent"
+              className="-mx-3 flex rounded-lg px-3 py-2 text-base/7 font-semibold hover:bg-sidebar-accent"
             >
               Get in Touch
             </a>
