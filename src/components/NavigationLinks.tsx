@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 interface NavigationLinksProps {
   navigation: NavigationItem[];
   className?: string;
@@ -5,7 +7,7 @@ interface NavigationLinksProps {
 
 export interface NavigationItem {
   name?: string;
-  href?: string;
+  to?: string;
   target?: string;
   icon?: React.ReactNode;
   onClick?: () => void;
@@ -18,15 +20,14 @@ export function NavigationLinks({
   return (
     <div className={className}>
       {navigation.map(item => (
-        <a
-          key={item.name}
-          href={item.href}
+        <Link
+          to={item.to || '#'}
           target={item.target}
           className="-mx-3 rounded-lg px-3 py-2 text-base/7 font-semibold hover:bg-sidebar-accent flex items-center gap-2"
         >
           {item.icon}
           {item.name}
-        </a>
+        </Link>
       ))}
     </div>
   );

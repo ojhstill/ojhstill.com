@@ -1,5 +1,6 @@
 import { BentoGrid, BentoGridItem } from '@/components/ui/bento-grid';
 import { Spotlight } from '@/components/ui/spotlight-new';
+import { Link } from 'react-router-dom';
 import {
   CodeSandboxLogoIcon,
   MixIcon,
@@ -90,15 +91,15 @@ export default function Home() {
         <div className="hidden sm:mb-8 sm:flex sm:justify-center">
           <div className="relative rounded-full px-3 py-1 text-sm/6 text-foreground ring-1 ring-foreground/60 hover:ring-foreground/30">
             I've recently joined Wattle.{' '}
-            <a
-              href="https://www.wearewattle.com"
+            <Link
+              to="https://www.wearewattle.com"
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold text-primary"
             >
               <span aria-hidden="true" className="absolute inset-0" />
               Learn more <span aria-hidden="true">&rarr;</span>
-            </a>
+            </Link>
           </div>
         </div>
         <Spotlight duration={20} translateY={-250} />
@@ -114,19 +115,19 @@ export default function Home() {
             including all work history and personal projects.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6 text-xs/6 lg:text-sm">
-            <a
-              href="/journey"
+            <Link
+              to="/journey"
               className="rounded-md bg-primary hover:bg-primary/70 text-primary-foreground px-3.5 py-2.5 font-semibold shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               See My Career Journey
-            </a>
-            <a
-              href="mailto:oliver@ojhstill.com"
+            </Link>
+            <Link
+              to="mailto:oliver@ojhstill.com"
               className="font-semibold flex items-center gap-2 hover:text-primary/70"
             >
               Let’s Collaborate
               <ArrowRightIcon aria-hidden="true" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

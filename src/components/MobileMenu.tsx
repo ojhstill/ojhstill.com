@@ -1,6 +1,7 @@
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { Cross1Icon, GlobeIcon } from '@radix-ui/react-icons';
 import { NavigationLinks, NavigationItem } from '@/components/NavigationLinks';
+import { Link } from 'react-router-dom';
 
 interface MobileMenuProps {
   mobileMenuOpen: boolean;
@@ -26,13 +27,13 @@ export default function MobileMenu({
       >
         <div className="flex items-center justify-between">
           <div className="sm:opacity-0">
-            <a
-              href="/"
+            <Link
+              to="/"
               className="-mx-3 px-3 py-2 text-base/7 font-semibold flex items-center gap-2"
             >
               <GlobeIcon aria-hidden="true" className="size-6" />
               ojhstill
-            </a>
+            </Link>
           </div>
           <button
             type="button"
@@ -50,12 +51,12 @@ export default function MobileMenu({
               className="space-y-2 py-6"
             />
             <div className="space-y-2 py-6">
-              <a
-                href="mailto:oliver@ojhstill.com"
+              <Link
+                to="mailto:oliver@ojhstill.com"
                 className="-mx-3 flex rounded-lg px-3 py-2 text-base/7 font-semibold hover:bg-sidebar-accent"
               >
                 Get in Touch
-              </a>
+              </Link>
             </div>
           </div>
         </div>

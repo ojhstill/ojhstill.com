@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NotFound: React.FC = () => {
   return (
@@ -10,12 +11,12 @@ const NotFound: React.FC = () => {
           </h1>
         </div>
         <div className="mt-10 flex items-center justify-center gap-x-6 text-xs/6 lg:text-sm">
-          <a
-            href="/"
+          <Link
+            to="/"
             className="rounded-md bg-primary hover:bg-primary/70 text-primary-foreground px-3.5 py-2.5 font-semibold shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
             Take Me Home
-          </a>
+          </Link>
         </div>
       </div>
     </div>

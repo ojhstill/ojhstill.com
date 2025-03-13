@@ -12,18 +12,18 @@ import NotFound from '@/pages/NotFound';
 
 export default function App() {
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Career Journey', href: '/journey' },
+    { name: 'Home', to: '/' },
+    { name: 'Career Journey', to: '/journey' },
     {
       name: 'GitHub',
       icon: <GitHubLogoIcon aria-hidden="true" />,
-      href: 'https://github.com/ojhstill',
+      to: 'https://github.com/ojhstill',
       target: '_blank',
     },
     {
       name: 'LinkedIn',
       icon: <LinkedInLogoIcon aria-hidden="true" />,
-      href: 'https://www.linkedin.com/in/ojhstill',
+      to: 'https://www.linkedin.com/in/ojhstill',
       target: '_blank',
     },
   ];

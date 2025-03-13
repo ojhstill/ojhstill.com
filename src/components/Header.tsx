@@ -3,6 +3,7 @@ import { HamburgerMenuIcon, GlobeIcon } from '@radix-ui/react-icons';
 import MobileMenu from '@/components/MobileMenu';
 import DarkModeToggle from '@/components/DarkModeToggle';
 import { NavigationLinks, NavigationItem } from '@/components/NavigationLinks';
+import { Link } from 'react-router-dom';
 
 interface HeaderProps {
   navigation: NavigationItem[];
@@ -24,13 +25,13 @@ export default function Header({ navigation }: HeaderProps) {
           className="flex items-center justify-between p-6"
         >
           <div className="flex lg:flex-1">
-            <a
-              href="/"
+            <Link
+              to="/"
               className="-mx-3 rounded-lg px-3 py-2 text-base/7 font-semibold flex items-center gap-2"
             >
               <GlobeIcon aria-hidden="true" className="size-6" />
               ojhstill
-            </a>
+            </Link>
           </div>
           <div className="flex lg:hidden gap-x-6 items-center">
             <DarkModeToggle />
@@ -49,12 +50,12 @@ export default function Header({ navigation }: HeaderProps) {
           />
           <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6 items-center">
             <DarkModeToggle />
-            <a
-              href="mailto:oliver@ojhstill.com"
+            <Link
+              to="mailto:oliver@ojhstill.com"
               className="-mx-3 flex rounded-lg px-3 py-2 text-base/7 font-semibold hover:bg-sidebar-accent"
             >
               Get in Touch
-            </a>
+            </Link>
           </div>
         </nav>
       </header>
