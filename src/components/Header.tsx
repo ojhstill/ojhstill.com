@@ -26,7 +26,7 @@ export default function Header({ navigation }: HeaderProps) {
           <div className="flex lg:flex-1">
             <a
               href="/"
-              className="-mx-3 px-3 py-2 text-base/7 font-semibold flex items-center gap-2"
+              className="-mx-3 rounded-lg px-3 py-2 text-base/7 font-semibold flex items-center gap-2"
             >
               <GlobeIcon aria-hidden="true" className="size-6" />
               ojhstill

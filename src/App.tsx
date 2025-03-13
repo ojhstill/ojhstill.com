@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Journey from '@/pages/Journey';
 import Home from '@/pages/Home';
 import Contact from '@/pages/Contact';
+import NotFound from '@/pages/NotFound';
 
 export default function App() {
   const navigation = [
@@ -50,9 +51,10 @@ export default function App() {
 
         <main className="relative isolate px-6 py-18">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route index element={<Home />} />
             <Route path="/journey" element={<Journey />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
 
