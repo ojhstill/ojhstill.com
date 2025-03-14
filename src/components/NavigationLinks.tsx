@@ -23,6 +23,7 @@ export function NavigationLinks({
         <Link
           to={item.to || '#'}
           target={item.target}
+          rel={item.target === '_blank' ? 'noopener noreferrer' : undefined}
           className="-mx-3 rounded-lg px-3 py-2 text-base/7 font-semibold hover:bg-sidebar-accent flex items-center gap-2"
         >
           {item.icon}

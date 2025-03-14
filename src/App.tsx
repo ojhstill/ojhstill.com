@@ -23,7 +23,7 @@ export default function App() {
     {
       name: 'LinkedIn',
       icon: <LinkedInLogoIcon aria-hidden="true" />,
-      to: 'https://www.linkedin.com/in/ojhstill',
+      to: 'https://linkedin.com/in/ojhstill',
       target: '_blank',
     },
   ];
