@@ -13,8 +13,8 @@ const data = [
             After eight months of freelancing, I joined Wattle as a Software
             Engineer. Here, I'm responsible for leading the architecture and
             development of the company's new MemEx portal, a platform that helps
-            membership organisations manage their members thoguht a suite of
-            digital tools.
+            membership organisations manage their members though a suite of D365
+            tools.
           </p>
         </div>
         <div className="grid grid-cols-2 gap-4">
@@ -43,17 +43,20 @@ const data = [
       <div>
         <div className="text-neutral-800 dark:text-neutral-200 font-normal space-y-4 mb-8">
           <p>
-            After an incredible two and a half years at Roke, I took the
-            opportunity to move to Bristol and explore the world of freelancing
-            and consulting. I worked with a number of clients on a variety of
-            projects, including full-stack Shopify solutions, software testing,
-            and creating React websites Python for data scraping.
+            Whilst exploring my next career move, I took the opportunity to move
+            to Bristol and explore the world of freelancing and consulting to
+            both broaden my technical expertise and keep everything sharp.
           </p>
           <p>
-            Outside of engineering, I focused on my long-standing passion for
-            music, producing my debut album set for release 2025, and regularly
-            participate in charity running events, recently raising over £500
-            for the British Red Cross at the 2024 Great North Run.
+            I worked with a number of clients on a variety of projects,
+            including full-stack Shopify solution development, CRM software
+            testing, and creating data-driven websites using React and Python.
+          </p>
+          <p>
+            Outside of engineering, I dedicated more time to my decade-long
+            passion for music by producing my debut album for release 2025, and
+            also participated in charity running events, recently raising over
+            £500 for the British Red Cross at the 2024 Great North Run.
           </p>
         </div>
         <div className="grid grid-cols-2 gap-4">
@@ -82,18 +85,28 @@ const data = [
       <div>
         <div className="text-neutral-800 dark:text-neutral-200 font-normal space-y-4 mb-8">
           <p>
-            I began my career through Roke’s two-year graduate scheme in Future
-            Compute & Agile Software, initially as a full-stack engineer on a
-            large Agile Scrum project specialising in accessibility, earning an
-            internal award for quality project delivery.
+            I started my career at Roke with a two-year graduate scheme. From
+            the start, I took on diverse technical roles and leadership
+            responsibilities to broaden my skill set.
           </p>
           <p>
-            I also was a technical lead for a project migrating an Angular
-            application to Vue, improving its architecture and mentoring junior
-            developers. Alongside technical roles, I contributed to business
-            development campaigns, supporting client strategies, conducting
-            interviews, hosting UI/UX workshops, and organising corporate social
-            events.
+            As a Technical Team Lead, I led a development team in the migration
+            of a live software application to Vue, modernising the UI,
+            architecture, and APIs, and eliminating a decade of technical debt.
+            I also line managed and mentored junior developers, fostering their
+            growth through code reviews and clean coding practices.
+          </p>
+          <p>
+            Alongside engineering, I took on a Certified ScrumMaster (CSM) role
+            for a 15-person Agile Scrum team, where I improved our delivery
+            velocity by 77% in a year, coordinated cross-site communication
+            between clients, and facilitated all Agile ceremonies.
+          </p>
+          <p>
+            Beyond engineering, I got stuck in and supported Roke’s Business
+            Development team and CSR initiatives by leading client engagement
+            strategies, representing the business at conferences, and assisting
+            with technical bids and company events.
           </p>
         </div>
         {/* <div className="mb-8">
