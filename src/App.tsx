@@ -31,7 +31,7 @@ export default function App() {
   return (
     <Router>
       <div className="relative h-full w-full">
-        <div
+        {/* <div
           className="
           absolute inset-0 bg-background
           z-0
@@ -45,7 +45,7 @@ export default function App() {
           [background-size:calc(2*var(--s))_var(--s)]
           [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]
         "
-        />
+        /> */}
 
         <Header navigation={navigation} />
 

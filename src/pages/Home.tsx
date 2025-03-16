@@ -1,5 +1,6 @@
 import { BentoGrid, BentoGridItem } from '@/components/ui/bento-grid';
-import { Spotlight } from '@/components/ui/spotlight-new';
+// import { Spotlight } from '@/components/ui/spotlight-new';
+import { BackgroundBeams } from '@/components/ui/background-beams';
 import { Link } from 'react-router-dom';
 import {
   CodeSandboxLogoIcon,
@@ -102,7 +103,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <Spotlight duration={20} translateY={-250} />
+        {/* <Spotlight duration={20} translateY={-250} /> */}
         <div className="text-center">
           <div className="relative inline-block">
             <h1 className="relative z-10 text-4xl sm:text-7xl font-semibold tracking-tight">
@@ -143,6 +144,7 @@ export default function Home() {
           />
         ))}
       </BentoGrid>
+      <BackgroundBeams />
     </>
   );
 }

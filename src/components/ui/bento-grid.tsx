@@ -44,7 +44,7 @@ export const BentoGridItem = ({
         <GlowingEffect
           disabled={false}
           blur={0}
-          inactiveZone={0}
+          inactiveZone={0.01}
           proximity={0}
           spread={100}
           variant="default"
