@@ -21,6 +21,7 @@ export function NavigationLinks({
     <div className={className}>
       {navigation.map(item => (
         <Link
+          key={item.name}
           to={item.to || '#'}
           target={item.target}
           rel={item.target === '_blank' ? 'noopener noreferrer' : undefined}
