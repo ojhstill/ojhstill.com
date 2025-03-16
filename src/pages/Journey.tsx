@@ -8,7 +8,7 @@ const data = [
     title: 'Joining Wattle',
     content: (
       <div>
-        <div className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal space-y-4 mb-8">
+        <div className="text-neutral-800 dark:text-neutral-200 font-normal space-y-4 mb-8">
           <p>
             After eight months of freelancing, I joined Wattle as a Software
             Engineer. Here, I'm responsible for leading the architecture and
@@ -41,7 +41,7 @@ const data = [
     title: 'Going Freelance in Bristol',
     content: (
       <div>
-        <div className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal space-y-4 mb-8">
+        <div className="text-neutral-800 dark:text-neutral-200 font-normal space-y-4 mb-8">
           <p>
             After an incredible two and a half years at Roke, I took the
             opportunity to move to Bristol and explore the world of freelancing
@@ -80,7 +80,7 @@ const data = [
     title: 'Begining at Roke',
     content: (
       <div>
-        <div className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal space-y-4 mb-8">
+        <div className="text-neutral-800 dark:text-neutral-200 font-normal space-y-4 mb-8">
           <p>
             I began my career through Roke’s two-year graduate scheme in Future
             Compute & Agile Software, initially as a full-stack engineer on a
@@ -137,7 +137,7 @@ const data = [
   //   title: "A Master's of Engineering",
   //   content: (
   //     <div>
-  //       <div className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal space-y-4 mb-8">
+  //       <div className="text-neutral-800 dark:text-neutral-200 font-normal space-y-4 mb-8">
   //         <p>
   //           I graduated from the University of York with a Master's of
   //           Engineering in Electronic Engineering. My final year project focused
