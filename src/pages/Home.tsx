@@ -14,7 +14,7 @@ const items = [
   {
     title: 'Full‑Stack Software Architect',
     description:
-      'Transforming complex project requirements into scalable, end‑to‑end digital solutions – from designing cost‑efficient architectures for e‑commerce platforms to integrating modern frameworks with robust back‑end systems.',
+      'Transforming project requirements into scalable, end‑to‑end digital solutions – from designing cost‑efficient architectures to integrating with modern frameworks.',
     header: (
       <div className="flex flex-1 min-h-[6rem] h-20 md:h-44 lg:h-60 w-full">
         <img
@@ -30,9 +30,9 @@ const items = [
     icon: <CodeSandboxLogoIcon aria-hidden="true" className="size-6" />,
   },
   {
-    title: 'Commerical-Focused Technical Consultant',
+    title: 'Client-Focused Technical Consultant',
     description:
-      'Empowering clients with tailored technical insights and hands‑on support – spearheading client engagement strategies to drive innovation.',
+      'Engaging with clients using tailored technical insights to drive innovation and support project delivery.',
     header: (
       <div className="flex flex-1 min-h-[6rem] h-20 md:h-44 lg:h-60 w-full">
         <img
@@ -48,9 +48,9 @@ const items = [
     icon: <MixIcon aria-hidden="true" className="size-6" />,
   },
   {
-    title: 'Certified Agile Team Leader',
+    title: 'Development Team Leader',
     description:
-      'Leading high‑performing teams with agile methodologies – demonstrated by boosting Scrum velocity, mentoring junior talent, and driving technical change.',
+      'Leading high‑performing teams with technical direction and driving continuous improvement.',
     header: (
       <div className="flex flex-1 min-h-[6rem] h-20 md:h-44 lg:h-60 w-full">
         <img
@@ -68,7 +68,7 @@ const items = [
   {
     title: 'Dynamic Product Designer',
     description:
-      'Merging full‑stack expertise with creative design principles – from revamping digital portals to championing accessibility standards, crafting intuitive products that resonate with users.',
+      'Merging front-end expertise with UI-UX design principles to craft intuitive and accessibile products that resonate with users.',
     header: (
       <div className="flex flex-1 min-h-[6rem] h-20 md:h-44 lg:h-60 w-full">
         <img
