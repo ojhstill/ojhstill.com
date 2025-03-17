@@ -29,6 +29,7 @@ export default function MobileMenu({
           <div className="sm:opacity-0">
             <Link
               to="/"
+              onClick={() => setMobileMenuOpen(false)}
               className="-mx-3 px-3 py-2 text-base/7 font-semibold flex items-center gap-2"
             >
               <GlobeIcon aria-hidden="true" className="size-6" />
@@ -48,11 +49,13 @@ export default function MobileMenu({
           <div className="-my-6 divide-y divide-gray-500/10">
             <NavigationLinks
               navigation={navigation}
+              onClick={() => setMobileMenuOpen(false)}
               className="space-y-2 py-6"
             />
             <div className="space-y-2 py-6">
               <Link
                 to="mailto:oliver@ojhstill.com"
+                onClick={() => setMobileMenuOpen(false)}
                 className="-mx-3 flex rounded-lg px-3 py-2 text-base/7 font-semibold hover:bg-sidebar-accent"
               >
                 Get in Touch
