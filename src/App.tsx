@@ -31,22 +31,6 @@ export default function App() {
   return (
     <Router>
       <div className="relative h-full w-full">
-        {/* <div
-          className="
-          absolute inset-0 bg-background
-          z-0
-          [--s:20px]
-          [--dot-size:1px]
-          [--dot-colour:theme('colors.zinc.300')]
-          dark:[--dot-colour:theme('colors.zinc.700')]
-          [--g:radial-gradient(var(--dot-size)_at_25%_50%,var(--dot-colour)_96%,transparent)]
-          [background-image:var(--g),var(--g)]
-          [background-position:0_0,var(--s)_calc(var(--s)/2)]
-          [background-size:calc(2*var(--s))_var(--s)]
-          [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]
-        "
-        /> */}
-
         <Header navigation={navigation} />
 
         <main className="relative isolate px-6 py-18">

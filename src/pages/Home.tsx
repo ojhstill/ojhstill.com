@@ -1,6 +1,4 @@
 import { BentoGrid, BentoGridItem } from '@/components/ui/bento-grid';
-// import { Spotlight } from '@/components/ui/spotlight-new';
-import { BackgroundBeams } from '@/components/ui/background-beams';
 import { Link } from 'react-router-dom';
 import {
   CodeSandboxLogoIcon,
@@ -88,23 +86,20 @@ const items = [
 export default function Home() {
   return (
     <>
-      <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-32">
-        <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-          <div className="relative rounded-full px-3 py-1 text-sm/6 text-foreground ring-1 ring-foreground/60 hover:ring-foreground/30">
-            I've recently joined Wattle.{' '}
-            <Link
-              to="https://www.wearewattle.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-semibold text-primary"
-            >
-              <span aria-hidden="true" className="absolute inset-0" />
-              Learn more <span aria-hidden="true">&rarr;</span>
-            </Link>
-          </div>
-        </div>
-        {/* <Spotlight duration={20} translateY={-250} /> */}
-        <div className="text-center">
+      <div className="relative flex flex-col items-center mx-auto my-24 sm:my-40 lg:my-24 py-8">
+        <div
+          className="absolute inset-2 -z-10
+            [--s:20px]
+            [--dot-size:1px]
+            [--dot-colour:theme('colors.zinc.300')]
+            dark:[--dot-colour:theme('colors.zinc.700')]
+            [--g:radial-gradient(var(--dot-size)_at_50%_50%,var(--dot-colour)_96%,transparent)]
+            [background-image:var(--g)]
+            [background-position:0_0]
+            [background-size:var(--s)_var(--s)]
+            [mask-image:linear-gradient(to bottom, #000 70%, transparent 100%)]"
+        />
+        <div className="max-w-2xl text-center">
           <div className="relative inline-block">
             <h1 className="relative z-10 text-4xl sm:text-7xl font-semibold tracking-tight">
               Software Engineer, Product Designer, and Agile Leader.
@@ -144,7 +139,6 @@ export default function Home() {
           />
         ))}
       </BentoGrid>
-      <BackgroundBeams />
     </>
   );
 }

@@ -192,14 +192,28 @@ export default function Journey() {
 
   return (
     <>
-      <div className="text-center mx-auto max-w-2xl py-16 sm:py-32 lg:py-32">
-        <h1 className="relative z-10 text-4xl sm:text-6xl font-semibold tracking-tight">
-          My Career Journey
-        </h1>
-        <p className="mt-8 text-lg font-medium text-pretty text-muted-foreground sm:text-xl/8">
-          Here's a quick overview of my career journey so far, showcasing some
-          highlights from my work history and freelance projects. 🚀
-        </p>
+      <div className="relative flex flex-col items-center text-center mx-auto my-8 sm:my-16 lg:my-16 py-32">
+        <div
+          className="absolute inset-2 -z-10
+            [--s:20px]
+            [--dot-size:1px]
+            [--dot-colour:theme('colors.zinc.300')]
+            dark:[--dot-colour:theme('colors.zinc.700')]
+            [--g:radial-gradient(var(--dot-size)_at_50%_50%,var(--dot-colour)_96%,transparent)]
+            [background-image:var(--g)]
+            [background-position:0_0]
+            [background-size:var(--s)_var(--s)]
+            [mask-image:linear-gradient(to bottom, #000 70%, transparent 100%)]"
+        />
+        <div className="max-w-2xl">
+          <h1 className="text-4xl sm:text-6xl font-semibold tracking-tight">
+            My Career Journey
+          </h1>
+          <p className="mt-8 text-lg font-medium text-pretty text-muted-foreground sm:text-xl/8">
+            Here's a quick overview of my career journey so far, showcasing some
+            highlights from my work history and freelance projects. 🚀
+          </p>
+        </div>
       </div>
       <div className="flex justify-center">
         <ArrowDownIcon aria-hidden="true" className="size-8 down-arrow" />
