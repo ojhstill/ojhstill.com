@@ -88,7 +88,7 @@ export default function Home() {
     <>
       <div className="relative flex flex-col items-center mx-auto my-24 sm:my-40 lg:my-24 py-8">
         <div
-          className="absolute inset-2 -z-10
+          className="absolute inset-0 md:inset-x-1/12 -z-10
             [--s:20px]
             [--dot-size:1px]
             [--dot-colour:theme('colors.zinc.300')]

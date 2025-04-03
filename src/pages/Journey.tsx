@@ -194,7 +194,7 @@ export default function Journey() {
     <>
       <div className="relative flex flex-col items-center text-center mx-auto my-8 sm:my-16 lg:my-16 py-32">
         <div
-          className="absolute inset-2 -z-10
+          className="absolute inset-0 md:inset-x-1/5 -z-10
             [--s:20px]
             [--dot-size:1px]
             [--dot-colour:theme('colors.zinc.300')]
