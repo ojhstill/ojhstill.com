@@ -1,51 +1,35 @@
-'use client';
-
 import { useState, useEffect } from 'react';
 import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
 
 export default function DarkModeToggle() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
-    const savedDarkMode = localStorage.getItem('darkMode');
-    if (savedDarkMode === 'true') {
-      document.documentElement.classList.add('dark');
-      setDarkMode(true);
-    } else if (savedDarkMode === 'false') {
+    const saved = localStorage.getItem('darkMode');
+    if (saved === 'false') {
       document.documentElement.classList.remove('dark');
       setDarkMode(false);
     } else {
-      const systemPrefersDark = window.matchMedia(
-        '(prefers-color-scheme: dark)'
-      ).matches;
-      if (systemPrefersDark) {
-        document.documentElement.classList.add('dark');
-        setDarkMode(true);
-      } else {
-        document.documentElement.classList.remove('dark');
-        setDarkMode(false);
-      }
+      // Default to dark — either saved as 'true' or first visit
+      document.documentElement.classList.add('dark');
+      setDarkMode(true);
     }
   }, []);
 
-  const toggleDarkMode = () => {
+  const toggle = () => {
+    const next = !darkMode;
     document.documentElement.classList.toggle('dark');
-    const newDarkMode = !darkMode;
-    setDarkMode(newDarkMode);
-    localStorage.setItem('darkMode', newDarkMode.toString());
+    setDarkMode(next);
+    localStorage.setItem('darkMode', next.toString());
   };
 
   return (
     <button
-      className="border-1 border-foreground/60 hover:border-foreground/30 rounded-lg p-2 cursor-pointer"
-      onClick={toggleDarkMode}
-      aria-label="Toggle Dark Mode"
+      onClick={toggle}
+      aria-label="Toggle dark mode"
+      className="p-2 rounded-lg border border-border/60 hover:border-border hover:bg-secondary/50 transition-colors cursor-pointer"
     >
-      {darkMode ? (
-        <MoonIcon aria-hidden="true" />
-      ) : (
-        <SunIcon aria-hidden="true" />
-      )}
+      {darkMode ? <MoonIcon className="size-4" /> : <SunIcon className="size-4" />}
     </button>
   );
 }

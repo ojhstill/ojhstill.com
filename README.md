@@ -1,54 +1,106 @@
-# React + TypeScript + Vite
+# Oliver Still — Portfolio Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio built with React + TypeScript + Vite + Tailwind CSS.
 
-Currently, two official plugins are available:
+## Design
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Palette:** C2 — Cool Slate + Terracotta  
+**Fonts:** Instrument Serif (display) + Plus Jakarta Sans (body)  
+**Theme:** Light-first with dark mode toggle, warm personality-led aesthetic
 
-## Expanding the ESLint configuration
+## Pages
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Home** — Hero, capabilities overview, expandable case study cards
+- **Journey** — Career timeline with scroll-triggered animations
+- **About** — Personal interests and personality
+- **Contact** — mailto link + social links
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
+## Setup
+
+### If migrating from the existing project
+
+1. Replace your `src/` directory with this one
+2. Replace `index.html` with the new version (adds Google Fonts)
+3. Ensure these dependencies are installed:
+
+```bash
+npm install react-router-dom motion @radix-ui/react-icons clsx tailwind-merge
+npm install -D tailwindcss @tailwindcss/vite tailwindcss-animate
+```
+
+4. Your existing `vite.config.ts` should work as-is — just ensure the `@` path alias points to `./src`
+5. You can remove these dependencies that are no longer used:
+   - `@headlessui/react`
+   - `class-variance-authority`
+   - `@radix-ui/react-slot`
+   - `@radix-ui/react-label`
+
+### Fresh setup
+
+```bash
+npm create vite@latest portfolio -- --template react-ts
+cd portfolio
+npm install react-router-dom motion @radix-ui/react-icons clsx tailwind-merge
+npm install -D tailwindcss @tailwindcss/vite tailwindcss-animate
+```
+
+Add the Tailwind plugin to `vite.config.ts`:
+
+```ts
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
+import path from 'path';
+
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
     },
   },
 });
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Deployment
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+Deploy to Vercel with zero config — connect the repo and it auto-detects Vite.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
+For client-side routing, add `vercel.json`:
+
+```json
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}
 ```
+
+## Customisation notes
+
+- **Palette:** All colours are defined as CSS variables in `src/index.css` — change the `:root` and `.dark` blocks to update the entire site
+- **Content:** Case studies, timeline data, and about page content are defined as data arrays within each page component — easy to update without touching layout code
+- **Fonts:** Loaded via Google Fonts in `index.html` and referenced in CSS variables
+
+## Images
+
+All images live in `public/images/`. The site uses graceful fallbacks — if an image isn't found, the element hides itself rather than showing a broken icon.
+
+### What to add
+
+| Path | Used on | Notes |
+|---|---|---|
+| `images/profile.jpg` | Home hero | Headshot or professional photo. Displayed at ~224×256px, cropped to fill. |
+| `images/about/portrait.jpg` | About page header | Casual/personal photo. Same crop behaviour. |
+| `images/about/music.jpg` | About page, Music section | Studio, gig, or production setup. Displayed at max 384px wide, 160px tall. |
+| `images/about/running.jpg` | About page, Running section | Race photo or similar. Same dimensions. |
+| `images/logos/wattle.svg` | Timeline + case study cards | Replace placeholder with real Wattle logo. SVG preferred. |
+| `images/logos/roke.svg` | Timeline + case study cards | Replace placeholder with real Roke logo. SVG preferred. |
+| `images/logos/york.svg` | Timeline | Replace placeholder with University of York crest. SVG preferred. |
+
+### Logo tips
+
+- SVGs work best — they scale cleanly and support dark mode
+- If using PNGs, use transparent backgrounds and at least 200×200px
+- Logos display at 36–48px inside a rounded container, so keep them simple
+

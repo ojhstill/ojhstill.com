@@ -1,102 +1,154 @@
-'use client';
-import React from 'react';
-import { Label } from '@/components/ui/label';
-import { Input } from '@/components/ui/input';
-import { cn } from '@/lib/utils';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import { useHeroParallax } from '@/lib/useParallax';
 import {
-  LinkedInLogoIcon,
+  EnvelopeClosedIcon,
   GitHubLogoIcon,
-  PaperPlaneIcon,
+  LinkedInLogoIcon,
+  ArrowTopRightIcon,
+  CheckIcon,
 } from '@radix-ui/react-icons';
-import { Link } from 'react-router-dom';
+
+const links = [
+  {
+    label: 'Email',
+    value: 'oliver@ojhstill.com',
+    href: 'mailto:oliver@ojhstill.com',
+    icon: EnvelopeClosedIcon,
+  },
+  {
+    label: 'LinkedIn',
+    value: 'linkedin.com/in/ojhstill',
+    href: 'https://linkedin.com/in/ojhstill',
+    icon: LinkedInLogoIcon,
+    external: true,
+  },
+  {
+    label: 'GitHub',
+    value: 'github.com/ojhstill',
+    href: 'https://github.com/ojhstill',
+    icon: GitHubLogoIcon,
+    external: true,
+  },
+];
 
 export default function Contact() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const { dotGridY, textY } = useHeroParallax();
+  const [copied, setCopied] = useState(false);
+
+  function handleEmailClick(e: React.MouseEvent) {
     e.preventDefault();
-    console.log('Form submitted');
-  };
-  return (
-    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
-      <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200"></h2>
-      {/* <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
-        Login to aceternity if you can because we don&apos;t have a login flow
-        yet
-      </p> */}
-
-      <form className="my-8" onSubmit={handleSubmit}>
-        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
-          <LabelInputContainer>
-            <Label htmlFor="firstname">First name</Label>
-            <Input id="firstname" placeholder="Tyler" type="text" />
-          </LabelInputContainer>
-          <LabelInputContainer>
-            <Label htmlFor="lastname">Last name</Label>
-            <Input id="lastname" placeholder="Durden" type="text" />
-          </LabelInputContainer>
-        </div>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="email">Email Address</Label>
-          <Input id="email" placeholder="your@email.com" type="email" />
-        </LabelInputContainer>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="message">Message</Label>
-          <Input id="message" placeholder="Let's connect" type="text" />
-        </LabelInputContainer>
-
-        <button
-          className="flex gap-2 items-center justify-center bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
-          type="submit"
-        >
-          Send <PaperPlaneIcon aria-hidden="true" />
-          <BottomGradient />
-        </button>
-
-        <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
-
-        <div className="flex flex-col space-y-4">
-          <Link
-            className="text-neutral-700 dark:text-neutral-300 text-sm relative group/btn flex space-x-2 items-center justify-start px-4 w-full rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
-            to="https://github.com/ojhstill"
-            target="_blank"
-          >
-            <GitHubLogoIcon aria-hidden="true" />
-            Follow on GitHub
-            <BottomGradient />
-          </Link>
-          <Link
-            className="text-neutral-700 dark:text-neutral-300 text-sm relative group/btn flex space-x-2 items-center justify-start px-4 w-full rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
-            to="https://linkedin.com/in/ojhstill"
-            target="_blank"
-          >
-            <LinkedInLogoIcon aria-hidden="true" />
-            Connect on LinkedIn
-            <BottomGradient />
-          </Link>
-        </div>
-      </form>
-    </div>
-  );
-}
-
-const BottomGradient = () => {
+    navigator.clipboard.writeText('oliver@ojhstill.com').then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  }
   return (
     <>
-      <span className="group-hover/btn:opacity-100 block transition duration-500 opacity-0 absolute h-px w-full -bottom-px inset-x-0 bg-gradient-to-r from-transparent via-cyan-500 to-transparent" />
-      <span className="group-hover/btn:opacity-100 blur-sm block transition duration-500 opacity-0 absolute h-px w-1/2 mx-auto -bottom-px inset-x-10 bg-gradient-to-r from-transparent via-indigo-500 to-transparent" />
+      {/* Header */}
+      <section className="relative overflow-hidden">
+        <motion.div className="absolute inset-0 dot-grid -z-10" style={{ y: dotGridY }} />
+        <div className="max-w-5xl mx-auto px-6 pt-24 pb-16 sm:pt-28 sm:pb-20">
+          <motion.div style={{ y: textY }}>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
+              className="max-w-xl"
+            >
+            <p className="font-display italic text-lg text-accent mb-4">
+              Get in touch
+            </p>
+            <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-tight">
+              Let's have a conversation.
+            </h1>
+            <p className="mt-6 text-muted-foreground leading-relaxed">
+              Whether you've got a project in mind, want to talk about
+              architecture, or just fancy a chat — I'm always happy to connect.
+              Drop me a line and I'll get back to you.
+            </p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact links */}
+      <section className="max-w-xl mx-auto px-6 pb-24 sm:pb-32">
+        <div className="space-y-3">
+          {links.map((link, i) => (
+            <motion.a
+              key={i}
+              href={link.href}
+              target={link.external ? '_blank' : undefined}
+              rel={link.external ? 'noopener noreferrer' : undefined}
+              onClick={link.label === 'Email' ? handleEmailClick : undefined}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              whileTap={{ scale: 0.985 }}
+              transition={{ duration: 0.4, delay: 0.2 + i * 0.1 }}
+              className="group flex items-center gap-4 px-5 py-4 rounded-xl border border-border/60 bg-card hover:border-accent/40 hover:shadow-sm transition-all cursor-pointer"
+            >
+              <div className="flex items-center justify-center size-10 rounded-lg bg-secondary group-hover:bg-accent/10 transition-colors">
+                <link.icon className="size-5 text-muted-foreground group-hover:text-accent transition-colors" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-xs font-semibold tracking-wide uppercase text-muted-foreground">
+                  {link.label}
+                </p>
+                {link.label === 'Email' ? (
+                  <div className="relative h-5 overflow-hidden">
+                    <AnimatePresence mode="wait" initial={false}>
+                      <motion.p
+                        key={copied ? 'copied' : 'address'}
+                        initial={{ y: 8, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        exit={{ y: -8, opacity: 0 }}
+                        transition={{ duration: 0.15, ease: 'easeOut' }}
+                        className="text-sm font-medium text-foreground truncate absolute inset-0"
+                      >
+                        {copied ? 'Copied!' : link.value}
+                      </motion.p>
+                    </AnimatePresence>
+                  </div>
+                ) : (
+                  <p className="text-sm font-medium text-foreground truncate">
+                    {link.value}
+                  </p>
+                )}
+              </div>
+              {link.label === 'Email' ? (
+                <AnimatePresence mode="wait" initial={false}>
+                  {copied ? (
+                    <motion.span
+                      key="check"
+                      initial={{ scale: 0.5, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      exit={{ scale: 0.5, opacity: 0 }}
+                      transition={{ duration: 0.15 }}
+                      className="shrink-0"
+                    >
+                      <CheckIcon className="size-4 text-accent" />
+                    </motion.span>
+                  ) : (
+                    <motion.span
+                      key="copy"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.15 }}
+                      className="text-xs text-muted-foreground group-hover:text-accent transition-colors shrink-0 select-none"
+                    >
+                      Copy
+                    </motion.span>
+                  )}
+                </AnimatePresence>
+              ) : link.external ? (
+                <ArrowTopRightIcon className="size-4 text-muted-foreground group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition shrink-0" />
+              ) : null}
+            </motion.a>
+          ))}
+        </div>
+      </section>
     </>
   );
-};
-
-const LabelInputContainer = ({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
-  return (
-    <div className={cn('flex flex-col space-y-2 w-full', className)}>
-      {children}
-    </div>
-  );
-};
+}

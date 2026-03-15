@@ -1,64 +1,120 @@
-import { useState } from 'react';
-import { HamburgerMenuIcon, GlobeIcon } from '@radix-ui/react-icons';
-import MobileMenu from '@/components/MobileMenu';
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { HamburgerMenuIcon, Cross1Icon } from '@radix-ui/react-icons';
+import { motion } from 'motion/react';
 import DarkModeToggle from '@/components/DarkModeToggle';
-import { NavigationLinks, NavigationItem } from '@/components/NavigationLinks';
-import { Link } from 'react-router-dom';
+import { cn } from '@/lib/utils';
 
-interface HeaderProps {
-  navigation: NavigationItem[];
-}
+const navigation = [
+  { name: 'Home', to: '/' },
+  { name: 'Journey', to: '/journey' },
+  { name: 'About', to: '/about' },
+  { name: 'Contact', to: '/contact' },
+];
 
-export default function Header({ navigation }: HeaderProps) {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 16);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location.pathname]);
 
   return (
-    <>
-      <MobileMenu
-        navigation={navigation}
-        mobileMenuOpen={mobileMenuOpen}
-        setMobileMenuOpen={setMobileMenuOpen}
-      />
-      <header className="absolute inset-x-0 top-0 z-50">
-        <nav
-          aria-label="Global"
-          className="flex items-center justify-between p-6"
+    <header
+      className={cn(
+        'sticky top-0 z-50 transition-all duration-300',
+        scrolled
+          ? 'bg-background/80 backdrop-blur-md border-b border-border/40'
+          : 'bg-transparent border-b border-transparent'
+      )}
+    >
+      <nav className="max-w-5xl mx-auto flex items-center justify-between px-6 py-4">
+        {/* Logo */}
+        <Link
+          to="/"
+          className="text-lg font-semibold tracking-tight hover:text-accent transition-colors"
         >
-          <div className="flex lg:flex-1">
-            <Link
-              to="/"
-              className="-mx-3 rounded-lg px-3 py-2 text-base/7 font-semibold flex items-center gap-2"
-            >
-              <GlobeIcon aria-hidden="true" className="size-6" />
-              ojhstill
-            </Link>
+          Oliver<span className="text-accent">&nbsp;</span>Still
+        </Link>
+
+        {/* Desktop nav */}
+        <div className="hidden md:flex items-center gap-8">
+          {navigation.map((item) => {
+            const isActive = location.pathname === item.to;
+            return (
+              <Link
+                key={item.name}
+                to={item.to}
+                className={cn(
+                  'relative text-sm font-medium transition-colors pb-0.5',
+                  isActive
+                    ? 'text-foreground'
+                    : 'text-muted-foreground hover:text-foreground'
+                )}
+              >
+                {item.name}
+                {isActive && (
+                  <motion.span
+                    layoutId="nav-indicator"
+                    className="absolute inset-x-0 -bottom-0.5 h-0.5 bg-accent rounded-full"
+                    transition={{ type: 'spring', stiffness: 450, damping: 28 }}
+                  />
+                )}
+              </Link>
+            );
+          })}
+          <DarkModeToggle />
+        </div>
+
+        {/* Mobile controls */}
+        <div className="flex md:hidden items-center gap-3">
+          <DarkModeToggle />
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="p-2 cursor-pointer"
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? (
+              <Cross1Icon className="size-5" />
+            ) : (
+              <HamburgerMenuIcon className="size-5" />
+            )}
+          </button>
+        </div>
+      </nav>
+
+      {/* Mobile menu */}
+      {menuOpen && (
+        <div className="md:hidden border-t border-border/40 bg-background/95 backdrop-blur-md">
+          <div className="px-6 py-4 space-y-1">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.to}
+                onClick={() => setMenuOpen(false)}
+                className={cn(
+                  'block py-2.5 text-base font-medium transition-colors',
+                  location.pathname === item.to
+                    ? 'text-accent'
+                    : 'text-muted-foreground hover:text-foreground'
+                )}
+              >
+                {item.name}
+              </Link>
+            ))}
           </div>
-          <div className="flex lg:hidden gap-x-6 items-center">
-            <DarkModeToggle />
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(true)}
-              className="-m-2.5 p-2 cursor-pointer"
-            >
-              <span className="sr-only">Open main menu</span>
-              <HamburgerMenuIcon aria-hidden="true" className="size-6" />
-            </button>
-          </div>
-          <NavigationLinks
-            navigation={navigation}
-            className="hidden lg:flex lg:gap-x-12"
-          />
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6 items-center">
-            <DarkModeToggle />
-            <Link
-              to="mailto:oliver@ojhstill.com"
-              className="-mx-3 flex rounded-lg px-3 py-2 text-base/7 font-semibold hover:bg-sidebar-accent"
-            >
-              Get in Touch
-            </Link>
-          </div>
-        </nav>
-      </header>
-    </>
+        </div>
+      )}
+    </header>
   );
 }

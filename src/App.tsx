@@ -1,47 +1,44 @@
-'use client';
-
-import { LinkedInLogoIcon, GitHubLogoIcon } from '@radix-ui/react-icons';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { AnimatePresence, motion } from 'motion/react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Journey from '@/pages/Journey';
 import Home from '@/pages/Home';
+import Journey from '@/pages/Journey';
+import About from '@/pages/About';
 import Contact from '@/pages/Contact';
 import NotFound from '@/pages/NotFound';
 
-export default function App() {
-  const navigation = [
-    { name: 'Home', to: '/' },
-    { name: 'Career Journey', to: '/journey' },
-    {
-      name: 'GitHub',
-      icon: <GitHubLogoIcon aria-hidden="true" />,
-      to: 'https://github.com/ojhstill',
-      target: '_blank',
-    },
-    {
-      name: 'LinkedIn',
-      icon: <LinkedInLogoIcon aria-hidden="true" />,
-      to: 'https://linkedin.com/in/ojhstill',
-      target: '_blank',
-    },
-  ];
+function AnimatedRoutes() {
+  const location = useLocation();
+  return (
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={location.pathname}
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -10 }}
+        transition={{ duration: 0.22, ease: [0.4, 0, 0.2, 1] }}
+      >
+        <Routes location={location}>
+          <Route index element={<Home />} />
+          <Route path="/journey" element={<Journey />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </motion.div>
+    </AnimatePresence>
+  );
+}
 
+export default function App() {
   return (
     <Router>
-      <div className="relative h-full w-full">
-        <Header navigation={navigation} />
-
-        <main className="relative isolate px-6 py-18">
-          <Routes>
-            <Route index element={<Home />} />
-            <Route path="/journey" element={<Journey />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+      <div className="relative min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-1">
+          <AnimatedRoutes />
         </main>
-
         <Footer />
       </div>
     </Router>

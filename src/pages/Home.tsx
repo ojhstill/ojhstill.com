@@ -1,144 +1,270 @@
-import { BentoGrid, BentoGridItem } from '@/components/ui/bento-grid';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import {
-  CodeSandboxLogoIcon,
-  MixIcon,
-  RocketIcon,
-  TransformIcon,
-  ArrowRightIcon,
-} from '@radix-ui/react-icons';
+import { buttonVariants, ButtonArrow } from '@/components/Button';
+import { motion } from 'motion/react';
+import CaseStudyCard, { type CaseStudy } from '@/components/CaseStudyCard';
+import SectionHeading from '@/components/SectionHeading';
+import { companyLogos } from '@/lib/companyLogos';
+import { useHeroParallax } from '@/lib/useParallax';
 
-const items = [
+const caseStudies: CaseStudy[] = [
   {
-    title: 'Full‑Stack Software Architect',
-    description:
-      'Transforming project requirements into scalable, end‑to‑end digital solutions – from designing cost‑efficient architectures to integrating with modern frameworks.',
-    header: (
-      <div className="flex flex-1 min-h-[6rem] h-20 md:h-44 lg:h-60 w-full">
-        <img
-          src="https://images.unsplash.com/photo-1669023414171-56f0740e34cd?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Header Image"
-          width={500}
-          height={500}
-          className="rounded-xl object-cover w-full"
-        />
-      </div>
-    ),
-    className: 'md:col-span-2',
-    icon: <CodeSandboxLogoIcon aria-hidden="true" className="size-6" />,
+    tag: 'Platform Engineering',
+    title: 'Designed a reusable platform that cut web build time by 75%',
+    metric: '4 wks → 1 wk',
+    metricLabel: 'build time reduction',
+    summary:
+      'Spotted a structural problem in how we delivered client websites and built the architectural foundation to fix it — turning bespoke builds into a scalable product.',
+    image: companyLogos.wattle.url,
+    imageAlt: 'Wattle logo',
+    imageFallback: companyLogos.wattle.fallback,
+    detail: [
+      {
+        heading: 'The problem',
+        text: 'Web builds were averaging four weeks, with inconsistent architecture across projects and no reusable foundation. Every new client meant starting from scratch, which was expensive and created quality drift.',
+      },
+      {
+        heading: 'What I built',
+        text: 'I designed and built a reusable Umbraco Whitelabel instance that standardised our front-end architecture. This required alignment across delivery and commercial teams to formalise it as our default approach — not just an engineering initiative.',
+      },
+      {
+        heading: 'The impact',
+        text: 'Build time dropped from roughly four weeks to under one week for standard scope. That saves around 10 developer days per project across 3–5 projects a year, and now underpins all future web work. It also strengthened our commercial positioning by enabling faster client onboarding.',
+      },
+    ],
+    technologies: ['Umbraco', 'C# .NET', 'Front-end Architecture', 'Azure DevOps', 'Commercial Alignment'],
   },
   {
-    title: 'Client-Focused Technical Consultant',
-    description:
-      'Engaging with clients using tailored technical insights to drive innovation and support project delivery.',
-    header: (
-      <div className="flex flex-1 min-h-[6rem] h-20 md:h-44 lg:h-60 w-full">
-        <img
-          src="https://images.unsplash.com/photo-1675023071154-407c202d06c7?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Header Image"
-          width={500}
-          height={500}
-          className="rounded-xl object-cover w-full"
-        />
-      </div>
-    ),
-    className: 'md:col-span-1',
-    icon: <MixIcon aria-hidden="true" className="size-6" />,
+    tag: 'Technical Leadership',
+    title: 'Led a migration that erased a decade of technical debt',
+    metric: '10 yrs',
+    metricLabel: 'of tech debt cleared',
+    summary:
+      'Directed the technical redesign of a live client product from Angular to Vue, modernising the architecture, UI, and API layer while building team capability.',
+    image: companyLogos.roke.url,
+    imageAlt: 'Roke logo',
+    imageFallback: companyLogos.roke.fallback,
+    detail: [
+      {
+        heading: 'The challenge',
+        text: 'A live, multi-million-pound client product running on legacy Angular with significant accumulated technical debt. It needed modernising without disrupting the service or the client relationship.',
+      },
+      {
+        heading: 'My approach',
+        text: 'As Technical Team Lead, I directed the development team through a structured migration. I redesigned the architecture, UX/UI, and API to modern standards, making deliberate decisions about what to rebuild versus refactor.',
+      },
+      {
+        heading: 'What changed',
+        text: 'Delivered a clean Vue application with modern architecture. Mentored junior developers through the process using clean code principles and code reviews — building their confidence alongside the technical deliverable.',
+      },
+    ],
+    technologies: ['Vue', 'Angular', 'REST APIs', 'UX/UI', 'Team Mentoring', 'Agile / SAFe'],
   },
   {
-    title: 'Development Team Leader',
-    description:
-      'Leading high‑performing teams with technical direction and driving continuous improvement.',
-    header: (
-      <div className="flex flex-1 min-h-[6rem] h-20 md:h-44 lg:h-60 w-full">
-        <img
-          src="https://images.unsplash.com/photo-1666336473880-aebebece24b4?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Header Image"
-          width={500}
-          height={500}
-          className="rounded-xl object-cover w-full"
-        />
-      </div>
-    ),
-    className: 'md:col-span-1',
-    icon: <RocketIcon aria-hidden="true" className="size-6" />,
+    tag: 'Delivery & Process',
+    title: 'Scrum Master on a cross-site team that increased velocity by 77%',
+    metric: '77%',
+    metricLabel: 'velocity increase in 12 months',
+    summary:
+      'Took on the Scrum Master role for a 15-person Agile team delivering a multi-million-pound project, improving both delivery speed and client satisfaction.',
+    image: companyLogos.roke.url,
+    imageAlt: 'Roke logo',
+    imageFallback: companyLogos.roke.fallback,
+    detail: [
+      {
+        heading: 'The context',
+        text: 'A cross-site Agile Scrum team of 15 within a SAFe delivery framework. The project needed consistent sprint deliveries and clear communication between distributed team members, clients, and stakeholders.',
+      },
+      {
+        heading: 'What I did',
+        text: 'Facilitated all Agile ceremonies, translated technical concepts between clients and engineering teams, and onboarded five new developers — adapting the team to a cross-site format through better communication channels while managing sprint capacity.',
+      },
+      {
+        heading: 'The result',
+        text: 'Scrum velocity increased by 77% within 12 months. Sprint deliveries became more predictable, client satisfaction improved, and the team scaled successfully without losing delivery quality.',
+      },
+    ],
+    technologies: ['Scrum', 'SAFe', 'Jira', 'Confluence', 'Stakeholder Management', 'CSM'],
+  },
+];
+
+const capabilities = [
+  {
+    title: 'Architecture & platforms',
+    text: 'I design reusable, scalable platforms — not one-off solutions. I think in systems and build foundations that compound value over time.',
   },
   {
-    title: 'Dynamic Product Designer',
-    description:
-      'Merging front-end expertise with UI-UX design principles to craft intuitive and accessibile products that resonate with users.',
-    header: (
-      <div className="flex flex-1 min-h-[6rem] h-20 md:h-44 lg:h-60 w-full">
-        <img
-          src="https://images.unsplash.com/photo-1675023112820-84a7ee71a119?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Header Image"
-          width={500}
-          height={500}
-          className="rounded-xl object-cover w-full"
-        />
-      </div>
-    ),
-    className: 'md:col-span-2',
-    icon: <TransformIcon aria-hidden="true" className="size-6" />,
+    title: 'Stakeholder bridge',
+    text: 'I sit between engineering, delivery, and commercial. I translate complexity into clear decisions and make sure technical direction aligns with business goals.',
+  },
+  {
+    title: 'Discovery & delivery',
+    text: 'I get involved early — shaping scope in discovery before it hardens. That upstream clarity means fewer surprises downstream and better outcomes for clients.',
   },
 ];
 
 export default function Home() {
+  const { dotGridY, imageY, textY } = useHeroParallax();
+
+  const fullText = "Hey, I'm Oli.";
+  const [displayed, setDisplayed] = useState('');
+
+  useEffect(() => {
+    let id: ReturnType<typeof setInterval>;
+    const delay = setTimeout(() => {
+      let i = 0;
+      id = setInterval(() => {
+        i++;
+        setDisplayed(fullText.slice(0, i));
+        if (i >= fullText.length) clearInterval(id);
+      }, 110);
+    }, 700);
+    return () => { clearTimeout(delay); clearInterval(id); };
+  }, [])
   return (
     <>
-      <div className="relative flex flex-col items-center mx-auto my-24 sm:my-40 lg:my-24 py-8">
-        <div
-          className="absolute inset-0 md:inset-x-1/12 -z-10
-            [--s:20px]
-            [--dot-size:1px]
-            [--dot-colour:theme('colors.zinc.300')]
-            dark:[--dot-colour:theme('colors.zinc.700')]
-            [--g:radial-gradient(var(--dot-size)_at_50%_50%,var(--dot-colour)_96%,transparent)]
-            [background-image:var(--g)]
-            [background-position:0_0]
-            [background-size:var(--s)_var(--s)]
-            [mask-image:linear-gradient(to bottom, #000 70%, transparent 100%)]"
-        />
-        <div className="max-w-2xl text-center">
-          <div className="relative inline-block">
-            <h1 className="relative z-10 text-4xl sm:text-7xl font-semibold tracking-tight">
-              Software Engineer, Product Designer, and Agile Leader.
-            </h1>
-          </div>
-          <p className="mt-8 text-lg font-medium text-pretty text-muted-foreground sm:text-xl/8">
-            Hi, I'm Oli. 👋 I'm currently a Software Engineer based in Bristol
-            building new things at Wattle. Here is my complete online portfolio,
-            including all work history and personal projects.
-          </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6 text-xs/6 lg:text-sm">
-            <Link
-              to="/journey"
-              className="rounded-md bg-primary hover:bg-primary/70 text-primary-foreground px-3.5 py-2.5 font-semibold shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-              See My Career Journey
-            </Link>
-            <Link
-              to="mailto:oliver@ojhstill.com"
-              className="font-semibold flex items-center gap-2 hover:text-primary/70"
-            >
-              Let’s Collaborate
-              <ArrowRightIcon aria-hidden="true" />
-            </Link>
+      {/* ─── Hero ─── */}
+      <section className="relative overflow-hidden">
+        <motion.div className="absolute inset-0 dot-grid -z-10" style={{ y: dotGridY }} />
+        <div className="max-w-5xl mx-auto px-6 pt-24 pb-20 sm:pt-32 sm:pb-28">
+          <div className="flex flex-col md:flex-row items-start gap-12 md:gap-16">
+            <motion.div style={{ y: textY }} className="max-w-2xl flex-1">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
+              >
+              <p className="font-display italic text-2xl text-accent mb-4">
+                {displayed}
+                <span
+                  aria-hidden="true"
+                  className="inline-block w-0.5 h-[0.85em] bg-accent align-middle ml-px translate-y-[-0.05em] cursor-blink"
+                />
+              </p>
+              <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight leading-tight">
+                I turn complexity into clarity — in code, in product, in
+                conversation.
+              </h1>
+              <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-xl">
+                Technical Product Owner with an engineering backbone. I shape
+                platforms, bridge technical and commercial decisions, and help
+                teams deliver work that holds up.
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <Link
+                  to="/journey"
+                  className={buttonVariants({ variant: 'primary', arrow: true })}
+                >
+                  See my journey
+                </Link>
+                <Link
+                  to="/contact"
+                  className={buttonVariants({ variant: 'ghost', arrow: true })}
+                >
+                  Get in touch
+                  <ButtonArrow />
+                </Link>
+              </div>
+              </motion.div>
+            </motion.div>
+
+            {/* Profile image */}
+            <motion.div style={{ y: imageY }} className="shrink-0">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+              >
+              <div className="relative">
+                <div className="w-48 h-56 sm:w-56 sm:h-64 rounded-2xl overflow-hidden border-2 border-border/40 bg-secondary">
+                  {/* Replace src with your actual headshot */}
+                  <img
+                    src="/images/profile.jpg"
+                    alt="Oliver Still"
+                    className="size-full object-cover"
+                    onError={(e) => {
+                      // Graceful fallback if image hasn't been added yet
+                      (e.target as HTMLImageElement).style.display = 'none';
+                    }}
+                  />
+                </div>
+                {/* Decorative terracotta accent corner */}
+                <div className="absolute -bottom-2 -right-2 w-16 h-16 rounded-xl bg-accent/15 -z-10" />
+              </div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
-      </div>
-      <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
-        {items.map((item, i) => (
-          <BentoGridItem
-            key={i}
-            title={item.title}
-            description={item.description}
-            header={item.header}
-            className={item.className}
-            icon={item.icon}
-          />
-        ))}
-      </BentoGrid>
+      </section>
+
+      {/* ─── What I do ─── */}
+      <section className="max-w-5xl mx-auto px-6 py-16 sm:py-20">
+        <SectionHeading label="What I do" title="Engineering meets architecture" />
+        <div className="mt-10 grid sm:grid-cols-3 gap-8">
+          {capabilities.map((cap, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.45, delay: i * 0.1 }}
+            >
+              <h3 className="text-base font-semibold text-foreground mb-2">
+                {cap.title}
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {cap.text}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* ─── Case Studies ─── */}
+      <section className="max-w-5xl mx-auto px-6 py-16 sm:py-20">
+        <SectionHeading label="Selected work" title="Things I've built and shaped" />
+        <div className="mt-10 space-y-4">
+          {caseStudies.map((study, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.45, delay: i * 0.08 }}
+            >
+              <CaseStudyCard study={study} />
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* ─── CTA ─── */}
+      <section className="max-w-5xl mx-auto px-6 py-16 sm:py-24 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <p className="font-display italic text-lg text-accent mb-3">
+            Interested?
+          </p>
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
+            Let's talk about what you're building.
+          </h2>
+          <p className="mt-4 text-muted-foreground max-w-md mx-auto">
+            Whether it's a platform challenge, an architecture decision, or a
+            team that needs bridging — I'm always up for a conversation.
+          </p>
+          <Link
+            to="/contact"
+            className={buttonVariants({ variant: 'accent', arrow: true, className: 'mt-8' })}
+          >
+            Get in touch
+            <ButtonArrow />
+          </Link>
+        </motion.div>
+      </section>
     </>
   );
 }
