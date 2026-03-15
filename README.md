@@ -70,9 +70,7 @@ For client-side routing, add `vercel.json`:
 
 ```json
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
 ```
 
@@ -88,19 +86,15 @@ All images live in `public/images/`. The site uses graceful fallbacks — if an 
 
 ### What to add
 
-| Path | Used on | Notes |
-|---|---|---|
-| `images/profile.jpg` | Home hero | Headshot or professional photo. Displayed at ~224×256px, cropped to fill. |
-| `images/about/portrait.jpg` | About page header | Casual/personal photo. Same crop behaviour. |
-| `images/about/music.jpg` | About page, Music section | Studio, gig, or production setup. Displayed at max 384px wide, 160px tall. |
-| `images/about/running.jpg` | About page, Running section | Race photo or similar. Same dimensions. |
-| `images/logos/wattle.svg` | Timeline + case study cards | Replace placeholder with real Wattle logo. SVG preferred. |
-| `images/logos/roke.svg` | Timeline + case study cards | Replace placeholder with real Roke logo. SVG preferred. |
-| `images/logos/york.svg` | Timeline | Replace placeholder with University of York crest. SVG preferred. |
+| Path                        | Used on                     | Notes                                                                      |
+| --------------------------- | --------------------------- | -------------------------------------------------------------------------- |
+| `images/profile.jpg`        | Home hero                   | Headshot or professional photo. Displayed at ~224×256px, cropped to fill.  |
+| `images/about/portrait.jpg` | About page header           | Casual/personal photo. Same crop behaviour.                                |
+| `images/about/music.jpg`    | About page, Music section   | Studio, gig, or production setup. Displayed at max 384px wide, 160px tall. |
+| `images/about/running.jpg`  | About page, Running section | Race photo or similar. Same dimensions.                                    |
 
 ### Logo tips
 
 - SVGs work best — they scale cleanly and support dark mode
 - If using PNGs, use transparent backgrounds and at least 200×200px
 - Logos display at 36–48px inside a rounded container, so keep them simple
-

@@ -9,7 +9,6 @@ const timelineData: TimelineEntry[] = [
     title: 'Technical Product Owner',
     subtitle: 'Wattle · Bristol',
     logo: companyLogos.wattle.url,
-    logoFallback: companyLogos.wattle.fallback,
     logoAlt: 'Wattle',
     content: (
       <>
@@ -38,14 +37,14 @@ const timelineData: TimelineEntry[] = [
     title: 'Software Engineer',
     subtitle: 'Wattle · Bristol',
     logo: companyLogos.wattle.url,
-    logoFallback: companyLogos.wattle.fallback,
     logoAlt: 'Wattle',
     content: (
       <p>
         Joined as a front-end engineer working on the MemEx membership platform.
-        Quickly expanded into architectural decisions, stakeholder conversations,
-        and delivery oversight — which led directly to the TPO role. Built the
-        early foundation of the Whitelabel platform during this period.
+        Quickly expanded into architectural decisions, stakeholder
+        conversations, and delivery oversight — which led directly to the TPO
+        role. Built the early foundation of the Whitelabel platform during this
+        period.
       </p>
     ),
   },
@@ -53,6 +52,8 @@ const timelineData: TimelineEntry[] = [
     date: 'Mar 2024 — Feb 2025',
     title: 'Consultant Engineer',
     subtitle: 'Freelance · Bristol',
+    logo: companyLogos.dos.url,
+    logoAlt: 'DOS',
     content: (
       <>
         <p>
@@ -74,15 +75,14 @@ const timelineData: TimelineEntry[] = [
     title: 'Software Engineer',
     subtitle: 'Roke · Romsey',
     logo: companyLogos.roke.url,
-    logoFallback: companyLogos.roke.fallback,
     logoAlt: 'Roke',
     content: (
       <>
         <p>
-          Started on a two-year graduate scheme and quickly moved into leadership
-          roles. As Technical Team Lead, I directed the migration of a live
-          Angular product to Vue — redesigning the architecture, UI, and API
-          layer while mentoring junior developers through the process.
+          Started on a two-year graduate scheme and quickly moved into
+          leadership roles. As Technical Team Lead, I directed the migration of
+          a live Angular product to Vue — redesigning the architecture, UI, and
+          API layer while mentoring junior developers through the process.
         </p>
         <p>
           Took on the Certified ScrumMaster role for a 15-person cross-site
@@ -103,7 +103,6 @@ const timelineData: TimelineEntry[] = [
     title: 'MEng Electronic Engineering',
     subtitle: 'University of York · First-Class Honours',
     logo: companyLogos.york.url,
-    logoFallback: companyLogos.york.fallback,
     logoAlt: 'University of York',
     content: (
       <>
@@ -128,7 +127,10 @@ export default function Journey() {
     <>
       {/* Header */}
       <section className="relative overflow-hidden">
-        <motion.div className="absolute inset-0 dot-grid -z-10" style={{ y: dotGridY }} />
+        <motion.div
+          className="absolute inset-0 dot-grid -z-10"
+          style={{ y: dotGridY }}
+        />
         <div className="max-w-5xl mx-auto px-6 pt-24 pb-16 sm:pt-28 sm:pb-20">
           <motion.div style={{ y: textY }}>
             <motion.div
@@ -137,17 +139,17 @@ export default function Journey() {
               transition={{ duration: 0.6, ease: 'easeOut' }}
               className="max-w-xl"
             >
-            <p className="font-display italic text-lg text-accent mb-4">
-              Career journey
-            </p>
-            <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-tight">
-              From engineering to architecture — one role at a time.
-            </h1>
-            <p className="mt-6 text-muted-foreground leading-relaxed">
-              I started in software engineering, moved into technical leadership,
-              and now sit at the intersection of product, architecture, and
-              delivery. Here's how that happened.
-            </p>
+              <p className="font-display italic text-lg text-accent mb-4">
+                Career journey
+              </p>
+              <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-tight">
+                From engineering to architecture — one role at a time.
+              </h1>
+              <p className="mt-6 text-muted-foreground leading-relaxed">
+                I started in software engineering, moved into technical
+                leadership, and now sit at the intersection of product,
+                architecture, and delivery. Here's how that happened.
+              </p>
             </motion.div>
           </motion.div>
         </div>

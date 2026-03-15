@@ -44,12 +44,13 @@ export default function Header() {
           to="/"
           className="text-lg font-semibold tracking-tight hover:text-accent transition-colors"
         >
-          Oliver<span className="text-accent">&nbsp;</span>Still
+          {/* Oliver&nbsp;<span className="text-accent">Still</span> */}
+          ojh<span className="text-accent">still</span>
         </Link>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
-          {navigation.map((item) => {
+          {navigation.map(item => {
             const isActive = location.pathname === item.to;
             return (
               <Link
@@ -97,7 +98,7 @@ export default function Header() {
       {menuOpen && (
         <div className="md:hidden border-t border-border/40 bg-background/95 backdrop-blur-md">
           <div className="px-6 py-4 space-y-1">
-            {navigation.map((item) => (
+            {navigation.map(item => (
               <Link
                 key={item.name}
                 to={item.to}
