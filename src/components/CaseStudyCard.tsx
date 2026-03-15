@@ -54,9 +54,12 @@ export default function CaseStudyCard({ study }: { study: CaseStudy }) {
                   src={study.image}
                   alt={study.imageAlt || ''}
                   className="size-full object-cover"
-                  onError={(e) => {
+                  onError={e => {
                     const img = e.target as HTMLImageElement;
-                    if (study.imageFallback && img.src !== study.imageFallback) {
+                    if (
+                      study.imageFallback &&
+                      img.src !== study.imageFallback
+                    ) {
                       img.src = study.imageFallback;
                     } else {
                       img.parentElement!.style.display = 'none';
@@ -103,7 +106,7 @@ export default function CaseStudyCard({ study }: { study: CaseStudy }) {
               <span>{open ? 'Show less' : 'Read the full story'}</span>
               <ChevronDownIcon
                 className={cn(
-                  'size-3.5 transition-transform duration-300',
+                  'size-3.5 transition-transform duration-500',
                   open && 'rotate-180'
                 )}
               />
@@ -131,22 +134,23 @@ export default function CaseStudyCard({ study }: { study: CaseStudy }) {
             ))}
             <div className="flex flex-wrap gap-2 pt-2">
               <AnimatePresence>
-                {open && study.technologies.map((tech, i) => (
-                  <motion.span
-                    key={tech}
-                    initial={{ opacity: 0, y: 10, scale: 0.92 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 6, scale: 0.92 }}
-                    transition={{
-                      duration: 0.25,
-                      ease: 'easeOut',
-                      delay: i * 0.055,
-                    }}
-                    className="text-xs px-2.5 py-1 rounded-md bg-secondary text-secondary-foreground font-medium"
-                  >
-                    {tech}
-                  </motion.span>
-                ))}
+                {open &&
+                  study.technologies.map((tech, i) => (
+                    <motion.span
+                      key={tech}
+                      initial={{ opacity: 0, y: 10, scale: 0.92 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 6, scale: 0.92 }}
+                      transition={{
+                        duration: 0.35,
+                        ease: 'easeOut',
+                        delay: i * 0.07,
+                      }}
+                      className="text-xs px-2.5 py-1 rounded-md bg-secondary text-secondary-foreground font-medium"
+                    >
+                      {tech}
+                    </motion.span>
+                  ))}
               </AnimatePresence>
             </div>
           </div>

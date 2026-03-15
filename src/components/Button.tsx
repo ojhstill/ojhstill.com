@@ -7,8 +7,8 @@ export type ButtonSize = 'sm' | 'md';
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary: 'rounded-lg bg-primary text-primary-foreground hover:bg-primary/90',
-  accent:  'rounded-lg bg-accent text-accent-foreground hover:bg-accent/90',
-  ghost:   'text-muted-foreground hover:text-foreground',
+  accent: 'rounded-lg bg-accent text-accent-foreground hover:bg-accent/90',
+  ghost: 'text-muted-foreground hover:text-foreground',
 };
 
 const sizeClasses: Record<ButtonSize, string> = {
@@ -19,8 +19,8 @@ const sizeClasses: Record<ButtonSize, string> = {
 // Default size per variant (ghost carries no padding by default)
 const defaultSize: Record<ButtonVariant, ButtonSize | null> = {
   primary: 'sm',
-  accent:  'md',
-  ghost:   null,
+  accent: 'md',
+  ghost: null,
 };
 
 /**
@@ -46,7 +46,7 @@ export function buttonVariants({
     arrow && 'group',
     resolvedSize && sizeClasses[resolvedSize],
     variantClasses[variant],
-    className,
+    className
   );
 }
 
@@ -58,7 +58,10 @@ export function buttonVariants({
 export function ButtonArrow({ className }: { className?: string }) {
   return (
     <ArrowRightIcon
-      className={cn('size-4 transition-transform group-hover:translate-x-1', className)}
+      className={cn(
+        'size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1',
+        className
+      )}
     />
   );
 }
@@ -77,7 +80,10 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ variant = 'primary', size, arrow, className, children, ...props }, ref) => (
+  (
+    { variant = 'primary', size, arrow, className, children, ...props },
+    ref
+  ) => (
     <button
       ref={ref}
       className={buttonVariants({ variant, size, arrow, className })}
@@ -86,7 +92,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       {children}
       {arrow && <ButtonArrow />}
     </button>
-  ),
+  )
 );
 
 Button.displayName = 'Button';

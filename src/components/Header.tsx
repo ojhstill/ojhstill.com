@@ -68,7 +68,7 @@ export default function Header() {
                   <motion.span
                     layoutId="nav-indicator"
                     className="absolute inset-x-0 -bottom-0.5 h-0.5 bg-accent rounded-full"
-                    transition={{ type: 'spring', stiffness: 450, damping: 28 }}
+                    transition={{ type: 'spring', stiffness: 350, damping: 28 }}
                   />
                 )}
               </Link>

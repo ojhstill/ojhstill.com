@@ -12,7 +12,13 @@ export interface TimelineEntry {
   content: React.ReactNode;
 }
 
-function TimelineItem({ entry, index }: { entry: TimelineEntry; index: number }) {
+function TimelineItem({
+  entry,
+  index,
+}: {
+  entry: TimelineEntry;
+  index: number;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
@@ -21,7 +27,7 @@ function TimelineItem({ entry, index }: { entry: TimelineEntry; index: number })
       ref={ref}
       initial={{ opacity: 0, y: 24 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5, delay: index * 0.1, ease: 'easeOut' }}
+      transition={{ duration: 0.65, delay: index * 0.12, ease: 'easeOut' }}
       className="relative pl-8 pb-12 last:pb-0"
     >
       {/* Timeline dot — spring-pops into view */}
@@ -30,9 +36,9 @@ function TimelineItem({ entry, index }: { entry: TimelineEntry; index: number })
         animate={isInView ? { scale: 1 } : { scale: 0 }}
         transition={{
           type: 'spring',
-          stiffness: 480,
-          damping: 22,
-          delay: index * 0.1 + 0.15,
+          stiffness: 260,
+          damping: 32,
+          delay: index * 0.12 + 0.18,
         }}
         className="absolute left-0 top-2.5 size-3.75 rounded-full border-2 border-accent bg-background"
       />
@@ -46,7 +52,7 @@ function TimelineItem({ entry, index }: { entry: TimelineEntry; index: number })
                 src={entry.logo}
                 alt={entry.logoAlt || ''}
                 className="size-full object-cover"
-                onError={(e) => {
+                onError={e => {
                   const img = e.target as HTMLImageElement;
                   if (entry.logoFallback && img.src !== entry.logoFallback) {
                     img.src = entry.logoFallback;
@@ -85,7 +91,7 @@ export default function Timeline({ entries }: { entries: TimelineEntry[] }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ['start 85%', 'end 70%'],
+    offset: ['start 90%', 'end 52%'],
   });
   const lineScaleY = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
