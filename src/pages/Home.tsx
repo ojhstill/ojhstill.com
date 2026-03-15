@@ -4,6 +4,7 @@ import { buttonVariants, ButtonArrow } from '@/components/Button';
 import { motion } from 'motion/react';
 import CaseStudyCard, { type CaseStudy } from '@/components/CaseStudyCard';
 import SectionHeading from '@/components/SectionHeading';
+import CurrentlyStatus from '@/components/CurrentlyStatus';
 import { companyLogos } from '@/lib/companyLogos';
 import { useHeroParallax } from '@/lib/useParallax';
 
@@ -193,6 +194,9 @@ export default function Home() {
                     Get in touch
                     <ButtonArrow />
                   </Link>
+                </div>
+                <div className="mt-6">
+                  <CurrentlyStatus />
                 </div>
               </motion.div>
             </motion.div>
