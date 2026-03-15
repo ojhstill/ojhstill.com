@@ -8,7 +8,7 @@ const timelineData: TimelineEntry[] = [
     date: 'Nov 2025 — Present',
     title: 'Technical Product Owner',
     subtitle: 'Wattle · Bristol',
-    logo: companyLogos.wattle.url,
+    logo: companyLogos.wattle,
     logoAlt: 'Wattle',
     content: (
       <>
@@ -36,7 +36,7 @@ const timelineData: TimelineEntry[] = [
     date: 'Feb 2025 — Nov 2025',
     title: 'Software Engineer',
     subtitle: 'Wattle · Bristol',
-    logo: companyLogos.wattle.url,
+    logo: companyLogos.wattle,
     logoAlt: 'Wattle',
     content: (
       <p>
@@ -52,7 +52,7 @@ const timelineData: TimelineEntry[] = [
     date: 'Mar 2024 — Feb 2025',
     title: 'Consultant Engineer',
     subtitle: 'Freelance · Bristol',
-    logo: companyLogos.dos.url,
+    logo: companyLogos.dos,
     logoAlt: 'DOS',
     content: (
       <>
@@ -74,7 +74,7 @@ const timelineData: TimelineEntry[] = [
     date: 'Oct 2021 — Mar 2024',
     title: 'Software Engineer',
     subtitle: 'Roke · Romsey',
-    logo: companyLogos.roke.url,
+    logo: companyLogos.roke,
     logoAlt: 'Roke',
     content: (
       <>
@@ -102,7 +102,7 @@ const timelineData: TimelineEntry[] = [
     date: '2017 — 2021',
     title: 'MEng Electronic Engineering',
     subtitle: 'University of York · First-Class Honours',
-    logo: companyLogos.york.url,
+    logo: companyLogos.york,
     logoAlt: 'University of York',
     content: (
       <>

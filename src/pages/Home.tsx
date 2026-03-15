@@ -15,9 +15,8 @@ const caseStudies: CaseStudy[] = [
     metricLabel: 'build time reduction',
     summary:
       'Spotted a structural problem in how we delivered client websites and built the architectural foundation to fix it — turning bespoke builds into a scalable product.',
-    image: companyLogos.wattle.url,
+    image: companyLogos.wattle,
     imageAlt: 'Wattle logo',
-    imageFallback: companyLogos.wattle.fallback,
     detail: [
       {
         heading: 'The problem',
@@ -32,7 +31,13 @@ const caseStudies: CaseStudy[] = [
         text: 'Build time dropped from roughly four weeks to under one week for standard scope. That saves around 10 developer days per project across 3–5 projects a year, and now underpins all future web work. It also strengthened our commercial positioning by enabling faster client onboarding.',
       },
     ],
-    technologies: ['Umbraco', 'C# .NET', 'Front-end Architecture', 'Azure DevOps', 'Commercial Alignment'],
+    technologies: [
+      'Umbraco',
+      'C# .NET',
+      'Front-end Architecture',
+      'Azure DevOps',
+      'Commercial Alignment',
+    ],
   },
   {
     tag: 'Technical Leadership',
@@ -41,9 +46,8 @@ const caseStudies: CaseStudy[] = [
     metricLabel: 'of tech debt cleared',
     summary:
       'Directed the technical redesign of a live client product from Angular to Vue, modernising the architecture, UI, and API layer while building team capability.',
-    image: companyLogos.roke.url,
+    image: companyLogos.roke,
     imageAlt: 'Roke logo',
-    imageFallback: companyLogos.roke.fallback,
     detail: [
       {
         heading: 'The challenge',
@@ -58,7 +62,14 @@ const caseStudies: CaseStudy[] = [
         text: 'Delivered a clean Vue application with modern architecture. Mentored junior developers through the process using clean code principles and code reviews — building their confidence alongside the technical deliverable.',
       },
     ],
-    technologies: ['Vue', 'Angular', 'REST APIs', 'UX/UI', 'Team Mentoring', 'Agile / SAFe'],
+    technologies: [
+      'Vue',
+      'Angular',
+      'REST APIs',
+      'UX/UI',
+      'Team Mentoring',
+      'Agile / SAFe',
+    ],
   },
   {
     tag: 'Delivery & Process',
@@ -67,9 +78,8 @@ const caseStudies: CaseStudy[] = [
     metricLabel: 'velocity increase in 12 months',
     summary:
       'Took on the Scrum Master role for a 15-person Agile team delivering a multi-million-pound project, improving both delivery speed and client satisfaction.',
-    image: companyLogos.roke.url,
+    image: companyLogos.roke,
     imageAlt: 'Roke logo',
-    imageFallback: companyLogos.roke.fallback,
     detail: [
       {
         heading: 'The context',
@@ -84,7 +94,14 @@ const caseStudies: CaseStudy[] = [
         text: 'Scrum velocity increased by 77% within 12 months. Sprint deliveries became more predictable, client satisfaction improved, and the team scaled successfully without losing delivery quality.',
       },
     ],
-    technologies: ['Scrum', 'SAFe', 'Jira', 'Confluence', 'Stakeholder Management', 'CSM'],
+    technologies: [
+      'Scrum',
+      'SAFe',
+      'Jira',
+      'Confluence',
+      'Stakeholder Management',
+      'CSM',
+    ],
   },
 ];
 
@@ -119,13 +136,19 @@ export default function Home() {
         if (i >= fullText.length) clearInterval(id);
       }, 110);
     }, 700);
-    return () => { clearTimeout(delay); clearInterval(id); };
-  }, [])
+    return () => {
+      clearTimeout(delay);
+      clearInterval(id);
+    };
+  }, []);
   return (
     <>
       {/* ─── Hero ─── */}
       <section className="relative overflow-hidden">
-        <motion.div className="absolute inset-0 dot-grid -z-10" style={{ y: dotGridY }} />
+        <motion.div
+          className="absolute inset-0 dot-grid -z-10"
+          style={{ y: dotGridY }}
+        />
         <div className="max-w-5xl mx-auto px-6 pt-24 pb-20 sm:pt-32 sm:pb-28">
           <div className="flex flex-col md:flex-row items-start gap-12 md:gap-16">
             <motion.div style={{ y: textY }} className="max-w-2xl flex-1">
@@ -134,37 +157,43 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: 'easeOut' }}
               >
-              <p className="font-display italic text-2xl text-accent mb-4">
-                {displayed}
-                <span
-                  aria-hidden="true"
-                  className="inline-block w-0.5 h-[0.85em] bg-accent align-middle ml-px translate-y-[-0.05em] cursor-blink"
-                />
-              </p>
-              <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight leading-tight">
-                I turn complexity into clarity — in code, in product, in
-                conversation.
-              </h1>
-              <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-xl">
-                Technical Product Owner with an engineering backbone. I shape
-                platforms, bridge technical and commercial decisions, and help
-                teams deliver work that holds up.
-              </p>
-              <div className="mt-8 flex flex-wrap items-center gap-4">
-                <Link
-                  to="/journey"
-                  className={buttonVariants({ variant: 'primary', arrow: true })}
-                >
-                  See my journey
-                </Link>
-                <Link
-                  to="/contact"
-                  className={buttonVariants({ variant: 'ghost', arrow: true })}
-                >
-                  Get in touch
-                  <ButtonArrow />
-                </Link>
-              </div>
+                <p className="font-display italic text-2xl text-accent mb-4">
+                  {displayed}
+                  <span
+                    aria-hidden="true"
+                    className="inline-block w-0.5 h-[0.85em] bg-accent align-middle ml-px translate-y-[-0.05em] cursor-blink"
+                  />
+                </p>
+                <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight leading-tight">
+                  I turn complexity into clarity — in code, in product, in
+                  conversation.
+                </h1>
+                <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-xl">
+                  Technical Product Owner with an engineering backbone. I shape
+                  platforms, bridge technical and commercial decisions, and help
+                  teams deliver work that holds up.
+                </p>
+                <div className="mt-8 flex flex-wrap items-center gap-4">
+                  <Link
+                    to="/journey"
+                    className={buttonVariants({
+                      variant: 'primary',
+                      arrow: true,
+                    })}
+                  >
+                    See my journey
+                  </Link>
+                  <Link
+                    to="/contact"
+                    className={buttonVariants({
+                      variant: 'ghost',
+                      arrow: true,
+                    })}
+                  >
+                    Get in touch
+                    <ButtonArrow />
+                  </Link>
+                </div>
               </motion.div>
             </motion.div>
 
@@ -175,22 +204,22 @@ export default function Home() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
               >
-              <div className="relative">
-                <div className="w-48 h-56 sm:w-56 sm:h-64 rounded-2xl overflow-hidden border-2 border-border/40 bg-secondary">
-                  {/* Replace src with your actual headshot */}
-                  <img
-                    src="/images/profile.jpg"
-                    alt="Oliver Still"
-                    className="size-full object-cover"
-                    onError={(e) => {
-                      // Graceful fallback if image hasn't been added yet
-                      (e.target as HTMLImageElement).style.display = 'none';
-                    }}
-                  />
+                <div className="relative">
+                  <div className="w-48 h-56 sm:w-56 sm:h-64 rounded-2xl overflow-hidden border-2 border-border/40 bg-secondary">
+                    {/* Replace src with your actual headshot */}
+                    <img
+                      src="/images/profile.jpg"
+                      alt="Oliver Still"
+                      className="size-full object-cover"
+                      onError={e => {
+                        // Graceful fallback if image hasn't been added yet
+                        (e.target as HTMLImageElement).style.display = 'none';
+                      }}
+                    />
+                  </div>
+                  {/* Decorative terracotta accent corner */}
+                  <div className="absolute -bottom-2 -right-2 w-16 h-16 rounded-xl bg-accent/15 -z-10" />
                 </div>
-                {/* Decorative terracotta accent corner */}
-                <div className="absolute -bottom-2 -right-2 w-16 h-16 rounded-xl bg-accent/15 -z-10" />
-              </div>
               </motion.div>
             </motion.div>
           </div>
@@ -199,7 +228,10 @@ export default function Home() {
 
       {/* ─── What I do ─── */}
       <section className="max-w-5xl mx-auto px-6 py-16 sm:py-20">
-        <SectionHeading label="What I do" title="Engineering meets architecture" />
+        <SectionHeading
+          label="What I do"
+          title="Engineering meets architecture"
+        />
         <div className="mt-10 grid sm:grid-cols-3 gap-8">
           {capabilities.map((cap, i) => (
             <motion.div
@@ -222,7 +254,10 @@ export default function Home() {
 
       {/* ─── Case Studies ─── */}
       <section className="max-w-5xl mx-auto px-6 py-16 sm:py-20">
-        <SectionHeading label="Selected work" title="Things I've built and shaped" />
+        <SectionHeading
+          label="Selected work"
+          title="Things I've built and shaped"
+        />
         <div className="mt-10 space-y-4">
           {caseStudies.map((study, i) => (
             <motion.div
@@ -258,7 +293,11 @@ export default function Home() {
           </p>
           <Link
             to="/contact"
-            className={buttonVariants({ variant: 'accent', arrow: true, className: 'mt-8' })}
+            className={buttonVariants({
+              variant: 'accent',
+              arrow: true,
+              className: 'mt-8',
+            })}
           >
             Get in touch
             <ButtonArrow />
