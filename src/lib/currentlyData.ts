@@ -1,8 +1,3 @@
-/**
- * Edit these entries to update the "Currently" status widget.
- * The widget cycles through all items automatically.
- */
-
 export interface CurrentlyItem {
   category: 'working' | 'reading' | 'listening';
   label: string;
@@ -10,7 +5,24 @@ export interface CurrentlyItem {
 }
 
 export const currentlyItems: CurrentlyItem[] = [
-  { category: 'working', label: 'Building', value: 'Membership platforms at Wattle' },
-  { category: 'reading', label: 'Reading', value: "Could Should Might Don't by Nick Foster" },
-  { category: 'listening', label: 'Listening to', value: 'James Blake - Trying Times' },
+  {
+    category: 'working',
+    label: 'Building',
+    value:
+      import.meta.env.VITE_CURRENTLY_WORKING ??
+      'Membership platforms at Wattle',
+  },
+  {
+    category: 'reading',
+    label: 'Reading',
+    value:
+      import.meta.env.VITE_CURRENTLY_READING ??
+      "Could Should Might Don't by Nick Foster",
+  },
+  {
+    category: 'listening',
+    label: 'Listening to',
+    value:
+      import.meta.env.VITE_CURRENTLY_LISTENING ?? 'James Blake - Trying Times',
+  },
 ];
