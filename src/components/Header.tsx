@@ -9,7 +9,7 @@ const navigation = [
   { name: 'Home', to: '/' },
   { name: 'Journey', to: '/journey' },
   { name: 'About', to: '/about' },
-  { name: 'Contact', to: '/contact' },
+  { name: "Let's Chat", to: '/contact' },
 ];
 
 export default function Header() {
