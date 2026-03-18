@@ -1,8 +1,14 @@
 @import 'tailwindcss';
+@import '@fontsource/libertinus-serif';
 
 @keyframes cursor-blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 .cursor-blink {
   animation: cursor-blink 0.85s step-end infinite;
@@ -15,7 +21,7 @@
 /* ─── C2 Palette: Cool Slate + Terracotta ─── */
 
 :root {
-  --font-display: 'Instrument Serif', serif;
+  --font-display: 'Libertinus Serif', serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
 
   --background: #f5f6f8;
@@ -161,7 +167,11 @@
   --s: 22px;
   --dot-size: 1px;
   --dot-colour: #cccdd2;
-  background-image: radial-gradient(var(--dot-size) at 50% 50%, var(--dot-colour) 96%, transparent);
+  background-image: radial-gradient(
+    var(--dot-size) at 50% 50%,
+    var(--dot-colour) 96%,
+    transparent
+  );
   background-size: var(--s) var(--s);
   mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
 }
