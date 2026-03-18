@@ -162,7 +162,7 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: 'easeOut' }}
               >
-                <p className="font-display italic text-2xl text-accent mb-4">
+                <p className="font-display text-2xl text-accent mb-4">
                   {displayed}
                   <span
                     aria-hidden="true"
@@ -293,9 +293,7 @@ export default function Home() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <p className="font-display italic text-lg text-accent mb-3">
-            Interested?
-          </p>
+          <p className="font-display text-lg text-accent mb-3">Interested?</p>
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
             Always happy to have a conversation.
           </h2>

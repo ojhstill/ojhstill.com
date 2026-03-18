@@ -47,7 +47,10 @@ export default function Contact() {
     <>
       {/* Header */}
       <section className="relative overflow-hidden">
-        <motion.div className="absolute inset-0 dot-grid -z-10" style={{ y: dotGridY }} />
+        <motion.div
+          className="absolute inset-0 dot-grid -z-10"
+          style={{ y: dotGridY }}
+        />
         <div className="max-w-5xl mx-auto px-6 pt-24 pb-16 sm:pt-28 sm:pb-20">
           <motion.div style={{ y: textY }}>
             <motion.div
@@ -56,17 +59,17 @@ export default function Contact() {
               transition={{ duration: 0.6, ease: 'easeOut' }}
               className="max-w-xl"
             >
-            <p className="font-display italic text-lg text-accent mb-4">
-              Get in touch
-            </p>
-            <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-tight">
-              Let's have a conversation.
-            </h1>
-            <p className="mt-6 text-muted-foreground leading-relaxed">
-              Whether you've got a project in mind, want to talk about
-              architecture, or just fancy a chat — I'm always happy to connect.
-              Drop me a line and I'll get back to you.
-            </p>
+              <p className="font-display text-lg text-accent mb-4">
+                Get in touch
+              </p>
+              <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-tight">
+                Let's have a conversation.
+              </h1>
+              <p className="mt-6 text-muted-foreground leading-relaxed">
+                Whether you've got a project in mind, want to talk about
+                architecture, or just fancy a chat — I'm always happy to
+                connect. Drop me a line and I'll get back to you.
+              </p>
             </motion.div>
           </motion.div>
         </div>

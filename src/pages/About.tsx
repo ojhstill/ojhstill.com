@@ -1,5 +1,9 @@
 import { motion } from 'motion/react';
-import { GlobeIcon, SpeakerLoudIcon, StopwatchIcon } from '@radix-ui/react-icons';
+import {
+  GlobeIcon,
+  SpeakerLoudIcon,
+  StopwatchIcon,
+} from '@radix-ui/react-icons';
 import { useHeroParallax } from '@/lib/useParallax';
 
 interface Interest {
@@ -42,7 +46,10 @@ export default function About() {
     <>
       {/* Header */}
       <section className="relative overflow-hidden">
-        <motion.div className="absolute inset-0 dot-grid -z-10" style={{ y: dotGridY }} />
+        <motion.div
+          className="absolute inset-0 dot-grid -z-10"
+          style={{ y: dotGridY }}
+        />
         <div className="max-w-5xl mx-auto px-6 pt-24 pb-16 sm:pt-28 sm:pb-20">
           <div className="flex flex-col md:flex-row items-start gap-10 md:gap-16">
             <motion.div style={{ y: textY }} className="max-w-xl flex-1">
@@ -51,38 +58,42 @@ export default function About() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: 'easeOut' }}
               >
-              <p className="font-display italic text-lg text-accent mb-4">
-                About me
-              </p>
-              <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-tight">
-                The person behind the product thinking.
-              </h1>
-              <p className="mt-6 text-muted-foreground leading-relaxed">
-                I care about building things that work — technically, commercially,
-                and for the people using them. But I also believe the best work
-                comes from people who have a life outside of it.
-              </p>
+                <p className="font-display text-lg text-accent mb-4">
+                  About me
+                </p>
+                <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-tight">
+                  The person behind the product thinking.
+                </h1>
+                <p className="mt-6 text-muted-foreground leading-relaxed">
+                  I care about building things that work — technically,
+                  commercially, and for the people using them. But I also
+                  believe the best work comes from people who have a life
+                  outside of it.
+                </p>
               </motion.div>
             </motion.div>
 
             {/* Personal photo */}
-            <motion.div style={{ y: imageY }} className="shrink-0 hidden md:block">
+            <motion.div
+              style={{ y: imageY }}
+              className="shrink-0 hidden md:block"
+            >
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-              <div className="w-48 h-56 rounded-2xl overflow-hidden border-2 border-border/40 bg-secondary">
-                {/* Replace src with a casual/personal photo */}
-                <img
-                  src="/images/about/portrait.jpg"
-                  alt="Oli"
-                  className="size-full object-cover"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = 'none';
-                  }}
-                />
-              </div>
+                <div className="w-48 h-56 rounded-2xl overflow-hidden border-2 border-border/40 bg-secondary">
+                  {/* Replace src with a casual/personal photo */}
+                  <img
+                    src="/images/about/portrait.jpg"
+                    alt="Oli"
+                    className="size-full object-cover"
+                    onError={e => {
+                      (e.target as HTMLImageElement).style.display = 'none';
+                    }}
+                  />
+                </div>
               </motion.div>
             </motion.div>
           </div>
@@ -153,8 +164,10 @@ export default function About() {
                     src={interest.image}
                     alt={interest.imageAlt || ''}
                     className="w-full h-40 object-cover"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).parentElement!.style.display = 'none';
+                    onError={e => {
+                      (
+                        e.target as HTMLImageElement
+                      ).parentElement!.style.display = 'none';
                     }}
                   />
                 </div>

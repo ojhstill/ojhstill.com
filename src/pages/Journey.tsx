@@ -139,7 +139,7 @@ export default function Journey() {
               transition={{ duration: 0.6, ease: 'easeOut' }}
               className="max-w-xl"
             >
-              <p className="font-display italic text-lg text-accent mb-4">
+              <p className="font-display text-lg text-accent mb-4">
                 Career journey
               </p>
               <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-tight">
