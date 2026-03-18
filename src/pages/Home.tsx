@@ -7,6 +7,7 @@ import SectionHeading from '@/components/SectionHeading';
 import CurrentlyStatus from '@/components/CurrentlyStatus';
 import { companyLogos } from '@/lib/companyLogos';
 import { useHeroParallax } from '@/lib/useParallax';
+import { Layers, ArrowLeftRight, Search } from 'lucide-react';
 
 const caseStudies: CaseStudy[] = [
   {
@@ -108,14 +109,17 @@ const caseStudies: CaseStudy[] = [
 
 const capabilities = [
   {
+    icon: Layers,
     title: 'Architecture & platforms',
     text: 'I design reusable, scalable platforms — not one-off solutions. I think in systems and build foundations that compound value over time.',
   },
   {
+    icon: ArrowLeftRight,
     title: 'Stakeholder bridge',
     text: 'I sit between engineering, delivery, and commercial. I translate complexity into clear decisions and make sure technical direction aligns with business goals.',
   },
   {
+    icon: Search,
     title: 'Discovery & delivery',
     text: 'I get involved early — shaping scope in discovery before it hardens. That upstream clarity means fewer surprises downstream and better outcomes for clients.',
   },
@@ -245,6 +249,10 @@ export default function Home() {
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.45, delay: i * 0.1 }}
             >
+              <cap.icon
+                className="w-5 h-5 text-accent mb-3"
+                strokeWidth={1.75}
+              />
               <h3 className="text-base font-semibold text-foreground mb-2">
                 {cap.title}
               </h3>
@@ -289,11 +297,11 @@ export default function Home() {
             Interested?
           </p>
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
-            Let's talk about what you're building.
+            Always happy to have a conversation.
           </h2>
           <p className="mt-4 text-muted-foreground max-w-md mx-auto">
-            Whether it's a platform challenge, an architecture decision, or a
-            team that needs bridging — I'm always up for a conversation.
+            If something here resonates, feel free to reach out — whether that's
+            to swap ideas, explore a potential fit, or just connect.
           </p>
           <Link
             to="/contact"
