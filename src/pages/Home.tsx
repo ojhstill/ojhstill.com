@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { buttonVariants, ButtonArrow } from '@/components/Button';
 import { motion } from 'motion/react';
@@ -7,7 +6,11 @@ import SectionHeading from '@/components/SectionHeading';
 import CurrentlyStatus from '@/components/CurrentlyStatus';
 import { companyLogos } from '@/lib/companyLogos';
 import { useHeroParallax } from '@/lib/useParallax';
-import { Layers, ArrowLeftRight, Search } from 'lucide-react';
+import {
+  LayersIcon,
+  Share1Icon,
+  MagnifyingGlassIcon,
+} from '@radix-ui/react-icons';
 
 const caseStudies: CaseStudy[] = [
   {
@@ -109,52 +112,30 @@ const caseStudies: CaseStudy[] = [
 
 const capabilities = [
   {
-    icon: Layers,
+    icon: LayersIcon,
     title: 'Architecture & platforms',
     text: 'I design reusable, scalable platforms — not one-off solutions. I think in systems and build foundations that compound value over time.',
   },
   {
-    icon: ArrowLeftRight,
+    icon: Share1Icon,
     title: 'Stakeholder bridge',
     text: 'I sit between engineering, delivery, and commercial. I translate complexity into clear decisions and make sure technical direction aligns with business goals.',
   },
   {
-    icon: Search,
+    icon: MagnifyingGlassIcon,
     title: 'Discovery & delivery',
     text: 'I get involved early — shaping scope in discovery before it hardens. That upstream clarity means fewer surprises downstream and better outcomes for clients.',
   },
 ];
 
 export default function Home() {
-  const { dotGridY, imageY, textY } = useHeroParallax();
+  const { imageY, textY } = useHeroParallax();
 
-  const fullText = "Hey, I'm Oli.";
-  const [displayed, setDisplayed] = useState('');
-
-  useEffect(() => {
-    let id: ReturnType<typeof setInterval>;
-    const delay = setTimeout(() => {
-      let i = 0;
-      id = setInterval(() => {
-        i++;
-        setDisplayed(fullText.slice(0, i));
-        if (i >= fullText.length) clearInterval(id);
-      }, 110);
-    }, 700);
-    return () => {
-      clearTimeout(delay);
-      clearInterval(id);
-    };
-  }, []);
   return (
     <>
       {/* ─── Hero ─── */}
       <section className="relative overflow-hidden">
-        <motion.div
-          className="absolute inset-0 dot-grid -z-10"
-          style={{ y: dotGridY }}
-        />
-        <div className="max-w-5xl mx-auto px-6 pt-24 pb-20 sm:pt-32 sm:pb-28">
+        <div className="max-w-5xl mx-auto px-6 pt-32 pb-28 sm:pt-44 sm:pb-36">
           <div className="flex flex-col md:flex-row items-start gap-12 md:gap-16">
             <motion.div style={{ y: textY }} className="max-w-2xl flex-1">
               <motion.div
@@ -163,13 +144,9 @@ export default function Home() {
                 transition={{ duration: 0.6, ease: 'easeOut' }}
               >
                 <p className="font-display text-2xl text-accent mb-4">
-                  {displayed}
-                  <span
-                    aria-hidden="true"
-                    className="inline-block w-0.5 h-[0.85em] bg-accent align-middle ml-px translate-y-[-0.05em] cursor-blink"
-                  />
+                  Hey, I'm Oli.
                 </p>
-                <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight leading-tight">
+                <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight leading-[1.15]">
                   I turn complexity into clarity — in code, in product, in
                   conversation.
                 </h1>
@@ -212,21 +189,15 @@ export default function Home() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
               >
-                <div className="relative">
-                  <div className="w-48 h-56 sm:w-56 sm:h-64 rounded-2xl overflow-hidden border-2 border-border/40 bg-secondary">
-                    {/* Replace src with your actual headshot */}
-                    <img
-                      src="/images/profile.jpg"
-                      alt="Oliver Still"
-                      className="size-full object-cover"
-                      onError={e => {
-                        // Graceful fallback if image hasn't been added yet
-                        (e.target as HTMLImageElement).style.display = 'none';
-                      }}
-                    />
-                  </div>
-                  {/* Decorative terracotta accent corner */}
-                  <div className="absolute -bottom-2 -right-2 w-16 h-16 rounded-xl bg-accent/15 -z-10" />
+                <div className="w-48 h-56 sm:w-56 sm:h-64 rounded-3xl overflow-hidden shadow-lg shadow-accent/8 bg-secondary">
+                  <img
+                    src="/images/profile.jpg"
+                    alt="Oliver Still"
+                    className="size-full object-cover"
+                    onError={e => {
+                      (e.target as HTMLImageElement).style.display = 'none';
+                    }}
+                  />
                 </div>
               </motion.div>
             </motion.div>
@@ -234,26 +205,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── What I do ─── */}
-      <section className="max-w-5xl mx-auto px-6 py-16 sm:py-20">
+      {/* ─── How I work ─── */}
+      <section className="max-w-3xl mx-auto px-6 py-24 sm:py-32">
         <SectionHeading
-          label="What I do"
+          label="How I work"
           title="Engineering meets architecture"
         />
-        <div className="mt-10 grid sm:grid-cols-3 gap-8">
+        <div className="mt-10 space-y-10">
           {capabilities.map((cap, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.45, delay: i * 0.1 }}
+              transition={{ duration: 0.5, delay: i * 0.06 }}
+              className="pl-6 border-l-2 border-accent/30"
             >
-              <cap.icon
-                className="w-5 h-5 text-accent mb-3"
-                strokeWidth={1.75}
-              />
-              <h3 className="text-base font-semibold text-foreground mb-2">
+              <h3 className="flex items-center gap-2 text-base font-semibold text-foreground mb-2">
+                <cap.icon className="size-4 text-accent shrink-0" />
                 {cap.title}
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
@@ -265,19 +234,19 @@ export default function Home() {
       </section>
 
       {/* ─── Case Studies ─── */}
-      <section className="max-w-5xl mx-auto px-6 py-16 sm:py-20">
+      <section className="max-w-3xl mx-auto px-6 py-24 sm:py-32">
         <SectionHeading
           label="Selected work"
           title="Things I've built and shaped"
         />
-        <div className="mt-10 space-y-4">
+        <div className="mt-10 space-y-12">
           {caseStudies.map((study, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.45, delay: i * 0.08 }}
+              transition={{ type: 'spring', stiffness: 100, damping: 20, delay: i * 0.05 }}
             >
               <CaseStudyCard study={study} />
             </motion.div>
@@ -286,12 +255,12 @@ export default function Home() {
       </section>
 
       {/* ─── CTA ─── */}
-      <section className="max-w-5xl mx-auto px-6 py-16 sm:py-24 text-center">
+      <section className="max-w-3xl mx-auto px-6 py-24 sm:py-36 text-center">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
         >
           <p className="font-display text-lg text-accent mb-3">Interested?</p>
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">

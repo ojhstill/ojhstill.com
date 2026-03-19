@@ -5,7 +5,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border/40 mt-auto">
+    <footer className="border-t border-border/20 mt-auto">
       <div className="max-w-5xl mx-auto px-6 pt-6 pb-2">
         <CurrentlyStatus />
       </div>

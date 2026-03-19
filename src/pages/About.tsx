@@ -41,16 +41,12 @@ const interests: Interest[] = [
 ];
 
 export default function About() {
-  const { dotGridY, imageY, textY } = useHeroParallax();
+  const { imageY, textY } = useHeroParallax();
   return (
     <>
       {/* Header */}
       <section className="relative overflow-hidden">
-        <motion.div
-          className="absolute inset-0 dot-grid -z-10"
-          style={{ y: dotGridY }}
-        />
-        <div className="max-w-5xl mx-auto px-6 pt-24 pb-16 sm:pt-28 sm:pb-20">
+        <div className="max-w-5xl mx-auto px-6 pt-32 pb-20 sm:pt-40 sm:pb-28">
           <div className="flex flex-col md:flex-row items-start gap-10 md:gap-16">
             <motion.div style={{ y: textY }} className="max-w-xl flex-1">
               <motion.div
@@ -83,7 +79,7 @@ export default function About() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <div className="w-48 h-56 rounded-2xl overflow-hidden border-2 border-border/40 bg-secondary">
+                <div className="w-48 h-56 rounded-3xl overflow-hidden shadow-lg shadow-accent/8 bg-secondary">
                   {/* Replace src with a casual/personal photo */}
                   <img
                     src="/images/about/portrait.jpg"
@@ -131,7 +127,7 @@ export default function About() {
 
       {/* Interests */}
       <section className="max-w-3xl mx-auto px-6 pb-24 sm:pb-32">
-        <div className="space-y-12">
+        <div className="space-y-16">
           {interests.map((interest, i) => (
             <motion.div
               key={i}
@@ -159,7 +155,7 @@ export default function About() {
                 </a>
               )}
               {interest.image && (
-                <div className="mt-4 rounded-xl overflow-hidden border border-border/40 bg-secondary max-w-sm">
+                <div className="mt-4 rounded-xl overflow-hidden bg-secondary max-w-sm">
                   <img
                     src={interest.image}
                     alt={interest.imageAlt || ''}

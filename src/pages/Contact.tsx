@@ -33,7 +33,7 @@ const links = [
 ];
 
 export default function Contact() {
-  const { dotGridY, textY } = useHeroParallax();
+  const { textY } = useHeroParallax();
   const [copied, setCopied] = useState(false);
 
   function handleEmailClick(e: React.MouseEvent) {
@@ -47,11 +47,7 @@ export default function Contact() {
     <>
       {/* Header */}
       <section className="relative overflow-hidden">
-        <motion.div
-          className="absolute inset-0 dot-grid -z-10"
-          style={{ y: dotGridY }}
-        />
-        <div className="max-w-5xl mx-auto px-6 pt-24 pb-16 sm:pt-28 sm:pb-20">
+        <div className="max-w-5xl mx-auto px-6 pt-32 pb-20 sm:pt-40 sm:pb-28">
           <motion.div style={{ y: textY }}>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -89,7 +85,7 @@ export default function Contact() {
               animate={{ opacity: 1, y: 0 }}
               whileTap={{ scale: 0.985 }}
               transition={{ duration: 0.4, delay: 0.2 + i * 0.1 }}
-              className="group flex items-center gap-4 px-5 py-4 rounded-xl border border-border/60 bg-card hover:border-accent/40 hover:shadow-sm transition-all cursor-pointer"
+              className="group flex items-center gap-4 px-5 py-4 border-b border-border/20 last:border-0 hover:bg-accent/5 transition-all cursor-pointer"
             >
               <div className="flex items-center justify-center size-10 rounded-lg bg-secondary group-hover:bg-accent/10 transition-colors">
                 <link.icon className="size-5 text-muted-foreground group-hover:text-accent transition-colors" />

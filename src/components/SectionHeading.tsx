@@ -8,13 +8,13 @@ interface SectionHeadingProps {
 
 export default function SectionHeading({ label, title, className }: SectionHeadingProps) {
   return (
-    <div className={cn('space-y-2', className)}>
+    <div className={cn('space-y-3', className)}>
       {label && (
         <span className="text-xs font-semibold tracking-wide uppercase text-accent">
           {label}
         </span>
       )}
-      <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">
+      <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground font-display">
         {title}
       </h2>
     </div>
