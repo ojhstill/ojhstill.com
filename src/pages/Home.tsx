@@ -277,7 +277,9 @@ export default function Home() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
-          <p className="font-display text-lg text-accent mb-3">Interested?</p>
+          <p className="font-display text-lg text-accent font-semibold tracking-tight mb-3">
+            Interested?
+          </p>
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
             Always happy to have a conversation.
           </h2>
