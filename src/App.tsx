@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-route
 import { AnimatePresence, motion } from 'motion/react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import GrainOverlay from '@/components/GrainOverlay';
 import Home from '@/pages/Home';
 import Journey from '@/pages/Journey';
 import About from '@/pages/About';
@@ -40,6 +41,7 @@ export default function App() {
           <AnimatedRoutes />
         </main>
         <Footer />
+        <GrainOverlay />
       </div>
     </Router>
   );
