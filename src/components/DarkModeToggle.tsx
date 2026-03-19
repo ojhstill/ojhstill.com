@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
+import { Moon, Sun } from 'lucide-react';
 
 export default function DarkModeToggle() {
   const [darkMode, setDarkMode] = useState(false);
@@ -30,9 +30,9 @@ export default function DarkModeToggle() {
       className="p-2 rounded-lg border border-border/60 hover:border-border hover:bg-secondary/50 transition-colors cursor-pointer"
     >
       {darkMode ? (
-        <MoonIcon className="size-4" />
+        <Moon className="size-4" />
       ) : (
-        <SunIcon className="size-4" />
+        <Sun className="size-4" />
       )}
     </button>
   );

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { HamburgerMenuIcon, Cross1Icon } from '@radix-ui/react-icons';
+import { Menu, X } from 'lucide-react';
 import { motion } from 'motion/react';
 import DarkModeToggle from '@/components/DarkModeToggle';
 import { cn } from '@/lib/utils';
@@ -86,9 +86,9 @@ export default function Header() {
             aria-label="Toggle menu"
           >
             {menuOpen ? (
-              <Cross1Icon className="size-5" />
+              <X className="size-5" />
             ) : (
-              <HamburgerMenuIcon className="size-5" />
+              <Menu className="size-5" />
             )}
           </button>
         </div>

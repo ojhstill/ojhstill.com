@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
-import { CodeIcon, ReaderIcon, SpeakerLoudIcon } from '@radix-ui/react-icons';
+import { BookOpen, Code2, Headphones } from 'lucide-react';
 import { currentlyItems, type CurrentlyItem } from '@/lib/currentlyData';
 
 const categoryIcon: Record<CurrentlyItem['category'], React.ReactNode> = {
-  working: <CodeIcon className="size-3.5" />,
-  reading: <ReaderIcon className="size-3.5" />,
-  listening: <SpeakerLoudIcon className="size-3.5" />,
+  working: <Code2 className="size-3.5" />,
+  reading: <BookOpen className="size-3.5" />,
+  listening: <Headphones className="size-3.5" />,
 };
 
 const CYCLE_MS = 5_000;
@@ -17,8 +17,8 @@ export default function CurrentlyStatus() {
   useEffect(() => {
     if (currentlyItems.length <= 1) return;
     const id = setInterval(
-      () => setIndex((i) => (i + 1) % currentlyItems.length),
-      CYCLE_MS,
+      () => setIndex(i => (i + 1) % currentlyItems.length),
+      CYCLE_MS
     );
     return () => clearInterval(id);
   }, []);
@@ -28,7 +28,7 @@ export default function CurrentlyStatus() {
   const item = currentlyItems[index];
 
   return (
-    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+    <div className="flex items-center gap-3 text-sm text-muted-foreground">
       {/* Pulsing live dot */}
       <span className="relative flex size-2">
         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
@@ -46,7 +46,9 @@ export default function CurrentlyStatus() {
         >
           {categoryIcon[item.category]}
           <span>
-            <span className="font-medium text-foreground/70">{item.label}:</span>{' '}
+            <span className="font-medium text-foreground/70">
+              {item.label}:
+            </span>{' '}
             {item.value}
           </span>
         </motion.span>

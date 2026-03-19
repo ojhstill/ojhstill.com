@@ -1,13 +1,9 @@
 import { motion } from 'motion/react';
-import {
-  GlobeIcon,
-  SpeakerLoudIcon,
-  StopwatchIcon,
-} from '@radix-ui/react-icons';
+import { Disc3, Footprints, Languages, type LucideIcon } from 'lucide-react';
 import { useHeroParallax } from '@/lib/useParallax';
 
 interface Interest {
-  icon: React.ComponentType<{ className?: string }>;
+  icon: LucideIcon;
   title: string;
   text: string;
   link?: string;
@@ -18,7 +14,7 @@ interface Interest {
 
 const interests: Interest[] = [
   {
-    icon: SpeakerLoudIcon,
+    icon: Disc3,
     title: 'Music',
     text: `I've been producing and releasing music for over a decade. Self-taught in production, mixing, mastering, and digital marketing - I've put out six singles and two EPs, accumulating over a million streams. It's the longest-running project I've ever managed, and it taught me more about discipline and iteration than any job has. I'm also a classically trained pianist and used to give private tuition to students aged 8 to 17.`,
     link: 'https://owarimusic.com',
@@ -27,14 +23,14 @@ const interests: Interest[] = [
     imageAlt: 'Music production setup',
   },
   {
-    icon: StopwatchIcon,
+    icon: Footprints,
     title: 'Running',
     text: `I run half-marathons for charity - most recently the Great North Run, where I raised over £500 for the British Red Cross. It's the thing that keeps everything else balanced. I also play hockey and have competed in national diving competitions, although the diving is more of a past life at this point.`,
     image: '/images/about/running.jpg',
     imageAlt: 'Post race photo',
   },
   {
-    icon: GlobeIcon,
+    icon: Languages,
     title: 'French',
     text: `I've been teaching myself French for a few years now. Currently at B1 level - enough to hold most conversations when I'm travelling in French-speaking regions. It's slow progress, but the kind of slow progress that compounds.`,
   },
@@ -138,7 +134,7 @@ export default function About() {
               className="relative pl-6 border-l-2 border-accent/30"
             >
               <h3 className="flex items-center gap-2 text-lg font-semibold text-foreground mb-2">
-                <interest.icon className="size-4 text-accent shrink-0" />
+                <interest.icon className="size-6 text-accent shrink-0" />
                 {interest.title}
               </h3>
               <p className="text-base text-muted-foreground leading-relaxed">

@@ -1,4 +1,4 @@
-import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons';
+import { Github, Linkedin } from 'lucide-react';
 import CurrentlyStatus from '@/components/CurrentlyStatus';
 
 export default function Footer() {
@@ -21,7 +21,7 @@ export default function Footer() {
             className="text-muted-foreground hover:text-foreground transition-colors"
             aria-label="GitHub"
           >
-            <GitHubLogoIcon className="size-5" />
+            <Github className="size-5" />
           </a>
           <a
             href="https://linkedin.com/in/ojhstill"
@@ -30,7 +30,7 @@ export default function Footer() {
             className="text-muted-foreground hover:text-foreground transition-colors"
             aria-label="LinkedIn"
           >
-            <LinkedInLogoIcon className="size-5" />
+            <Linkedin className="size-5" />
           </a>
         </div>
       </div>

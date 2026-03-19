@@ -231,10 +231,7 @@ export default function Home() {
               className="pl-6 border-l-2 border-accent/30"
             >
               <h3 className="flex items-center gap-2 text-base font-semibold text-foreground mb-2">
-                <cap.icon
-                  className="size-6 text-accent shrink-0"
-                  strokeWidth={1.5}
-                />
+                <cap.icon className="size-6 text-accent shrink-0" />
                 {cap.title}
               </h3>
               <p className="text-base text-muted-foreground leading-relaxed">

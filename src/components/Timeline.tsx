@@ -98,10 +98,10 @@ export default function Timeline({ entries }: { entries: TimelineEntry[] }) {
   return (
     <div ref={containerRef} className="relative">
       {/* Static rail - shows the full path faintly */}
-      <div className="absolute left-1.75 top-3 bottom-0 w-px bg-border" />
+      <div className="absolute left-[6.5px] top-3 bottom-0 w-0.5 bg-border" />
       {/* Scroll-drawn accent line - grows from top as you scroll */}
       <motion.div
-        className="absolute left-1.75 top-3 bottom-0 w-px bg-accent/70 origin-top"
+        className="absolute left-[6.5px] top-3 bottom-0 w-0.5 bg-accent/70 origin-top"
         style={{ scaleY: lineScaleY }}
       />
       {entries.map((entry, i) => (

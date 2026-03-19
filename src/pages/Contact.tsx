@@ -2,32 +2,41 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useHeroParallax } from '@/lib/useParallax';
 import {
-  EnvelopeClosedIcon,
-  GitHubLogoIcon,
-  LinkedInLogoIcon,
-  ArrowTopRightIcon,
-  CheckIcon,
-} from '@radix-ui/react-icons';
+  ArrowUpRight,
+  Check,
+  Github,
+  Linkedin,
+  Mail,
+  type LucideIcon,
+} from 'lucide-react';
 
-const links = [
+type ContactLink = {
+  label: string;
+  value: string;
+  href: string;
+  icon: LucideIcon;
+  external?: boolean;
+};
+
+const links: ContactLink[] = [
   {
     label: 'Email',
     value: 'oliver@ojhstill.com',
     href: 'mailto:oliver@ojhstill.com',
-    icon: EnvelopeClosedIcon,
+    icon: Mail,
   },
   {
     label: 'LinkedIn',
     value: 'linkedin.com/in/ojhstill',
     href: 'https://linkedin.com/in/ojhstill',
-    icon: LinkedInLogoIcon,
+    icon: Linkedin,
     external: true,
   },
   {
     label: 'GitHub',
     value: 'github.com/ojhstill',
     href: 'https://github.com/ojhstill',
-    icon: GitHubLogoIcon,
+    icon: Github,
     external: true,
   },
 ];
@@ -73,7 +82,7 @@ export default function Contact() {
 
       {/* Contact links */}
       <section className="max-w-xl mx-auto px-6 pb-24 sm:pb-32">
-        <div className="space-y-3">
+        <div>
           {links.map((link, i) => (
             <motion.a
               key={i}
@@ -126,7 +135,7 @@ export default function Contact() {
                       transition={{ duration: 0.15 }}
                       className="shrink-0"
                     >
-                      <CheckIcon className="size-4 text-accent" />
+                        <Check className="size-4 text-accent" />
                     </motion.span>
                   ) : (
                     <motion.span
@@ -142,7 +151,7 @@ export default function Contact() {
                   )}
                 </AnimatePresence>
               ) : link.external ? (
-                <ArrowTopRightIcon className="size-4 text-muted-foreground group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition shrink-0" />
+                <ArrowUpRight className="size-4 text-muted-foreground group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition shrink-0" />
               ) : null}
             </motion.a>
           ))}

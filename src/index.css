@@ -11,6 +11,7 @@
 :root {
   --font-display: 'Libertinus Serif', serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
+  --icon-stroke-width: 1.5;
 
   --background: #f0e9dd;
   --foreground: #252422;
@@ -203,6 +204,10 @@
 
 .border-accent {
   border-color: var(--accent);
+}
+
+.lucide {
+  stroke-width: var(--icon-stroke-width);
 }
 
 /* Selection */

@@ -24,7 +24,7 @@ Personal portfolio built with React + TypeScript + Vite + Tailwind CSS.
 3. Ensure these dependencies are installed:
 
 ```bash
-npm install react-router-dom motion @radix-ui/react-icons clsx tailwind-merge
+npm install react-router-dom motion lucide-react clsx tailwind-merge
 npm install -D tailwindcss @tailwindcss/vite tailwindcss-animate
 ```
 
@@ -40,7 +40,7 @@ npm install -D tailwindcss @tailwindcss/vite tailwindcss-animate
 ```bash
 npm create vite@latest portfolio -- --template react-ts
 cd portfolio
-npm install react-router-dom motion @radix-ui/react-icons clsx tailwind-merge
+npm install react-router-dom motion lucide-react clsx tailwind-merge
 npm install -D tailwindcss @tailwindcss/vite tailwindcss-animate
 ```
 
