@@ -29,11 +29,7 @@ export default function DarkModeToggle() {
       aria-label="Toggle dark mode"
       className="p-2 rounded-lg border border-border/60 hover:border-border hover:bg-secondary/50 transition-colors cursor-pointer"
     >
-      {darkMode ? (
-        <Moon className="size-4" />
-      ) : (
-        <Sun className="size-4" />
-      )}
+      {darkMode ? <Moon className="size-4" /> : <Sun className="size-4" />}
     </button>
   );
 }

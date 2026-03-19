@@ -135,7 +135,7 @@ export default function Contact() {
                       transition={{ duration: 0.15 }}
                       className="shrink-0"
                     >
-                        <Check className="size-4 text-accent" />
+                      <Check className="size-4 text-accent" />
                     </motion.span>
                   ) : (
                     <motion.span

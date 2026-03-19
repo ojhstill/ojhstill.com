@@ -1,7 +1,6 @@
 @import 'tailwindcss';
 @import '@fontsource/libertinus-serif';
 
-
 @plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));

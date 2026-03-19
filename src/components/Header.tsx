@@ -85,11 +85,7 @@ export default function Header() {
             className="p-2 cursor-pointer"
             aria-label="Toggle menu"
           >
-            {menuOpen ? (
-              <X className="size-5" />
-            ) : (
-              <Menu className="size-5" />
-            )}
+            {menuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
         </div>
       </nav>
