@@ -60,7 +60,7 @@ export default function CaseStudyCard({ study }: { study: CaseStudy }) {
             </div>
           )}
 
-          <div className="flex-1 space-y-3 min-w-0">
+          <div className="flex-1 space-y-1 min-w-0">
             <span className="inline-block text-xs font-semibold tracking-wide uppercase text-accent">
               {study.tag}
             </span>

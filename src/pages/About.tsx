@@ -42,7 +42,7 @@ export default function About() {
     <>
       {/* Header */}
       <section className="relative overflow-hidden">
-        <div className="max-w-5xl mx-auto px-6 pt-32 pb-20 sm:pt-40 sm:pb-28">
+        <div className="max-w-5xl mx-auto px-6 pt-32 pb-20 sm:pb-28">
           <div className="flex flex-col md:flex-row items-start gap-10 md:gap-16">
             <motion.div style={{ y: textY }} className="max-w-xl flex-1">
               <motion.div
@@ -50,7 +50,7 @@ export default function About() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: 'easeOut' }}
               >
-                <p className="font-display text-lg text-accent mb-4">
+                <p className="font-display text-lg text-accent font-semibold tracking-tight mb-4">
                   About me
                 </p>
                 <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-tight">

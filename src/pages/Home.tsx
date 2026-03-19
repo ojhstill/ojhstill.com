@@ -131,7 +131,7 @@ export default function Home() {
     <>
       {/* ─── Hero ─── */}
       <section className="relative overflow-hidden">
-        <div className="max-w-5xl mx-auto px-6 pt-32 pb-28 sm:pt-44 sm:pb-36">
+        <div className="max-w-5xl mx-auto px-6 pt-32 pb-28 sm:pb-36">
           <div className="flex flex-col md:flex-row items-start gap-12 md:gap-16">
             <motion.div style={{ y: textY }} className="max-w-2xl flex-1">
               <motion.div
@@ -139,7 +139,7 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: 'easeOut' }}
               >
-                <p className="font-display text-2xl text-accent mb-4 flex gap-[0.35em]">
+                <p className="text-2xl font-semibold tracking-tight text-accent font-display mb-4 flex gap-[0.3em]">
                   {['Hey,', "I'm", 'Oli.'].map((word, i) => (
                     <motion.span
                       key={word}

@@ -127,7 +127,7 @@ export default function Journey() {
     <>
       {/* Header */}
       <section className="relative overflow-hidden">
-        <div className="max-w-5xl mx-auto px-6 pt-32 pb-20 sm:pt-40 sm:pb-28">
+        <div className="max-w-5xl mx-auto px-6 pt-32 pb-20 sm:pb-28">
           <motion.div style={{ y: textY }}>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -135,7 +135,7 @@ export default function Journey() {
               transition={{ duration: 0.6, ease: 'easeOut' }}
               className="max-w-xl"
             >
-              <p className="font-display text-lg text-accent mb-4">
+              <p className="font-display text-lg text-accent font-semibold tracking-tight mb-4">
                 Career journey
               </p>
               <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-tight">
