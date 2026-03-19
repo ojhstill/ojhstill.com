@@ -20,7 +20,7 @@ const interests: Interest[] = [
   {
     icon: SpeakerLoudIcon,
     title: 'Music',
-    text: `I've been producing and releasing music for over a decade. Self-taught in production, mixing, mastering, and digital marketing — I've put out six singles and two EPs, accumulating over a million streams. It's the longest-running project I've ever managed, and it taught me more about discipline and iteration than any job has. I'm also a classically trained pianist and used to give private tuition to students aged 8 to 17.`,
+    text: `I've been producing and releasing music for over a decade. Self-taught in production, mixing, mastering, and digital marketing - I've put out six singles and two EPs, accumulating over a million streams. It's the longest-running project I've ever managed, and it taught me more about discipline and iteration than any job has. I'm also a classically trained pianist and used to give private tuition to students aged 8 to 17.`,
     link: 'https://owarimusic.com',
     linkLabel: 'Hear for yourself',
     image: '/images/about/music.jpg',
@@ -29,14 +29,14 @@ const interests: Interest[] = [
   {
     icon: StopwatchIcon,
     title: 'Running',
-    text: `I run half-marathons for charity — most recently the Great North Run, where I raised over £500 for the British Red Cross. It's the thing that keeps everything else balanced. I also play hockey and have competed in national diving competitions, although the diving is more of a past life at this point.`,
+    text: `I run half-marathons for charity - most recently the Great North Run, where I raised over £500 for the British Red Cross. It's the thing that keeps everything else balanced. I also play hockey and have competed in national diving competitions, although the diving is more of a past life at this point.`,
     image: '/images/about/running.jpg',
     imageAlt: 'Post race photo',
   },
   {
     icon: GlobeIcon,
     title: 'French',
-    text: `I've been teaching myself French for a few years now. Currently at B1 level — enough to hold most conversations when I'm travelling in French-speaking regions. It's slow progress, but the kind of slow progress that compounds.`,
+    text: `I've been teaching myself French for a few years now. Currently at B1 level - enough to hold most conversations when I'm travelling in French-speaking regions. It's slow progress, but the kind of slow progress that compounds.`,
   },
 ];
 
@@ -61,7 +61,7 @@ export default function About() {
                   The person behind the product thinking.
                 </h1>
                 <p className="mt-6 text-muted-foreground leading-relaxed">
-                  I care about building things that work — technically,
+                  I care about building things that work - technically,
                   commercially, and for the people using them. But I also
                   believe the best work comes from people who have a life
                   outside of it.
@@ -106,7 +106,7 @@ export default function About() {
           className="space-y-4 text-muted-foreground leading-relaxed"
         >
           <p>
-            I'm Oli — a Technical Product Owner based in Bristol. I moved here
+            I'm Oli - a Technical Product Owner based in Bristol. I moved here
             from Hampshire in 2024 for a change of pace and never looked back.
             Before that I was at Roke, where I cut my teeth on everything from
             graduate engineering to Scrum mastering to business development.
@@ -114,7 +114,7 @@ export default function About() {
           <p>
             I'm naturally curious, self-starting, and I gravitate towards
             environments where ownership is real and decisions move fast. I care
-            about culture as much as capability — the best teams I've worked in
+            about culture as much as capability - the best teams I've worked in
             have been the ones where people trust each other enough to be direct
             and collaborative enough to stay aligned.
           </p>
@@ -141,7 +141,7 @@ export default function About() {
                 <interest.icon className="size-4 text-accent shrink-0" />
                 {interest.title}
               </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 {interest.text}
               </p>
               {interest.link && (

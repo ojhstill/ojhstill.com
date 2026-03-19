@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
-import { Code, BookOpen, Headphones } from 'lucide-react';
+import { CodeIcon, ReaderIcon, SpeakerLoudIcon } from '@radix-ui/react-icons';
 import { currentlyItems, type CurrentlyItem } from '@/lib/currentlyData';
 
 const categoryIcon: Record<CurrentlyItem['category'], React.ReactNode> = {
-  working: <Code className="size-3.5" />,
-  reading: <BookOpen className="size-3.5" />,
-  listening: <Headphones className="size-3.5" />,
+  working: <CodeIcon className="size-3.5" />,
+  reading: <ReaderIcon className="size-3.5" />,
+  listening: <SpeakerLoudIcon className="size-3.5" />,
 };
 
 const CYCLE_MS = 5_000;

@@ -12,34 +12,34 @@
   --font-display: 'Libertinus Serif', serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
 
-  --background: #fffcf2;
+  --background: #f0e9dd;
   --foreground: #252422;
-  --card: #fff9e5;
+  --card: #f9f5ee;
   --card-foreground: #252422;
-  --popover: #fff9e5;
+  --popover: #f9f5ee;
   --popover-foreground: #252422;
   --primary: #252422;
-  --primary-foreground: #fffcf2;
-  --secondary: #f4f3f0;
+  --primary-foreground: #f9f5ee;
+  --secondary: #e8e0d4;
   --secondary-foreground: #252422;
-  --muted: #eae7e1;
-  --muted-foreground: #6c6760;
+  --muted: #e8e0d4;
+  --muted-foreground: #6c5f50;
   --accent: #eb5e28;
-  --accent-foreground: #fffcf2;
+  --accent-foreground: #ffffff;
   --destructive: #e24b4a;
   --destructive-foreground: #ffffff;
-  --border: #d4cec4;
-  --input: #d4cec4;
+  --border: #d4cabb;
+  --input: #d4cabb;
   --ring: #eb5e28;
   --radius: 0.5rem;
 
-  --sidebar: #fff9e5;
+  --sidebar: #f9f5ee;
   --sidebar-foreground: #252422;
   --sidebar-primary: #252422;
-  --sidebar-primary-foreground: #fffcf2;
-  --sidebar-accent: #f4f3f0;
+  --sidebar-primary-foreground: #f9f5ee;
+  --sidebar-accent: #e8e0d4;
   --sidebar-accent-foreground: #252422;
-  --sidebar-border: #d4cec4;
+  --sidebar-border: #d4cabb;
   --sidebar-ring: #eb5e28;
 }
 

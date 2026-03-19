@@ -5,7 +5,7 @@ import { companyLogos } from '@/lib/companyLogos';
 
 const timelineData: TimelineEntry[] = [
   {
-    date: 'Nov 2025 — Present',
+    date: 'Nov 2025 - Present',
     title: 'Technical Product Owner',
     subtitle: 'Wattle · Bristol',
     logo: companyLogos.wattle,
@@ -19,7 +19,7 @@ const timelineData: TimelineEntry[] = [
         </p>
         <p>
           I designed and built a reusable Umbraco Whitelabel platform that
-          reduced web build time from roughly four weeks to under one week —
+          reduced web build time from roughly four weeks to under one week -
           turning bespoke project work into scalable, repeatable delivery. That
           work now underpins all future web projects.
         </p>
@@ -33,7 +33,7 @@ const timelineData: TimelineEntry[] = [
     ),
   },
   {
-    date: 'Feb 2025 — Nov 2025',
+    date: 'Feb 2025 - Nov 2025',
     title: 'Software Engineer',
     subtitle: 'Wattle · Bristol',
     logo: companyLogos.wattle,
@@ -42,14 +42,14 @@ const timelineData: TimelineEntry[] = [
       <p>
         Joined as a front-end engineer working on the MemEx membership platform.
         Quickly expanded into architectural decisions, stakeholder
-        conversations, and delivery oversight — which led directly to the TPO
+        conversations, and delivery oversight - which led directly to the TPO
         role. Built the early foundation of the Whitelabel platform during this
         period.
       </p>
     ),
   },
   {
-    date: 'Mar 2024 — Feb 2025',
+    date: 'Mar 2024 - Feb 2025',
     title: 'Consultant Engineer',
     subtitle: 'Freelance · Bristol',
     logo: companyLogos.dos,
@@ -71,7 +71,7 @@ const timelineData: TimelineEntry[] = [
     ),
   },
   {
-    date: 'Oct 2021 — Mar 2024',
+    date: 'Oct 2021 - Mar 2024',
     title: 'Software Engineer',
     subtitle: 'Roke · Romsey',
     logo: companyLogos.roke,
@@ -81,7 +81,7 @@ const timelineData: TimelineEntry[] = [
         <p>
           Started on a two-year graduate scheme and quickly moved into
           leadership roles. As Technical Team Lead, I directed the migration of
-          a live Angular product to Vue — redesigning the architecture, UI, and
+          a live Angular product to Vue - redesigning the architecture, UI, and
           API layer while mentoring junior developers through the process.
         </p>
         <p>
@@ -90,7 +90,7 @@ const timelineData: TimelineEntry[] = [
           velocity by 77% in twelve months.
         </p>
         <p>
-          Also supported the Business Development team — leading client
+          Also supported the Business Development team - leading client
           engagement strategies, attending conferences, and consulting on
           technical bid work. This gave me early exposure to the commercial side
           of technical delivery.
@@ -99,7 +99,7 @@ const timelineData: TimelineEntry[] = [
     ),
   },
   {
-    date: '2017 — 2021',
+    date: '2017 - 2021',
     title: 'MEng Electronic Engineering',
     subtitle: 'University of York · First-Class Honours',
     logo: companyLogos.york,
@@ -108,7 +108,7 @@ const timelineData: TimelineEntry[] = [
       <>
         <p>
           Four-year integrated master's degree. Developed a strong foundation in
-          systems-level thinking — understanding how components interact, where
+          systems-level thinking - understanding how components interact, where
           complexity hides, and how to design for reliability.
         </p>
         <p>
@@ -139,7 +139,7 @@ export default function Journey() {
                 Career journey
               </p>
               <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-tight">
-                From engineering to architecture — one role at a time.
+                From engineering to architecture - one role at a time.
               </h1>
               <p className="mt-6 text-muted-foreground leading-relaxed">
                 I started in software engineering, moved into technical

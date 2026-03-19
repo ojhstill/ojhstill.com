@@ -63,7 +63,7 @@ export default function Contact() {
               </h1>
               <p className="mt-6 text-muted-foreground leading-relaxed">
                 Whether you've got a project in mind, want to talk about
-                architecture, or just fancy a chat — I'm always happy to
+                architecture, or just fancy a chat - I'm always happy to
                 connect. Drop me a line and I'll get back to you.
               </p>
             </motion.div>

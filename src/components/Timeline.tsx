@@ -30,7 +30,7 @@ function TimelineItem({
       transition={{ duration: 0.65, delay: index * 0.12, ease: 'easeOut' }}
       className="relative pl-8 pb-12 last:pb-0"
     >
-      {/* Timeline dot — spring-pops into view */}
+      {/* Timeline dot - spring-pops into view */}
       <motion.div
         initial={{ scale: 0 }}
         animate={isInView ? { scale: 1 } : { scale: 0 }}
@@ -79,7 +79,7 @@ function TimelineItem({
             )}
           </div>
         </div>
-        <div className="pt-2 text-sm text-muted-foreground leading-relaxed space-y-3">
+        <div className="pt-2 text-base text-muted-foreground leading-relaxed space-y-3">
           {entry.content}
         </div>
       </div>
@@ -97,9 +97,9 @@ export default function Timeline({ entries }: { entries: TimelineEntry[] }) {
 
   return (
     <div ref={containerRef} className="relative">
-      {/* Static rail — shows the full path faintly */}
+      {/* Static rail - shows the full path faintly */}
       <div className="absolute left-1.75 top-3 bottom-0 w-px bg-border" />
-      {/* Scroll-drawn accent line — grows from top as you scroll */}
+      {/* Scroll-drawn accent line - grows from top as you scroll */}
       <motion.div
         className="absolute left-1.75 top-3 bottom-0 w-px bg-accent/70 origin-top"
         style={{ scaleY: lineScaleY }}

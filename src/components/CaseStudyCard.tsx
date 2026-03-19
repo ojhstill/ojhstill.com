@@ -79,7 +79,7 @@ export default function CaseStudyCard({ study }: { study: CaseStudy }) {
                 )}
               </div>
             )}
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-base text-muted-foreground leading-relaxed">
               {study.summary}
             </p>
 
@@ -107,10 +107,10 @@ export default function CaseStudyCard({ study }: { study: CaseStudy }) {
           <div className="space-y-4 pl-0 sm:pl-[68px]">
             {study.detail.map((section, i) => (
               <div key={i}>
-                <h4 className="text-sm font-semibold text-foreground mb-1">
+                <h4 className="text-base font-semibold text-foreground mb-1">
                   {section.heading}
                 </h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   {section.text}
                 </p>
               </div>

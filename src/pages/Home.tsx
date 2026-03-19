@@ -6,11 +6,7 @@ import SectionHeading from '@/components/SectionHeading';
 import CurrentlyStatus from '@/components/CurrentlyStatus';
 import { companyLogos } from '@/lib/companyLogos';
 import { useHeroParallax } from '@/lib/useParallax';
-import {
-  LayersIcon,
-  Share1Icon,
-  MagnifyingGlassIcon,
-} from '@radix-ui/react-icons';
+import { Layers, Share2, Route } from 'lucide-react';
 
 const caseStudies: CaseStudy[] = [
   {
@@ -19,7 +15,7 @@ const caseStudies: CaseStudy[] = [
     metric: '4 wks → 1 wk',
     metricLabel: 'build time reduction',
     summary:
-      'Spotted a structural problem in how we delivered client websites and built the architectural foundation to fix it — turning bespoke builds into a scalable product.',
+      'Spotted a structural problem in how we delivered client websites and built the architectural foundation to fix it - turning bespoke builds into a scalable product.',
     image: companyLogos.wattle,
     imageAlt: 'Wattle logo',
     detail: [
@@ -29,11 +25,11 @@ const caseStudies: CaseStudy[] = [
       },
       {
         heading: 'What I built',
-        text: 'I designed and built a reusable Umbraco Whitelabel instance that standardised our front-end architecture. This required alignment across delivery and commercial teams to formalise it as our default approach — not just an engineering initiative.',
+        text: 'I designed and built a reusable Umbraco Whitelabel instance that standardised our front-end architecture. This required alignment across delivery and commercial teams to formalise it as our default approach - not just an engineering initiative.',
       },
       {
         heading: 'The impact',
-        text: 'Build time dropped from roughly four weeks to under one week for standard scope. That saves around 10 developer days per project across 3–5 projects a year, and now underpins all future web work. It also strengthened our commercial positioning by enabling faster client onboarding.',
+        text: 'Build time dropped from roughly four weeks to under one week for standard scope. That saves around 10 developer days per project across 3-5 projects a year, and now underpins all future web work. It also strengthened our commercial positioning by enabling faster client onboarding.',
       },
     ],
     technologies: [
@@ -64,7 +60,7 @@ const caseStudies: CaseStudy[] = [
       },
       {
         heading: 'What changed',
-        text: 'Delivered a clean Vue application with modern architecture. Mentored junior developers through the process using clean code principles and code reviews — building their confidence alongside the technical deliverable.',
+        text: 'Delivered a clean Vue application with modern architecture. Mentored junior developers through the process using clean code principles and code reviews - building their confidence alongside the technical deliverable.',
       },
     ],
     technologies: [
@@ -92,7 +88,7 @@ const caseStudies: CaseStudy[] = [
       },
       {
         heading: 'What I did',
-        text: 'Facilitated all Agile ceremonies, translated technical concepts between clients and engineering teams, and onboarded five new developers — adapting the team to a cross-site format through better communication channels while managing sprint capacity.',
+        text: 'Facilitated all Agile ceremonies, translated technical concepts between clients and engineering teams, and onboarded five new developers - adapting the team to a cross-site format through better communication channels while managing sprint capacity.',
       },
       {
         heading: 'The result',
@@ -112,19 +108,19 @@ const caseStudies: CaseStudy[] = [
 
 const capabilities = [
   {
-    icon: LayersIcon,
+    icon: Layers,
     title: 'Architecture & platforms',
-    text: 'I design reusable, scalable platforms — not one-off solutions. I think in systems and build foundations that compound value over time.',
+    text: 'I design reusable, scalable platforms - not one-off solutions. I think in systems and build foundations that compound value over time.',
   },
   {
-    icon: Share1Icon,
+    icon: Share2,
     title: 'Stakeholder bridge',
     text: 'I sit between engineering, delivery, and commercial. I translate complexity into clear decisions and make sure technical direction aligns with business goals.',
   },
   {
-    icon: MagnifyingGlassIcon,
+    icon: Route,
     title: 'Discovery & delivery',
-    text: 'I get involved early — shaping scope in discovery before it hardens. That upstream clarity means fewer surprises downstream and better outcomes for clients.',
+    text: 'I get involved early - shaping scope in discovery before it hardens. That upstream clarity means fewer surprises downstream and better outcomes for clients.',
   },
 ];
 
@@ -143,11 +139,24 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: 'easeOut' }}
               >
-                <p className="font-display text-2xl text-accent mb-4">
-                  Hey, I'm Oli.
+                <p className="font-display text-2xl text-accent mb-4 flex gap-[0.35em]">
+                  {['Hey,', "I'm", 'Oli.'].map((word, i) => (
+                    <motion.span
+                      key={word}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{
+                        duration: 0.5,
+                        delay: 0.3 + i * 0.18,
+                        ease: [0.25, 0.1, 0.25, 1],
+                      }}
+                    >
+                      {word}
+                    </motion.span>
+                  ))}
                 </p>
                 <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight leading-[1.15]">
-                  I turn complexity into clarity — in code, in product, in
+                  I turn complexity into clarity: in code, in product, in
                   conversation.
                 </h1>
                 <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-xl">
@@ -222,10 +231,13 @@ export default function Home() {
               className="pl-6 border-l-2 border-accent/30"
             >
               <h3 className="flex items-center gap-2 text-base font-semibold text-foreground mb-2">
-                <cap.icon className="size-4 text-accent shrink-0" />
+                <cap.icon
+                  className="size-6 text-accent shrink-0"
+                  strokeWidth={1.5}
+                />
                 {cap.title}
               </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 {cap.text}
               </p>
             </motion.div>
@@ -246,7 +258,12 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
-              transition={{ type: 'spring', stiffness: 100, damping: 20, delay: i * 0.05 }}
+              transition={{
+                type: 'spring',
+                stiffness: 100,
+                damping: 20,
+                delay: i * 0.05,
+              }}
             >
               <CaseStudyCard study={study} />
             </motion.div>
@@ -267,7 +284,7 @@ export default function Home() {
             Always happy to have a conversation.
           </h2>
           <p className="mt-4 text-muted-foreground max-w-md mx-auto">
-            If something here resonates, feel free to reach out — whether that's
+            If something here resonates, feel free to reach out - whether that's
             to swap ideas, explore a potential fit, or just connect.
           </p>
           <Link

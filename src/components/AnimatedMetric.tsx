@@ -4,9 +4,9 @@ import { useInView } from 'motion/react';
 /**
  * Parses a metric string into segments of numeric values and static text.
  * Examples:
- *   "77%"        → [{ value: 77, suffix: "%" }]
- *   "10 yrs"     → [{ value: 10, suffix: " yrs" }]
- *   "4 wks → 1 wk" → [{ value: 4, suffix: " wks → " }, { value: 1, suffix: " wk" }]
+ *   "77%"        - [{ value: 77, suffix: "%" }]
+ *   "10 yrs"     - [{ value: 10, suffix: " yrs" }]
+ *   "4 wks → 1 wk" - [{ value: 4, suffix: " wks → " }, { value: 1, suffix: " wk" }]
  */
 interface Segment {
   value: number;
@@ -25,7 +25,7 @@ function parseMetric(metric: string): Segment[] {
     if (segments.length > 0) {
       segments[segments.length - 1].suffix += textBefore;
     }
-    // We ignore leading text for simplicity — metrics start with a number
+    // We ignore leading text for simplicity - metrics start with a number
     segments.push({ value: parseFloat(match[1]), suffix: '' });
     lastIndex = regex.lastIndex;
   }
@@ -49,7 +49,10 @@ interface AnimatedMetricProps {
   className?: string;
 }
 
-export default function AnimatedMetric({ metric, className }: AnimatedMetricProps) {
+export default function AnimatedMetric({
+  metric,
+  className,
+}: AnimatedMetricProps) {
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-40px' });
   const [displayed, setDisplayed] = useState(metric);
@@ -72,7 +75,7 @@ export default function AnimatedMetric({ metric, className }: AnimatedMetricProp
       const eased = easeOutCubic(progress);
 
       const text = segments
-        .map((seg) => {
+        .map(seg => {
           const current = eased * seg.value;
           // Use integers unless the original value has decimals
           const display = Number.isInteger(seg.value)

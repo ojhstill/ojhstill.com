@@ -1,5 +1,5 @@
 import { forwardRef, type ButtonHTMLAttributes } from 'react';
-import { ArrowRightIcon } from '@radix-ui/react-icons';
+import { ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export type ButtonVariant = 'primary' | 'accent' | 'ghost';
@@ -42,7 +42,7 @@ export function buttonVariants({
 } = {}): string {
   const resolvedSize = size ?? defaultSize[variant];
   return cn(
-    'inline-flex items-center gap-2 text-sm font-semibold transition-colors',
+    'inline-flex items-center gap-2 text-base font-semibold transition-colors',
     arrow && 'group',
     resolvedSize && sizeClasses[resolvedSize],
     variantClasses[variant],
@@ -57,7 +57,7 @@ export function buttonVariants({
  */
 export function ButtonArrow({ className }: { className?: string }) {
   return (
-    <ArrowRightIcon
+    <ArrowRight
       className={cn(
         'size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1',
         className

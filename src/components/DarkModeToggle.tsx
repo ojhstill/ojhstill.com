@@ -2,17 +2,17 @@ import { useState, useEffect } from 'react';
 import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
 
 export default function DarkModeToggle() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     const saved = localStorage.getItem('darkMode');
-    if (saved === 'false') {
-      document.documentElement.classList.remove('dark');
-      setDarkMode(false);
-    } else {
-      // Default to dark — either saved as 'true' or first visit
+    if (saved === 'true') {
       document.documentElement.classList.add('dark');
       setDarkMode(true);
+    } else {
+      // Default to light - either saved as 'false' or first visit
+      document.documentElement.classList.remove('dark');
+      setDarkMode(false);
     }
   }, []);
 
@@ -29,7 +29,11 @@ export default function DarkModeToggle() {
       aria-label="Toggle dark mode"
       className="p-2 rounded-lg border border-border/60 hover:border-border hover:bg-secondary/50 transition-colors cursor-pointer"
     >
-      {darkMode ? <MoonIcon className="size-4" /> : <SunIcon className="size-4" />}
+      {darkMode ? (
+        <MoonIcon className="size-4" />
+      ) : (
+        <SunIcon className="size-4" />
+      )}
     </button>
   );
 }

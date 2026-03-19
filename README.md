@@ -1,19 +1,19 @@
-# Oliver Still — Portfolio Site
+# Oliver Still - Portfolio Site
 
 Personal portfolio built with React + TypeScript + Vite + Tailwind CSS.
 
 ## Design
 
-**Palette:** C2 — Cool Slate + Terracotta  
+**Palette:** C2 - Cool Slate + Terracotta  
 **Fonts:** Instrument Serif (display) + Plus Jakarta Sans (body)  
 **Theme:** Light-first with dark mode toggle, warm personality-led aesthetic
 
 ## Pages
 
-- **Home** — Hero, capabilities overview, expandable case study cards
-- **Journey** — Career timeline with scroll-triggered animations
-- **About** — Personal interests and personality
-- **Contact** — mailto link + social links
+- **Home** - Hero, capabilities overview, expandable case study cards
+- **Journey** - Career timeline with scroll-triggered animations
+- **About** - Personal interests and personality
+- **Contact** - mailto link + social links
 
 ## Setup
 
@@ -28,7 +28,7 @@ npm install react-router-dom motion @radix-ui/react-icons clsx tailwind-merge
 npm install -D tailwindcss @tailwindcss/vite tailwindcss-animate
 ```
 
-4. Your existing `vite.config.ts` should work as-is — just ensure the `@` path alias points to `./src`
+4. Your existing `vite.config.ts` should work as-is - just ensure the `@` path alias points to `./src`
 5. You can remove these dependencies that are no longer used:
    - `@headlessui/react`
    - `class-variance-authority`
@@ -64,7 +64,7 @@ export default defineConfig({
 
 ## Deployment
 
-Deploy to Vercel with zero config — connect the repo and it auto-detects Vite.
+Deploy to Vercel with zero config - connect the repo and it auto-detects Vite.
 
 For client-side routing, add `vercel.json`:
 
@@ -76,13 +76,13 @@ For client-side routing, add `vercel.json`:
 
 ## Customisation notes
 
-- **Palette:** All colours are defined as CSS variables in `src/index.css` — change the `:root` and `.dark` blocks to update the entire site
-- **Content:** Case studies, timeline data, and about page content are defined as data arrays within each page component — easy to update without touching layout code
+- **Palette:** All colours are defined as CSS variables in `src/index.css` - change the `:root` and `.dark` blocks to update the entire site
+- **Content:** Case studies, timeline data, and about page content are defined as data arrays within each page component - easy to update without touching layout code
 - **Fonts:** Loaded via Google Fonts in `index.html` and referenced in CSS variables
 
 ## Images
 
-All images live in `public/images/`. The site uses graceful fallbacks — if an image isn't found, the element hides itself rather than showing a broken icon.
+All images live in `public/images/`. The site uses graceful fallbacks - if an image isn't found, the element hides itself rather than showing a broken icon.
 
 ### What to add
 
@@ -95,6 +95,6 @@ All images live in `public/images/`. The site uses graceful fallbacks — if an 
 
 ### Logo tips
 
-- SVGs work best — they scale cleanly and support dark mode
+- SVGs work best - they scale cleanly and support dark mode
 - If using PNGs, use transparent backgrounds and at least 200×200px
-- Logos display at 36–48px inside a rounded container, so keep them simple
+- Logos display at 36-48px inside a rounded container, so keep them simple
