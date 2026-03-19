@@ -156,8 +156,9 @@ export default function Home() {
                   ))}
                 </p>
                 <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight leading-[1.15]">
-                  I turn complexity into clarity: in code, in product, in
-                  conversation.
+                  I turn complexity into clarity:
+                  <br />
+                  in code, in product, in conversation.
                 </h1>
                 <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-xl">
                   Technical Product Owner with an engineering backbone. I shape
