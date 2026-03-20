@@ -6,7 +6,7 @@ import SectionHeading from '@/components/SectionHeading';
 import CurrentlyStatus from '@/components/CurrentlyStatus';
 import { companyLogos } from '@/lib/companyLogos';
 import { useHeroParallax } from '@/lib/useParallax';
-import HeroBlobs from '@/components/HeroBlobs';
+import HeroGeometric from '@/components/HeroGeometric';
 import { Layers, Share2, Route } from 'lucide-react';
 
 const caseStudies: CaseStudy[] = [
@@ -132,7 +132,7 @@ export default function Home() {
     <>
       {/* ─── Hero ─── */}
       <section className="relative">
-        <HeroBlobs />
+        <HeroGeometric />
         <div className="max-w-5xl mx-auto px-6 pt-32 pb-28 sm:pb-36">
           <div className="flex flex-col md:flex-row items-start gap-12 md:gap-16">
             <motion.div style={{ y: textY }} className="max-w-2xl flex-1">
