@@ -42,6 +42,7 @@ export default function Header() {
         {/* Logo */}
         <Link
           to="/"
+          viewTransition
           className="text-lg font-semibold tracking-tight hover:text-accent transition-colors"
         >
           {/* Oliver&nbsp;<span className="text-accent">Still</span> */}
@@ -56,6 +57,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 to={item.to}
+                viewTransition
                 className={cn(
                   'relative text-sm font-medium transition-colors pb-0.5',
                   isActive
@@ -98,6 +100,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 to={item.to}
+                viewTransition
                 onClick={() => setMenuOpen(false)}
                 className={cn(
                   'block py-2.5 text-base font-medium transition-colors',

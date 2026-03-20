@@ -7,7 +7,7 @@ import { useScroll, useTransform } from 'motion/react';
  */
 export function useHeroParallax() {
   const { scrollY } = useScroll();
-  const imageY = useTransform(scrollY, [0, 600], [0, 90]);
-  const textY = useTransform(scrollY, [0, 600], [0, 45]);
+  const imageY = useTransform(scrollY, [0, 600], [0, 160]);
+  const textY = useTransform(scrollY, [0, 600], [0, 50]);
   return { imageY, textY };
 }
