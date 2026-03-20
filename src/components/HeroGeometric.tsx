@@ -6,7 +6,7 @@ import type { Easing } from 'motion';
 //  22 → 72%   hold (fully visible)
 //  72 → 88%   pen erases forward (continues past the end)
 //  88 → 100%  gap (invisible, resets)
-const TIMES = [0, 0.22, 0.72, 0.88, 1.0] as const;
+const TIMES: number[] = [0, 0.22, 0.72, 0.88, 1.0];
 const EASE: Easing[] = ['easeOut', 'linear', 'easeIn', 'linear'];
 
 export default function HeroGeometric() {
