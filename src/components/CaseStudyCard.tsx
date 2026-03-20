@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import { cn } from '@/lib/utils';
 
 export interface CaseStudy {
@@ -19,14 +19,6 @@ export interface CaseStudy {
 
 export default function CaseStudyCard({ study }: { study: CaseStudy }) {
   const [open, setOpen] = useState(false);
-  const contentRef = useRef<HTMLDivElement>(null);
-  const [height, setHeight] = useState(0);
-
-  useEffect(() => {
-    if (contentRef.current) {
-      setHeight(contentRef.current.scrollHeight);
-    }
-  }, [open]);
 
   return (
     <div className="border-b border-border/20 pb-10 last:border-0 last:pb-0">
@@ -100,26 +92,31 @@ export default function CaseStudyCard({ study }: { study: CaseStudy }) {
 
       {/* Expandable detail */}
       <div
-        className="overflow-hidden transition-[max-height] duration-400 ease-in-out"
-        style={{ maxHeight: open ? `${height}px` : '0px' }}
+        style={{
+          display: 'grid',
+          gridTemplateRows: open ? '1fr' : '0fr',
+          transition: 'grid-template-rows 300ms ease-in-out',
+        }}
       >
-        <div ref={contentRef} className="pt-6">
-          <div className="space-y-4 pl-0 sm:pl-[68px]">
-            {study.detail.map((section, i) => (
-              <div key={i}>
-                <h4 className="text-base font-semibold text-foreground mb-1">
-                  {section.heading}
-                </h4>
-                <p className="text-base text-muted-foreground leading-relaxed">
-                  {section.text}
+        <div style={{ overflow: 'hidden' }}>
+          <div className="pt-6">
+            <div className="space-y-4 pl-0 sm:pl-[68px]">
+              {study.detail.map((section, i) => (
+                <div key={i}>
+                  <h4 className="text-base font-semibold text-foreground mb-1">
+                    {section.heading}
+                  </h4>
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    {section.text}
+                  </p>
+                </div>
+              ))}
+              {study.technologies.length > 0 && (
+                <p className="text-xs text-muted-foreground/70 pt-2">
+                  {study.technologies.join(' · ')}
                 </p>
-              </div>
-            ))}
-            {study.technologies.length > 0 && (
-              <p className="text-xs text-muted-foreground/70 pt-2">
-                {study.technologies.join(' · ')}
-              </p>
-            )}
+              )}
+            </div>
           </div>
         </div>
       </div>
