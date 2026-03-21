@@ -61,7 +61,7 @@ export default function CaseStudyCard({ study }: { study: CaseStudy }) {
             </h3>
             {study.metric && (
               <div className="flex items-baseline gap-2">
-                <span className="text-2xl font-display text-accent">
+                <span className="text-2xl font-display tracking-tight text-accent">
                   {study.metric}
                 </span>
                 {study.metricLabel && (

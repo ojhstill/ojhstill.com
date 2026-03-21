@@ -54,7 +54,7 @@ export default function About() {
                   About me
                 </p>
                 <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-tight">
-                  The person behind the product thinking.
+                  The person behind the thinking.
                 </h1>
                 <p className="mt-6 text-muted-foreground leading-relaxed">
                   I care about building things that work - technically,

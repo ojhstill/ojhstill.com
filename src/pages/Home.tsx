@@ -7,6 +7,7 @@ import CurrentlyStatus from '@/components/CurrentlyStatus';
 import { companyLogos } from '@/lib/companyLogos';
 import { useHeroParallax } from '@/lib/useParallax';
 import HeroGeometric from '@/components/HeroGeometric';
+import SectionDivider from '@/components/SectionDivider';
 import { Layers, Share2, Route } from 'lucide-react';
 
 const caseStudies: CaseStudy[] = [
@@ -217,6 +218,8 @@ export default function Home() {
         </div>
       </section>
 
+      <SectionDivider label="01" />
+
       {/* ─── How I work ─── */}
       <section className="max-w-3xl mx-auto px-6 py-24 sm:py-32">
         <SectionHeading
@@ -245,6 +248,8 @@ export default function Home() {
         </div>
       </section>
 
+      <SectionDivider label="02" />
+
       {/* ─── Case Studies ─── */}
       <section className="max-w-3xl mx-auto px-6 py-24 sm:py-32">
         <SectionHeading
@@ -270,6 +275,8 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <SectionDivider label="03" />
 
       {/* ─── CTA ─── */}
       <section className="max-w-3xl mx-auto px-6 py-24 sm:py-36 text-center">

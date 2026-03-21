@@ -10,7 +10,9 @@ export default function NotFound() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <p className="font-display text-lg text-accent mb-4">404</p>
+        <p className="font-display text-lg text-accent font-semibold tracking-tight mb-4">
+          404
+        </p>
         <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight">
           Page not found.
         </h1>
