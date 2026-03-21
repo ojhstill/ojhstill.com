@@ -349,16 +349,6 @@ export default function HeroGeometric() {
         </text>
 
         {/* Radius callout */}
-        <line
-          x1="755"
-          y1="370"
-          x2="828"
-          y2="370"
-          stroke="var(--foreground)"
-          strokeOpacity="0.11"
-          strokeWidth="0.4"
-          clipPath="url(#c-lbl-r)"
-        />
         <text
           x="836"
           y="366"
