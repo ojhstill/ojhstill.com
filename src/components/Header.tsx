@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useLayoutEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { motion } from 'motion/react';
 import DarkModeToggle from '@/components/DarkModeToggle';
 import { cn } from '@/lib/utils';
 
@@ -24,9 +23,11 @@ export default function Header() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Close mobile menu on route change
-  useEffect(() => {
+  // Scroll to top and close mobile menu on route change
+  useLayoutEffect(() => {
     setMenuOpen(false);
+    setScrolled(false);
+    window.scrollTo({ top: 0, behavior: 'instant' });
   }, [location.pathname]);
 
   return (
@@ -42,10 +43,8 @@ export default function Header() {
         {/* Logo */}
         <Link
           to="/"
-          viewTransition
           className="text-lg font-semibold tracking-tight hover:text-accent transition-colors"
         >
-          {/* Oliver&nbsp;<span className="text-accent">Still</span> */}
           ojh<span className="text-accent">still</span>
         </Link>
 
@@ -57,7 +56,6 @@ export default function Header() {
               <Link
                 key={item.name}
                 to={item.to}
-                viewTransition
                 className={cn(
                   'relative text-sm font-medium transition-colors pb-0.5',
                   isActive
@@ -66,13 +64,12 @@ export default function Header() {
                 )}
               >
                 {item.name}
-                {isActive && (
-                  <motion.span
-                    layoutId="nav-indicator"
-                    className="absolute inset-x-0 -bottom-0.5 h-0.5 bg-accent rounded-full"
-                    transition={{ type: 'spring', stiffness: 350, damping: 28 }}
-                  />
-                )}
+                <span
+                  className={cn(
+                    'absolute inset-x-0 -bottom-0.5 h-0.5 bg-accent rounded-full transition-transform duration-300 origin-left',
+                    isActive ? 'scale-x-100' : 'scale-x-0'
+                  )}
+                />
               </Link>
             );
           })}
@@ -100,7 +97,6 @@ export default function Header() {
               <Link
                 key={item.name}
                 to={item.to}
-                viewTransition
                 onClick={() => setMenuOpen(false)}
                 className={cn(
                   'block py-2.5 text-base font-medium transition-colors',

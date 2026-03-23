@@ -38,7 +38,7 @@ export default function SectionDivider({
             x2="100%"
             y2="0.5"
             stroke="var(--foreground)"
-            strokeOpacity={0.12}
+            strokeOpacity={0.2}
             strokeWidth={0.8}
             strokeDasharray="3 7"
           />
