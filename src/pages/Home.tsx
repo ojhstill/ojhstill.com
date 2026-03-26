@@ -117,7 +117,7 @@ const capabilities = [
   {
     icon: Share2,
     title: 'Translation layer',
-    text: "I sit between engineering, delivery, and commercial - and that's deliberately where I want to be. I translate complexity into clear decisions and make sure technical direction aligns with business goals.',
+    text: "I sit between engineering, delivery, and commercial - and that's deliberately where I want to be. I translate complexity into clear decisions and make sure technical direction aligns with business goals.",
   },
   {
     icon: Route,
