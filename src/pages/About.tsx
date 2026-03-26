@@ -16,7 +16,7 @@ const interests: Interest[] = [
   {
     icon: Disc3,
     title: 'Music',
-    text: `I've been producing and releasing music for over a decade. Self-taught across production, mixing, mastering, and marketing — one LP, two EPs, and six singles in, with over a million streams. Still going.`,
+    text: `I've been producing and releasing music for over a decade. Self-taught across production, mixing, mastering, and marketing — one LP, two EPs, and six singles, with over a million streams.`,
     link: 'https://owarimusic.com',
     linkLabel: 'Hear for yourself',
     image: '/images/about/music.jpg',
@@ -32,7 +32,7 @@ const interests: Interest[] = [
   {
     icon: Languages,
     title: 'French',
-    text: `I've been teaching myself French for a few years now. Currently at B1 level - enough to hold most conversations when I'm travelling in French-speaking regions. It's slow progress, but the kind of slow progress that compounds.`,
+    text: `I've been teaching myself French for a few years now. Currently at B1 level - enough to hold most conversations when I'm travelling in French-speaking regions.`,
   },
 ];
 
@@ -54,7 +54,7 @@ export default function About() {
                   About me
                 </p>
                 <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-tight">
-                  There's more to the story.
+                  The personal behind the thinking.
                 </h1>
                 <p className="mt-6 text-muted-foreground leading-relaxed">
                   I care about building things that work - technically,
@@ -76,7 +76,6 @@ export default function About() {
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
                 <div className="w-48 h-56 rounded-3xl overflow-hidden shadow-lg shadow-accent/8 bg-secondary">
-                  {/* Replace src with a casual/personal photo */}
                   <img
                     src="/images/about/portrait.jpg"
                     alt="Oli"
@@ -103,9 +102,9 @@ export default function About() {
         >
           <p>
             I'm Oli - a Technical Product Owner at Wattle. I moved to Bristol in
-            2024 for a change of pace and never looked back. Before that I was
-            at Roke, where I cut my teeth on everything from graduate
-            engineering to Scrum mastering to business development.
+            2024 for a change of pace. Before that I was at Roke, where I cut my
+            teeth on everything from graduate engineering to Scrum mastering to
+            business development.
           </p>
           <p>
             I'm naturally curious, self-starting, and I gravitate towards

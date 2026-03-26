@@ -17,13 +17,13 @@ const caseStudies: CaseStudy[] = [
     metric: '4 wks → 1 wk',
     metricLabel: 'build time reduction',
     summary:
-      'Spotted a structural problem in how we delivered client websites and built the architectural foundation to fix it - turning bespoke builds into a scalable product.',
+      'Spotted a structural problem in how we were delivering client websites. Every project was starting from scratch. I built the platform to fix that.',
     image: companyLogos.wattle,
     imageAlt: 'Wattle logo',
     detail: [
       {
         heading: 'The problem',
-        text: 'Web builds were averaging four weeks, with inconsistent architecture across projects and no reusable foundation. Every new client meant starting from scratch, which was expensive and created quality drift.',
+        text: 'Web builds were averaging four weeks, with inconsistent architecture across projects and no reusable foundation. Every new client meant starting from scratch, which cost time and let inconsistency creep in.',
       },
       {
         heading: 'What I built',
@@ -48,7 +48,7 @@ const caseStudies: CaseStudy[] = [
     metric: '10 yrs',
     metricLabel: 'of tech debt cleared',
     summary:
-      'Directed the technical redesign of a live client product from Angular to Vue, modernising the architecture, UI, and API layer while building team capability.',
+      'Took full ownership of migrating a live product off legacy Angular - redesigning the architecture, UX, and API from the ground up while bringing the team along with me.',
     image: companyLogos.roke,
     imageAlt: 'Roke logo',
     detail: [
@@ -58,7 +58,7 @@ const caseStudies: CaseStudy[] = [
       },
       {
         heading: 'My approach',
-        text: 'As Technical Team Lead, I directed the development team through a structured migration. I redesigned the architecture, UX/UI, and API to modern standards, making deliberate decisions about what to rebuild versus refactor.',
+        text: 'As Technical Team Lead, I directed the development team through a structured migration. I made deliberate calls on what to rebuild versus refactor, rather than just modernising the surface.',
       },
       {
         heading: 'What changed',
@@ -112,17 +112,17 @@ const capabilities = [
   {
     icon: Layers,
     title: 'Architecture & platforms',
-    text: 'I design reusable, scalable platforms - not one-off solutions. I think in systems and build foundations that compound value over time.',
+    text: 'I care about the technical integrity of what we build and how we build it - foundations built right tend to pay for themselves.',
   },
   {
     icon: Share2,
     title: 'Translation layer',
-    text: "I sit between engineering, delivery, and commercial - and that's deliberately where I want to be. I translate complexity into clear decisions and make sure technical direction aligns with business goals.",
+    text: "I sit between engineering, delivery, and commercial - and that's deliberately where I want to be. I translate complexity into clear decisions to make sure neither side is flying blind.",
   },
   {
     icon: Route,
     title: 'Discovery & delivery',
-    text: 'I get involved early - shaping scope in discovery before it hardens. That upstream clarity means fewer surprises downstream and better outcomes for clients.',
+    text: 'I get involved before scope hardens. Technical direction shaped early means fewer expensive surprises later, and better outcomes for everyone involved.',
   },
 ];
 
