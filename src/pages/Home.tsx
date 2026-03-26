@@ -116,8 +116,8 @@ const capabilities = [
   },
   {
     icon: Share2,
-    title: 'Stakeholder bridge',
-    text: 'I sit between engineering, delivery, and commercial. I translate complexity into clear decisions and make sure technical direction aligns with business goals.',
+    title: 'Translation layer',
+    text: "I sit between engineering, delivery, and commercial - and that's deliberately where I want to be. I translate complexity into clear decisions and make sure technical direction aligns with business goals.',
   },
   {
     icon: Route,
@@ -165,8 +165,8 @@ export default function Home() {
                 </h1>
                 <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-xl">
                   Technical Product Owner with an engineering backbone. I shape
-                  platforms, bridge technical and commercial decisions, and help
-                  teams deliver work that holds up.
+                  platforms, translate complexity into clear decisions, and help
+                  teams deliver work that actually lasts.
                 </p>
                 <div className="mt-8 flex flex-wrap items-center gap-4">
                   <Link

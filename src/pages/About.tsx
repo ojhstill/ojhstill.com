@@ -16,7 +16,7 @@ const interests: Interest[] = [
   {
     icon: Disc3,
     title: 'Music',
-    text: `I've been producing and releasing music for over a decade. Self-taught in production, mixing, mastering, and digital marketing - I've put out six singles and two EPs, accumulating over a million streams. It's the longest-running project I've ever managed, and it taught me more about discipline and iteration than any job has. I'm also a classically trained pianist and used to give private tuition to students aged 8 to 17.`,
+    text: `I've been producing and releasing music for over a decade. Self-taught across production, mixing, mastering, and marketing — one LP, two EPs, and six singles in, with over a million streams. Still going.`,
     link: 'https://owarimusic.com',
     linkLabel: 'Hear for yourself',
     image: '/images/about/music.jpg',
@@ -25,7 +25,7 @@ const interests: Interest[] = [
   {
     icon: Footprints,
     title: 'Running',
-    text: `I run half-marathons for charity - most recently the Great North Run, where I raised over £500 for the British Red Cross. It's the thing that keeps everything else balanced. I also play hockey and have competed in national diving competitions, although the diving is more of a past life at this point.`,
+    text: `I run half-marathons and raise money when I can — most recently over £500 for the British Red Cross. Grew up as a competitive diver, training nationally for most of my teens. Still the sport I'm most proud of in hindsight, even if it's firmly past tense now.`,
     image: '/images/about/running.jpg',
     imageAlt: 'Post race photo',
   },
@@ -54,13 +54,13 @@ export default function About() {
                   About me
                 </p>
                 <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-tight">
-                  The person behind the thinking.
+                  There's more to the story.
                 </h1>
                 <p className="mt-6 text-muted-foreground leading-relaxed">
                   I care about building things that work - technically,
-                  commercially, and for the people using them. But I also
-                  believe the best work comes from people who have a life
-                  outside of it.
+                  commercially, and especially for the people using them. But I
+                  also believe the best work comes from people who can draw from
+                  a life outside of it.
                 </p>
               </motion.div>
             </motion.div>
@@ -102,10 +102,10 @@ export default function About() {
           className="space-y-4 text-muted-foreground leading-relaxed"
         >
           <p>
-            I'm Oli - a Technical Product Owner based in Bristol. I moved here
-            from Hampshire in 2024 for a change of pace and never looked back.
-            Before that I was at Roke, where I cut my teeth on everything from
-            graduate engineering to Scrum mastering to business development.
+            I'm Oli - a Technical Product Owner at Wattle. I moved to Bristol in
+            2024 for a change of pace and never looked back. Before that I was
+            at Roke, where I cut my teeth on everything from graduate
+            engineering to Scrum mastering to business development.
           </p>
           <p>
             I'm naturally curious, self-starting, and I gravitate towards

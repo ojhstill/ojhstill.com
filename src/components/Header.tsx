@@ -27,7 +27,6 @@ export default function Header() {
   useLayoutEffect(() => {
     setMenuOpen(false);
     setScrolled(false);
-    window.scrollTo({ top: 0, behavior: 'instant' });
   }, [location.pathname]);
 
   return (

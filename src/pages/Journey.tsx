@@ -5,7 +5,7 @@ import { companyLogos } from '@/lib/companyLogos';
 
 const timelineData: TimelineEntry[] = [
   {
-    date: 'Nov 2025 - Present',
+    date: 'Oct 2025 - Present',
     title: 'Technical Product Owner',
     subtitle: 'Wattle · Bristol',
     logo: companyLogos.wattle,
@@ -24,16 +24,15 @@ const timelineData: TimelineEntry[] = [
           work now underpins all future web projects.
         </p>
         <p>
-          My day-to-day involves discovery with clients like Dogs for Good,
-          CIWM, WSET, and LMA, owning the web backlog, validating architectural
-          decisions, and making sure what we commit to is realistic and
-          sustainable.
+          Right now I'm working closely with clients including Dogs for Good,
+          CIWM, WSET, and LMA. Shaping scope early, managing the web backlog,
+          and making sure what we promise is something we can actually deliver.
         </p>
       </>
     ),
   },
   {
-    date: 'Feb 2025 - Nov 2025',
+    date: 'Feb 2025 - Oct 2025',
     title: 'Software Engineer',
     subtitle: 'Wattle · Bristol',
     logo: companyLogos.wattle,
@@ -57,9 +56,8 @@ const timelineData: TimelineEntry[] = [
     content: (
       <>
         <p>
-          Moved to Bristol and spent a year freelancing to broaden my technical
-          and commercial exposure. Worked across a range of projects and client
-          types.
+          Relocated to Bristol and used the year to go independent. Different
+          industries, different problems, all self-directed.
         </p>
         <p>
           Highlights included designing and deploying a full-stack Shopify
