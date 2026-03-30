@@ -91,7 +91,7 @@ export default function Timeline({ entries }: { entries: TimelineEntry[] }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ['start 90%', 'end 52%'],
+    offset: ['start 80%', 'end 40%'],
   });
   const lineScaleY = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
