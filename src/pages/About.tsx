@@ -57,10 +57,10 @@ export default function About() {
                   The personal behind the thinking.
                 </h1>
                 <p className="mt-6 text-muted-foreground leading-relaxed">
-                  I care about building things that work - technically,
-                  commercially, and especially for the people using them. But I
-                  also believe the best work comes from people who can draw from
-                  a life outside of it.
+                  I care about building things that work — for the people using
+                  them, the teams delivering them, and the clients relying on
+                  them. The best work tends to come from people who bring more
+                  than their job title to the room.
                 </p>
               </motion.div>
             </motion.div>
@@ -108,10 +108,10 @@ export default function About() {
           </p>
           <p>
             I'm naturally curious, self-starting, and I gravitate towards
-            environments where ownership is real and decisions move fast. I care
-            about culture as much as capability - the best teams I've worked in
-            have been the ones where people trust each other enough to be direct
-            and collaborative enough to stay aligned.
+            environments where ownership is real. I care about culture as much
+            as capability — the best teams I've been in have trusted each other
+            enough to be direct, and I tend to be the calm one when delivery
+            pressure rises.
           </p>
           <p>
             Outside of work, I have a few things that keep me grounded and
