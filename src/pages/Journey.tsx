@@ -13,20 +13,15 @@ const timelineData: TimelineEntry[] = [
     content: (
       <>
         <p>
-          Promoted from Software Engineer after nine months. I now shape product
-          direction and technical architecture for Wattle's membership platform,
-          bridging engineering, delivery, and commercial teams.
+          Promoted from engineer after nine months. I now own product direction
+          and technical architecture across Wattle's web projects — sitting
+          between engineering, delivery, and the client.
         </p>
         <p>
-          I designed and built a reusable Umbraco Whitelabel platform that
-          reduced web build time from roughly four weeks to under one week -
-          turning bespoke project work into scalable, repeatable delivery. That
-          work now underpins all future web projects.
-        </p>
-        <p>
-          Right now I'm working closely with clients including Dogs for Good,
-          CIWM, WSET, and LMA. Shaping scope early, managing the web backlog,
-          and making sure what we promise is something we can actually deliver.
+          I designed and built a Whitelabel platform that cut our web build time
+          from four weeks to under one. I work directly with clients like Dogs
+          for Good, CIWM, and WSET — shaping scope early and making sure what
+          we promise is something we can actually ship.
         </p>
       </>
     ),
@@ -39,33 +34,26 @@ const timelineData: TimelineEntry[] = [
     logoAlt: 'Wattle',
     content: (
       <p>
-        Joined as a front-end engineer working on the MemEx membership platform.
-        Quickly expanded into architectural decisions, stakeholder
-        conversations, and delivery oversight - which led directly to the TPO
-        role. Built the early foundation of the Whitelabel platform during this
-        period.
+        Joined as a front-end engineer on the MemEx membership platform. Within
+        a few months I was in architecture discussions and client calls — not
+        because anyone asked, but because I kept spotting gaps. That laid the
+        groundwork for a role that didn't exist yet.
       </p>
     ),
   },
   {
     date: 'Mar 2024 - Feb 2025',
-    title: 'Consultant Engineer',
+    title: 'Software Engineer & Consultant',
     subtitle: 'Freelance · Bristol',
     logo: companyLogos.dos,
     logoAlt: 'DOS',
     content: (
-      <>
-        <p>
-          Relocated to Bristol and used the year to go independent. Different
-          industries, different problems, all self-directed.
-        </p>
-        <p>
-          Highlights included designing and deploying a full-stack Shopify
-          solution for independent businesses, providing software testing and QA
-          for a London-based consultancy's CRM portal, and technical consultancy
-          for clients pursuing their own projects.
-        </p>
-      </>
+      <p>
+        Moved to Bristol and spent a year freelancing. Different clients,
+        different stacks, no safety net. Built a Shopify integration for small
+        businesses, did QA for a London consultancy, and gave technical advice
+        to people with ideas and no engineering background.
+      </p>
     ),
   },
   {
@@ -77,21 +65,15 @@ const timelineData: TimelineEntry[] = [
     content: (
       <>
         <p>
-          Started on a two-year graduate scheme and quickly moved into
-          leadership roles. As Technical Team Lead, I directed the migration of
-          a live Angular product to Vue - redesigning the architecture, UI, and
-          API layer while mentoring junior developers through the process.
+          Started on the graduate scheme and moved quickly into leadership. Led
+          the migration of a live Angular product to Vue — owning the
+          architecture, UX, and API while mentoring junior engineers.
         </p>
         <p>
-          Took on the Certified ScrumMaster role for a 15-person cross-site
-          Agile team on a multi-million-pound project, increasing delivery
-          velocity by 77% in twelve months.
-        </p>
-        <p>
-          Also supported the Business Development team - leading client
-          engagement strategies, attending conferences, and consulting on
-          technical bid work. This gave me early exposure to the commercial side
-          of technical delivery.
+          Also Scrum Master for a 15-person team on a multi-million-pound
+          project, and got involved in business development — consulting on bids
+          and leading client engagement. That's where I first realised I liked
+          the commercial side as much as the technical one.
         </p>
       </>
     ),
@@ -105,14 +87,14 @@ const timelineData: TimelineEntry[] = [
     content: (
       <>
         <p>
-          Four-year integrated master's degree. Developed a strong foundation in
-          systems-level thinking - understanding how components interact, where
-          complexity hides, and how to design for reliability.
+          Four-year integrated master's in Electronic Engineering. First-Class.
+          The degree was systems-heavy and built the structured thinking I still
+          rely on.
         </p>
         <p>
-          Led a team of eight as Project Manager and Developer for a tech
-          start-up project, taking it from idea through to product using Agile
-          methodologies. We received one of the highest marks in the department.
+          Led a team of eight on a start-up-style project as both Project
+          Manager and Developer. One of the highest marks in the department —
+          and the first time I realised I liked leading as much as building.
         </p>
       </>
     ),
@@ -137,12 +119,13 @@ export default function Journey() {
                 Career journey
               </p>
               <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-tight">
-                From engineering to architecture - one role at a time.
+                From writing code to deciding what gets built.
               </h1>
               <p className="mt-6 text-muted-foreground leading-relaxed">
-                I started in software engineering, moved into technical
-                leadership, and now sit at the intersection of product,
-                architecture, and delivery. Here's how that happened.
+                I started as a software engineer and gradually moved closer to
+                the people side of delivery — shaping products, working with
+                clients, and keeping teams honest about what's actually
+                possible. This is the path that got me here.
               </p>
             </motion.div>
           </motion.div>
