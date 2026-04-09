@@ -32,7 +32,7 @@ const interests: Interest[] = [
   {
     icon: Languages,
     title: 'French',
-    text: `I've been teaching myself French for a few years now. Currently at B1 level - enough to hold most conversations when I'm travelling in French-speaking regions.`,
+    text: `I've been teaching myself French properly for a few years now — partly to aid my travels abroad rather than relying on hand gestures and confidence. Currently at B1 and comfortable in most native conversations.`,
   },
 ];
 

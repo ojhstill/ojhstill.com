@@ -23,15 +23,15 @@ const caseStudies: CaseStudy[] = [
     detail: [
       {
         heading: 'The problem',
-        text: 'Web builds were averaging four weeks, with inconsistent architecture across projects and no reusable foundation. Every new client meant starting from scratch, which cost time and let inconsistency creep in.',
+        text: 'Web builds were averaging four weeks or more, with inconsistent architecture across projects and no reusable foundation. Every new project was starting from scratch which cost time and let inconsistency creep in.',
       },
       {
         heading: 'What I built',
-        text: 'I designed and built a reusable Umbraco Whitelabel instance that standardised our front-end architecture. This required alignment across delivery and commercial teams to formalise it as our default approach - not just an engineering initiative.',
+        text: 'Designed and built a reusable Umbraco Whitelabel instance that standardised our front-end architecture — then worked across delivery and commercial to formalise it as our default approach. Getting the organisational buy-in was as much the work as the build itself.',
       },
       {
         heading: 'The impact',
-        text: 'Build time dropped from roughly four weeks to under one week for standard scope. That saves around 10 developer days per project across 3-5 projects a year, and now underpins all future web work. It also strengthened our commercial positioning by enabling faster client onboarding.',
+        text: 'Build time dropped from roughly four weeks to under one week for baseline scope projects, and now underpins all future web work. It also strengthened our commercial positioning by enabling faster client onboarding.',
       },
     ],
     technologies: [
@@ -48,7 +48,7 @@ const caseStudies: CaseStudy[] = [
     metric: '10 yrs',
     metricLabel: 'of tech debt cleared',
     summary:
-      'Took full ownership of migrating a live product off legacy Angular - redesigning the architecture, UX, and API from the ground up while bringing the team along with me.',
+      'Led the architectural redesign of a live Angular product, migrating to Vue to resolve a decade of technical debt — owning the full technical direction while bringing the team along.',
     image: companyLogos.roke,
     imageAlt: 'Roke logo',
     detail: [
@@ -58,7 +58,7 @@ const caseStudies: CaseStudy[] = [
       },
       {
         heading: 'My approach',
-        text: 'As Technical Team Lead, I directed the development team through a structured migration. I made deliberate calls on what to rebuild versus refactor, rather than just modernising the surface.',
+        text: 'Took full ownership of the architecture, UX/UI, and API — making deliberate calls on what to rebuild versus refactor rather than just modernising the surface.',
       },
       {
         heading: 'What changed',
@@ -80,7 +80,7 @@ const caseStudies: CaseStudy[] = [
     metric: '77%',
     metricLabel: 'velocity increase in 12 months',
     summary:
-      'Took on the Scrum Master role for a 15-person Agile team delivering a multi-million-pound project, improving both delivery speed and client satisfaction.',
+      'Scrum Master for a cross-site team of 15 on a multi-million-pound project — translating technical complexity into clear business language and growing velocity by 77% over 12 months.',
     image: companyLogos.roke,
     imageAlt: 'Roke logo',
     detail: [
@@ -90,7 +90,7 @@ const caseStudies: CaseStudy[] = [
       },
       {
         heading: 'What I did',
-        text: 'Facilitated all Agile ceremonies, translated technical concepts between clients and engineering teams, and onboarded five new developers - adapting the team to a cross-site format through better communication channels while managing sprint capacity.',
+        text: 'Facilitated all Agile ceremonies, translated technical concepts between clients and engineering, and onboarded five new developers — keeping blockers visible early and adapting the team to a cross-site format.',
       },
       {
         heading: 'The result',
@@ -116,7 +116,7 @@ const capabilities = [
   },
   {
     icon: Share2,
-    title: 'Translation layer',
+    title: 'Bridging the gap',
     text: "I sit between engineering, delivery, and commercial - and that's deliberately where I want to be. I translate complexity into clear decisions to make sure neither side is flying blind.",
   },
   {
@@ -224,7 +224,7 @@ export default function Home() {
       <section className="max-w-3xl mx-auto px-6 py-24 sm:py-32">
         <SectionHeading
           label="How I work"
-          title="Engineering meets architecture"
+          title="Engineering, people, and product"
         />
         <div className="mt-10 space-y-10">
           {capabilities.map((cap, i) => (

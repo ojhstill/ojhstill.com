@@ -13,15 +13,17 @@ const timelineData: TimelineEntry[] = [
     content: (
       <>
         <p>
-          Promoted from engineer after nine months. I now own product direction
-          and technical architecture across Wattle's web projects — sitting
-          between engineering, delivery, and the client.
+          I own product direction and technical architecture at Wattle, sitting
+          as the central link between development, QA, delivery, and commercial
+          — translating complexity for client stakeholders and challenging scope
+          early before it can become a delivery issue.
         </p>
         <p>
-          I designed and built a Whitelabel platform that cut our web build time
-          from four weeks to under one. I work directly with clients like Dogs
-          for Good, CIWM, and WSET — shaping scope early and making sure what
-          we promise is something we can actually ship.
+          Built a reusable Umbraco Whitelabel platform that shifted web delivery
+          from inconsistent bespoke builds to a scalable product baseline,
+          reducing build time from four weeks to under one and strengthening our
+          commercial positioning. Also involved in early-stage client discovery
+          with clients including Dogs for Good, CIWM, WSET, LMA, and GSL.
         </p>
       </>
     ),
@@ -34,10 +36,12 @@ const timelineData: TimelineEntry[] = [
     logoAlt: 'Wattle',
     content: (
       <p>
-        Joined as a front-end engineer on the MemEx membership platform. Within
-        a few months I was in architecture discussions and client calls — not
-        because anyone asked, but because I kept spotting gaps. That laid the
-        groundwork for a role that didn't exist yet.
+        Joined as a front-end engineer before getting pulled into client
+        conversations, scope shaping, and delivery oversight — work that led to
+        the creation of the company's first Technical Product Owner role.
+        Spotted a structural gap in how we delivered client websites and built
+        the company's first reusable Umbraco platform from the ground up,
+        creating the foundation that later became a core product.
       </p>
     ),
   },
@@ -49,10 +53,10 @@ const timelineData: TimelineEntry[] = [
     logoAlt: 'DOS',
     content: (
       <p>
-        Moved to Bristol and spent a year freelancing. Different clients,
-        different stacks, no safety net. Built a Shopify integration for small
-        businesses, did QA for a London consultancy, and gave technical advice
-        to people with ideas and no engineering background.
+        Relocated to Bristol and took on a range of independent client projects
+        across technical consultancy and full-stack development, including a
+        Shopify-based app solution for independent businesses integrating a
+        cost-effective architecture with Shopify's GraphQL API.
       </p>
     ),
   },
@@ -65,15 +69,18 @@ const timelineData: TimelineEntry[] = [
     content: (
       <>
         <p>
-          Started on the graduate scheme and moved quickly into leadership. Led
-          the migration of a live Angular product to Vue — owning the
-          architecture, UX, and API while mentoring junior engineers.
+          Joined on the graduate scheme and moved into leadership fairly
+          quickly. Led the architectural redesign of a live Angular product,
+          migrating to Vue to resolve a decade of technical debt — taking full
+          ownership of the architecture, UX/UI, and API, and building the team
+          through mentoring and code reviews.
         </p>
         <p>
-          Also Scrum Master for a 15-person team on a multi-million-pound
-          project, and got involved in business development — consulting on bids
-          and leading client engagement. That's where I first realised I liked
-          the commercial side as much as the technical one.
+          Scrum Master for a cross-site team of 15 on a multi-million-pound
+          project — translating technical complexity into clear business
+          language and growing team velocity by 77% over 12 months. Also
+          stepped into business development, consulting on technical bids and
+          representing technical thinking in commercial conversations.
         </p>
       </>
     ),
@@ -87,14 +94,15 @@ const timelineData: TimelineEntry[] = [
     content: (
       <>
         <p>
-          Four-year integrated master's in Electronic Engineering. First-Class.
-          The degree was systems-heavy and built the structured thinking I still
-          rely on.
+          A systems-heavy integrated MEng with First Class Honours — the kind
+          of degree that builds the analytical and structured thinking that
+          stays with you.
         </p>
         <p>
-          Led a team of eight on a start-up-style project as both Project
-          Manager and Developer. One of the highest marks in the department —
-          and the first time I realised I liked leading as much as building.
+          Led a team of eight as both Project Manager and Developer on a
+          start-up style module from idea through to delivery, owning the
+          product direction and keeping the team aligned. Came away with one of
+          the highest marks in the department.
         </p>
       </>
     ),

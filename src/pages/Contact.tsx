@@ -71,9 +71,8 @@ export default function Contact() {
                 Let's have a conversation.
               </h1>
               <p className="mt-6 text-muted-foreground leading-relaxed">
-                Whether you've got a project in mind, want to talk about
-                architecture, or just fancy a chat - I'm always happy to
-                connect. Drop me a line and I'll get back to you.
+                Whether you've got something in mind or just want to connect —
+                always happy to have a conversation.
               </p>
             </motion.div>
           </motion.div>
