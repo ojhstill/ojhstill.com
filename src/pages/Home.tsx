@@ -117,7 +117,7 @@ const capabilities = [
   {
     icon: Share2,
     title: 'Bridging the gap',
-    text: 'I deliberately sit between engineering, delivery, and commercial. I translate complexity into clear decisions to make sure neither side is flying blind.',
+    text: 'I deliberately sit between engineering, delivery, and commercial - translating complexity into clear decisions to make sure neither side is flying blind.',
   },
   {
     icon: Route,
