@@ -130,7 +130,7 @@ export default function HeroGeometric() {
           width={520}
           height={340}
           stroke="var(--accent)"
-          strokeOpacity={0.14}
+          strokeOpacity={0.20}
           strokeWidth={0.75}
           {...trace}
           {...draw(38, 0)}
@@ -143,7 +143,7 @@ export default function HeroGeometric() {
           width={424}
           height={244}
           stroke="var(--foreground)"
-          strokeOpacity={0.14}
+          strokeOpacity={0.20}
           strokeWidth={0.5}
           {...trace}
           {...draw(34, 0.5)}
@@ -155,7 +155,7 @@ export default function HeroGeometric() {
           cy={370}
           r={215}
           stroke="var(--foreground)"
-          strokeOpacity={0.14}
+          strokeOpacity={0.20}
           strokeWidth={0.75}
           {...trace}
           {...draw(36, 0.2)}
@@ -167,7 +167,7 @@ export default function HeroGeometric() {
           cy={370}
           r={140}
           stroke="var(--accent)"
-          strokeOpacity={0.2}
+          strokeOpacity={0.28}
           strokeWidth={0.5}
           {...trace}
           {...draw(30, 0.7)}
@@ -180,7 +180,7 @@ export default function HeroGeometric() {
           x2={1200}
           y2={370}
           stroke="var(--foreground)"
-          strokeOpacity={0.11}
+          strokeOpacity={0.16}
           strokeWidth={0.5}
           {...trace}
           {...draw(28, 1.0)}
@@ -193,7 +193,7 @@ export default function HeroGeometric() {
           x2={970}
           y2={600}
           stroke="var(--foreground)"
-          strokeOpacity={0.11}
+          strokeOpacity={0.16}
           strokeWidth={0.5}
           {...trace}
           {...draw(28, 1.1)}
@@ -210,7 +210,7 @@ export default function HeroGeometric() {
           x2={820}
           y2={210}
           stroke="var(--foreground)"
-          strokeOpacity={0.11}
+          strokeOpacity={0.16}
           strokeWidth={0.5}
           {...trace}
           {...draw(22, 0.6)}
@@ -222,7 +222,7 @@ export default function HeroGeometric() {
           cy={370}
           r={280}
           stroke="var(--foreground)"
-          strokeOpacity={0.09}
+          strokeOpacity={0.13}
           strokeWidth={0.5}
           {...trace}
           {...draw(32, 0.9)}
@@ -239,7 +239,7 @@ export default function HeroGeometric() {
           x2="560"
           y2="214"
           stroke="var(--foreground)"
-          strokeOpacity="0.12"
+          strokeOpacity="0.17"
           strokeWidth="0.8"
           strokeDasharray="3 7"
           clipPath="url(#c-dash-h)"
@@ -250,7 +250,7 @@ export default function HeroGeometric() {
           x2="300"
           y2="384"
           stroke="var(--foreground)"
-          strokeOpacity="0.12"
+          strokeOpacity="0.17"
           strokeWidth="0.8"
           strokeDasharray="3 7"
           clipPath="url(#c-dash-v)"
@@ -263,7 +263,7 @@ export default function HeroGeometric() {
           x2="560"
           y2="30"
           stroke="var(--foreground)"
-          strokeOpacity="0.14"
+          strokeOpacity="0.20"
           strokeWidth="0.8"
           clipPath="url(#c-dim-h)"
         />
@@ -273,7 +273,7 @@ export default function HeroGeometric() {
           x2="512"
           y2="34"
           stroke="var(--foreground)"
-          strokeOpacity="0.14"
+          strokeOpacity="0.20"
           strokeWidth="0.8"
           clipPath="url(#c-dim-h)"
         />
@@ -283,7 +283,7 @@ export default function HeroGeometric() {
           x2="560"
           y2="34"
           stroke="var(--foreground)"
-          strokeOpacity="0.14"
+          strokeOpacity="0.20"
           strokeWidth="0.8"
           clipPath="url(#c-dim-h)"
         />
@@ -295,7 +295,7 @@ export default function HeroGeometric() {
           x2="578"
           y2="384"
           stroke="var(--foreground)"
-          strokeOpacity="0.14"
+          strokeOpacity="0.20"
           strokeWidth="0.8"
           clipPath="url(#c-dim-v)"
         />
@@ -305,7 +305,7 @@ export default function HeroGeometric() {
           x2="582"
           y2="336"
           stroke="var(--foreground)"
-          strokeOpacity="0.14"
+          strokeOpacity="0.20"
           strokeWidth="0.8"
           clipPath="url(#c-dim-v)"
         />
@@ -315,7 +315,7 @@ export default function HeroGeometric() {
           x2="582"
           y2="384"
           stroke="var(--foreground)"
-          strokeOpacity="0.14"
+          strokeOpacity="0.20"
           strokeWidth="0.8"
           clipPath="url(#c-dim-v)"
         />
@@ -326,7 +326,7 @@ export default function HeroGeometric() {
           y="40"
           fontSize="5.5"
           fill="var(--foreground)"
-          fillOpacity="0.28"
+          fillOpacity="0.38"
           fontFamily="'Courier New', monospace"
           letterSpacing="0.5"
           clipPath="url(#c-lbl-a2)"
@@ -340,7 +340,7 @@ export default function HeroGeometric() {
           y="400"
           fontSize="5.5"
           fill="var(--foreground)"
-          fillOpacity="0.28"
+          fillOpacity="0.38"
           fontFamily="'Courier New', monospace"
           letterSpacing="0.5"
           clipPath="url(#c-lbl-a4)"
@@ -354,7 +354,7 @@ export default function HeroGeometric() {
           y="366"
           fontSize="5.5"
           fill="var(--foreground)"
-          fillOpacity="0.22"
+          fillOpacity="0.30"
           fontFamily="'Courier New', monospace"
           letterSpacing="0.5"
           clipPath="url(#c-lbl-r)"
