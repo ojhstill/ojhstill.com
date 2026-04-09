@@ -107,11 +107,10 @@ export default function About() {
             business development.
           </p>
           <p>
-            I'm naturally curious, self-starting, and I gravitate towards
-            environments where ownership is real. I care about culture as much
-            as capability — the best teams I've been in have trusted each other
-            enough to be direct, and I tend to be the calm one when delivery
-            pressure rises.
+            I gravitate towards environments where ownership is real. I care
+            about culture as much as capability — the best teams I've been in
+            have trusted each other enough to be direct, and I tend to be the
+            calm one when delivery pressure rises.
           </p>
           <p>
             Outside of work, I have a few things that keep me grounded and

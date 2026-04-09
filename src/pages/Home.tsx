@@ -117,12 +117,12 @@ const capabilities = [
   {
     icon: Share2,
     title: 'Bridging the gap',
-    text: "I sit between engineering, delivery, and commercial - and that's deliberately where I want to be. I translate complexity into clear decisions to make sure neither side is flying blind.",
+    text: 'I deliberately sit between engineering, delivery, and commercial. I translate complexity into clear decisions to make sure neither side is flying blind.',
   },
   {
     icon: Route,
     title: 'Discovery & delivery',
-    text: 'I get involved before scope hardens. Technical direction shaped early means fewer expensive surprises later, and better outcomes for everyone involved.',
+    text: 'Technical direction shaped early means fewer expensive surprises later and better outcomes for everyone involved.',
   },
 ];
 
@@ -164,9 +164,9 @@ export default function Home() {
                   in code, in product, in conversation.
                 </h1>
                 <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-xl">
-                  Technical Product Owner with an engineering backbone. I shape
-                  platforms, translate complexity into clear decisions, and help
-                  teams deliver work that actually lasts.
+                  Technical Product Owner with an engineering background. I
+                  shape platforms, architect decisions early, and make sure what
+                  gets built is actually the right thing to build.
                 </p>
                 <div className="mt-8 flex flex-wrap items-center gap-4">
                   <Link

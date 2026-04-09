@@ -36,9 +36,9 @@ const timelineData: TimelineEntry[] = [
     logoAlt: 'Wattle',
     content: (
       <p>
-        Joined as a front-end engineer before getting pulled into client
-        conversations, scope shaping, and delivery oversight — work that led to
-        the creation of the company's first Technical Product Owner role.
+        Joined as a software engineer before quickly getting involved with
+        client conversations, scope shaping, and delivery oversight — work that
+        led to the creation of the company's first Technical Product Owner role.
         Spotted a structural gap in how we delivered client websites and built
         the company's first reusable Umbraco platform from the ground up,
         creating the foundation that later became a core product.
@@ -78,8 +78,8 @@ const timelineData: TimelineEntry[] = [
         <p>
           Scrum Master for a cross-site team of 15 on a multi-million-pound
           project — translating technical complexity into clear business
-          language and growing team velocity by 77% over 12 months. Also
-          stepped into business development, consulting on technical bids and
+          language and growing team velocity by 77% over 12 months. Also stepped
+          into business development, consulting on technical bids and
           representing technical thinking in commercial conversations.
         </p>
       </>
@@ -94,9 +94,9 @@ const timelineData: TimelineEntry[] = [
     content: (
       <>
         <p>
-          A systems-heavy integrated MEng with First Class Honours — the kind
-          of degree that builds the analytical and structured thinking that
-          stays with you.
+          A systems-heavy integrated MEng with First Class Honours — the kind of
+          degree that builds the analytical and structured thinking that stays
+          with you.
         </p>
         <p>
           Led a team of eight as both Project Manager and Developer on a
