@@ -56,12 +56,11 @@ export default function About() {
                 <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-tight">
                   The personal behind the thinking.
                 </h1>
-                {/* <p className="mt-6 text-muted-foreground leading-relaxed">
+                <p className="mt-6 text-muted-foreground leading-relaxed">
                   I care about building things that work — for the people using
                   them, the teams delivering them, and the clients relying on
-                  them. The best work tends to come from people who bring more
-                  than their job title to the room.
-                </p> */}
+                  them.
+                </p>
               </motion.div>
             </motion.div>
 
@@ -101,21 +100,23 @@ export default function About() {
           className="space-y-4 text-muted-foreground leading-relaxed"
         >
           <p>
-            I'm Oli - a Technical Product Owner at Wattle. I moved to Bristol in
-            2024 for a change of pace. I care about building things that work —
-            for the people using them, the teams delivering them, and the
-            clients relying on them.
+            I'm Oli — a Technical Product Owner at Wattle, living in Bristol
+            since 2024. I came from a software engineering background and
+            gradually moved closer to the people and strategy side of building
+            things.
           </p>
           <p>
-            I gravitate towards environments where ownership is real. I care
-            about culture as much as capability — the best teams I've been in
-            have trusted each other enough to be direct, and I tend to be the
-            calm one when delivery pressure rises.
+            The work I enjoy most sits between technical complexity and human
+            communication — figuring out what to build, making sure the team's
+            aligned, and being the person in the room who stays calm when things
+            get noisy.
           </p>
           <p>
-            Outside of work, I have a few things that keep me grounded and
-            remind me that not everything needs a sprint retrospective.
+            I care about culture as much as capability. The best teams I've
+            worked in have been honest with each other, and I try to contribute
+            to that rather than just benefit from it.
           </p>
+          <p>Here's what I do when I log off.</p>
         </motion.div>
       </section>
 
