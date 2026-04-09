@@ -43,38 +43,6 @@ const caseStudies: CaseStudy[] = [
     ],
   },
   {
-    tag: 'Technical Leadership',
-    title: 'Led a migration that erased a decade of technical debt',
-    metric: '10 yrs',
-    metricLabel: 'of tech debt cleared',
-    summary:
-      'Led the architectural redesign of a live Angular product, migrating to Vue to resolve a decade of technical debt — owning the full technical direction while bringing the team along.',
-    image: companyLogos.roke,
-    imageAlt: 'Roke logo',
-    detail: [
-      {
-        heading: 'The challenge',
-        text: 'A live, multi-million-pound client product running on legacy Angular with significant accumulated technical debt. It needed modernising without disrupting the service or the client relationship.',
-      },
-      {
-        heading: 'My approach',
-        text: 'Took full ownership of the architecture, UX/UI, and API — making deliberate calls on what to rebuild versus refactor rather than just modernising the surface.',
-      },
-      {
-        heading: 'What changed',
-        text: 'Delivered a clean Vue application with modern architecture. Mentored junior developers through the process using clean code principles and code reviews - building their confidence alongside the technical deliverable.',
-      },
-    ],
-    technologies: [
-      'Vue',
-      'Angular',
-      'REST APIs',
-      'UX/UI',
-      'Team Mentoring',
-      'Agile / SAFe',
-    ],
-  },
-  {
     tag: 'Delivery & Process',
     title: 'Scrum Master on a cross-site team that increased velocity by 77%',
     metric: '77%',
@@ -104,6 +72,38 @@ const caseStudies: CaseStudy[] = [
       'Confluence',
       'Stakeholder Management',
       'CSM',
+    ],
+  },
+  {
+    tag: 'Technical Leadership',
+    title: 'Led a migration that erased a decade of technical debt',
+    metric: '10 yrs',
+    metricLabel: 'of tech debt cleared',
+    summary:
+      'Led the architectural redesign of a live Angular product, migrating to Vue to resolve a decade of technical debt — owning the full technical direction while bringing the team along.',
+    image: companyLogos.roke,
+    imageAlt: 'Roke logo',
+    detail: [
+      {
+        heading: 'The challenge',
+        text: 'A live, multi-million-pound client product running on legacy Angular with significant accumulated technical debt. It needed modernising without disrupting the service or the client relationship.',
+      },
+      {
+        heading: 'My approach',
+        text: 'Took full ownership of the architecture, UX/UI, and API — making deliberate calls on what to rebuild versus refactor rather than just modernising the surface.',
+      },
+      {
+        heading: 'What changed',
+        text: 'Delivered a clean Vue application with modern architecture. Mentored junior developers through the process using clean code principles and code reviews - building their confidence alongside the technical deliverable.',
+      },
+    ],
+    technologies: [
+      'Vue',
+      'Angular',
+      'REST APIs',
+      'UX/UI',
+      'Team Mentoring',
+      'Agile / SAFe',
     ],
   },
 ];
