@@ -56,12 +56,12 @@ export default function About() {
                 <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-tight">
                   The personal behind the thinking.
                 </h1>
-                <p className="mt-6 text-muted-foreground leading-relaxed">
+                {/* <p className="mt-6 text-muted-foreground leading-relaxed">
                   I care about building things that work — for the people using
                   them, the teams delivering them, and the clients relying on
                   them. The best work tends to come from people who bring more
                   than their job title to the room.
-                </p>
+                </p> */}
               </motion.div>
             </motion.div>
 
@@ -102,9 +102,9 @@ export default function About() {
         >
           <p>
             I'm Oli - a Technical Product Owner at Wattle. I moved to Bristol in
-            2024 for a change of pace. Before that I was at Roke, where I cut my
-            teeth on everything from graduate engineering to Scrum mastering to
-            business development.
+            2024 for a change of pace. I care about building things that work —
+            for the people using them, the teams delivering them, and the
+            clients relying on them.
           </p>
           <p>
             I gravitate towards environments where ownership is real. I care
